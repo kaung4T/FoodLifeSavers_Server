@@ -17,5 +17,5 @@ yarn-error.log
 /.fleet
 /.idea
 /.vscode
-/C:\xampp\htdocs\evpower\storage\framework\views/
-/C:\xampp\htdocs\evpower\storage\logs/
+*
+!.gitignore
