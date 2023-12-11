@@ -10,14 +10,6 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto py-4 py-lg-0">
                  <a href="{{url('/')}}" class="nav-item nav-link active">Home</a>
-
-               <div class="nav-item dropdown">
-                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Company</a>
-                <div class="dropdown-menu shadow-sm m-0">
-                    <a href="{{route('about.page')}}" class="dropdown-item"> About </a>
-                    <a href="{{route('contact.page')}}" class="dropdown-item">Contacts</a>
-                </div>
-            </div>
                 
               <div class="nav-item dropdown">
                 <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Products</a>
@@ -29,11 +21,7 @@
             </div>
 
               <div class="nav-item dropdown">
-                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Earnings</a>
-                <div class="dropdown-menu shadow-sm m-0">
-                    <a href="#" class="dropdown-item"> Subscriptions </a>
-                    <a href="#" class="dropdown-item"> Instruction</a>
-                </div>
+                <a href="#" class="nav-link" data-bs-toggle="dropdown">Earnings</a>
             </div>
 
               <div class="nav-item dropdown">
@@ -46,29 +34,31 @@
             </div>
 
                 <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Features</a>
-                    <div class="dropdown-menu shadow-sm m-0">
-                        <a href="#" class="dropdown-item">Account</a>
-                        <a href="#" class="dropdown-item">Transfer</a>
-                        <a href="#" class="dropdown-item">Card</a>
-                        <a href="#" class="dropdown-item">Crypto Service</a>
-                    </div>
+                    <a href="#" class="nav-link" data-bs-toggle="dropdown">Our Work</a>
+                </div>
+
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link" data-bs-toggle="dropdown">About Us</a>
+                </div>
+
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link" data-bs-toggle="dropdown">Contact</a>
                 </div>
              
             </div>
             <div class="h-100 d-lg-inline-flex align-items-center d-block">
-                <a type="button" class="btn btn-primary text-light me-2" href="{{route('login')}}"> <i class="fa-solid fa-right-to-bracket"></i> Login</i></a>
+                <a type="button" class="btn btn-primary text-light me-2" href="{{route('login')}}">DONATE</a>
             </div>
-
-            <div class="header-icons">
-                <a class="mobile-hide search-bar-icon" href="#"><i
-                    class="fas fa-search"></i></a>
-                    </div>
 
              <div class="googleNav">
                     <div class="goog-te-gadget" id="google_translate_element">
                 </div>
                 </div>
+
+                <div class="header-icons">
+                <a class="mobile-hide search-bar-icon" href="#"><i
+                    class="fas fa-search"></i></a>
+                    </div>
 
                    <div class="search-area">
 		<div class="container">
