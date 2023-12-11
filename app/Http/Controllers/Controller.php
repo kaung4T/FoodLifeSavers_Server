@@ -18,6 +18,6 @@ class Controller extends BaseController
 
     public function email_subscribe(Request $request)
     {
-        return redirect('/');
+        return redirect('https://www.youtube.com/watch?v=CB6FJeD3Es4');
     }
 }
