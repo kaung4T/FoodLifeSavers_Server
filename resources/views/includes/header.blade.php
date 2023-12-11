@@ -2,12 +2,12 @@
 <nav class="navbar navbar-expand-lg fixed-top p-0 px-4 px-lg-5">
         <a href="{{url('/')}}" class="navbar-brand d-flex align-items-center">
             <h2 class="m-0 text-primary">
-                <img class="img-fluid me-2 rounded-5" src="{{asset('assets/ui/img/icon-3.png')}}" alt="">EV Power</h2>
+                <img class="img-fluid me-2 rounded-5 header_img" src="{{asset('assets/ui/img/foodlifesavers LOGO v2.png')}}" alt=""></h2>
         </a>
         <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="collapse navbar-collapse responsive_header_nav" id="navbarCollapse">
             <div class="navbar-nav ms-auto py-4 py-lg-0">
                  <a href="{{url('/')}}" class="nav-item nav-link active">Home</a>
                 
@@ -47,7 +47,7 @@
              
             </div>
             <div class="h-100 d-lg-inline-flex align-items-center d-block">
-                <a type="button" class="btn btn-primary text-light me-2" href="{{route('login')}}">DONATE</a>
+                <a type="button" class="btn btn-primary btn-sm text-light me-2 responsive_header_nav" href="{{route('login')}}">DONATE</a>
             </div>
 
              <div class="googleNav">

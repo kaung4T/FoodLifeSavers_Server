@@ -8,6 +8,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>@yield('title','EV Power')</title>
 
+    <!-- web icon -->
+    <link class="favicon" rel="icon" type="image/x-icon" href="{{asset('assets/ui/img/foodlifesavers LOGO v1.png')}}">
+
   
 	 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Roboto:wght@500;700&display=swap"
         rel="stylesheet">

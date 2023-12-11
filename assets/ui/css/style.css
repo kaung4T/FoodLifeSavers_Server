@@ -18,6 +18,11 @@ body{
 }
 
 
+.header_img {
+  width: 5.5rem;
+  height: 4.5rem;
+}
+
 
 /* Preloader
 ============================= */
@@ -1120,3 +1125,25 @@ padding-left: 8px;
     width: 100%;
     background-color: red;
 }
+
+
+
+
+@media (max-width: 1350px) { 
+  .responsive_header_nav {
+      font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 1240px) { 
+  .responsive_header_nav {
+      font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 1140px) { 
+  .responsive_header_nav {
+      font-size: 0.6rem;
+  }
+}
+
