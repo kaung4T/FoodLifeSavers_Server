@@ -19,9 +19,13 @@
                Subscribe to our newsletter and witness the power of compassion in action. Stay updated on our latest humanitarian efforts, bringing hope, aid, and positive change to those in need. Join us in making a difference today.
             </p>
             <div class="position-relative">
+
+                <form action="" method="POST" enctype="multipart/form-data">
             <input type="text" class="form-control ps-4 pe-5 emailSignup" 
                     placeholder="Your email">
     <button type="button" class="btn btn-primary btn-sm py-2 px-3 position-absolute top-0 end-0 me-2 emailSignupBtn"> SignUp </button>
+                </form>
+
             </div>
         </div>
         <div class="col-lg-3 col-md-6">

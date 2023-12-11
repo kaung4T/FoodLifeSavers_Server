@@ -10,6 +10,7 @@ use App\Http\Controllers\agent\AgentController;
 use App\Http\Controllers\Backend\RoleController;
 use App\Http\Controllers\Backend\PropertyTypeController;
 use App\Http\Controllers\ContactController;
+use Symfony\Component\HttpKernel\Event\ControllerEvent;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,6 +29,9 @@ use App\Http\Controllers\ContactController;
 
 Route::get('/', [Controller::class, 'index']);
 Route::get('/panasonic', [ProductController::class, 'Panasonic'])->name('panasonic');
+
+// EMAIL Subscribe sign up
+Route::post('/email_subscribe', [Controller::class, 'email_subscribe'])->name('email_subscribe');
 
 Route::controller(ContactController::class)->group(function () {
     Route::get('/about', 'about')->name('about.page');
