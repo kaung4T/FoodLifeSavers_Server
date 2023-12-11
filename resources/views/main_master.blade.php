@@ -12,23 +12,34 @@
 	 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Roboto:wght@500;700&display=swap"
         rel="stylesheet">
 
+
     <!-- Libraries Stylesheet -->
     <link href="{{asset('assets/ui/lib/owlcarousel/assets/owl.carousel.min.css')}}" rel="stylesheet">
+    <!-- Libraries Stylesheet with pubic folder -->
+    <link href="{{asset('ui/lib/owlcarousel/assets/owl.carousel.min.css')}}" rel="stylesheet">
+
 
     <!-- Customized Bootstrap Stylesheet -->
-	
     <link href="{{asset('assets/ui/css/bootstrap.min.css')}}" rel="stylesheet">	
+    <link href="{{asset('assets/ui/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
+    <!-- Customized Bootstrap Stylesheet with public folder -->
+    <link href="{{asset('ui/css/bootstrap.min.css')}}" rel="stylesheet">	
+    <link href="{{asset('ui/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
 
- <link href="{{asset('assets/ui/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
+
 	    <!-- Icon Font Stylesheet -->
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.3/css/intlTelInput.min.css" />
-
 	<link href="{{asset('assets/ui/lib/animate/animate.min.css" rel="stylesheet')}}">
+    <!-- Icon Font Stylesheet with public folder -->
+	<link href="{{asset('ui/lib/animate/animate.min.css" rel="stylesheet')}}">
 	
+
     <!-- Template Stylesheet -->
     <link href="{{asset('assets/ui/css/style.css')}}" rel="stylesheet">
+    <!-- Template Stylesheet with public folder -->
+    <link href="{{asset('ui/css/style.css')}}" rel="stylesheet">
+
 
   <body>
 
@@ -52,26 +63,41 @@
 	
 	
 	
-	 <script src="{{asset('assets/ui/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
-	 
+	  <script src="{{asset('assets/ui/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
 	  <script src="{{asset('assets/ui/bootstrap/js/jquery-3.7.1.min.js')}}"></script>
+      <!-- JS script with public folder -->
+      <script src="{{asset('ui/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+	  <script src="{{asset('ui/bootstrap/js/jquery-3.7.1.min.js')}}"></script>
 	
+
     <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>-->
-	
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js" integrity="sha512-uKQ39gEGiyUJl4AI6L+ekBdGKpGw4xJ55+xyJG7YFlJokPNYegn9KwQ3P8A7aFQAUtUsAQHep+d/lrGqrbPIDQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-	<!-- JavaScript Libraries -->
+	
+
+    <!-- JavaScript Libraries -->
     <script src="{{asset('assets/ui/lib/wow/wow.min.js')}}"></script>
     <script src="{{asset('assets/ui/lib/easing/easing.min.js')}}"></script>
     <script src="{{asset('assets/ui/lib/waypoints/waypoints.min.js')}}"></script>
     <script src="{{asset('assets/ui/lib/owlcarousel/owl.carousel.min.js')}}"></script>
     <script src="{{asset('assets/ui/lib/counterup/counterup.min.js')}}"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.3/js/intlTelInput.min.js"></script>
+    <!-- JavaScript Libraries with public folder -->
+    <script src="{{asset('ui/lib/wow/wow.min.js')}}"></script>
+    <script src="{{asset('ui/lib/easing/easing.min.js')}}"></script>
+    <script src="{{asset('ui/lib/waypoints/waypoints.min.js')}}"></script>
+    <script src="{{asset('ui/lib/owlcarousel/owl.carousel.min.js')}}"></script>
+    <script src="{{asset('ui/lib/counterup/counterup.min.js')}}"></script>
+
+
     <!-- Template Javascript -->
-    
-   
-     <script src="{{asset('assets/ui/js/utils.js')}}"></script>
+    <script src="{{asset('assets/ui/js/utils.js')}}"></script>
+    <!-- Template Javascript with public folder -->
+    <script src="{{asset('ui/js/utils.js')}}"></script>
+
 	{{-- Google Font Link --}}
     <script src="{{asset('assets/ui/js/main.js')}}"></script>
+    <!-- Template Javascript with public folder -->
+    <script src="{{asset('ui/js/main.js')}}"></script>
+
 	{{-- Google Font Link --}}
 	 <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
    
