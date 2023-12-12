@@ -284,29 +284,33 @@
                 <h1 class="display-6">Gaza Winter Aid</h1>
                 <p class="text-primary fs-5 mb-5">Winter Supply Countdown</p>
             </div>
-            <div class="row g-3 justify-content-center">
-                <div class="col-6 col-md-3 wow fadeIn" data-wow-delay="0.1s">
-                    <div class="bg-white text-center p-3">
+
+            <!-- Default setup with row and col -->
+            <!-- <div class="row g-3 justify-content-center">
+                <div class="col-6 col-md-3 wow fadeIn" data-wow-delay="0.1s"> -->
+            <div class="justify-content-center">
+                <div class="wow fadeIn" data-wow-delay="0.1s">
+                    <div class="bg-white text-center p-3 gaza-div-group">
 
                         <!-- <h1 class="mb-0 gaza-count-down">60</h1> -->
                         <!-- <span class="text-primary fs-5">Days</span> -->
 
                         <div id="gaza-date-time-group">
                             <div class="dhms">
-                                <h1 id="days" class="mb-0"></h1>
-                                <span class="text-primary fs-5">Days </span>
+                                <h1 id="days" class="mb-0 gaza-count-down"></h1>
+                                <span class="text-primary fs-5 gaza-count-down">Days </span>
                             </div>
                             <div class="dhms">
                                 <h1 id="hours" class="mb-0 gaza-count-down"></h1>
-                                <span class="text-primary fs-5">Hours </span>
+                                <span class="text-primary fs-5 gaza-count-down">Hours </span>
                             </div>
                             <div class="dhms">
                                 <h1 id="minutes" class="mb-0 gaza-count-down"></h1>
-                                <span class="text-primary fs-5">Minutes </span>
+                                <span class="text-primary fs-5 gaza-count-down">Minutes </span>
                             </div>
                             <div class="dhms">
                                 <h1 id="seconds" class="mb-0 gaza-count-down"></h1>
-                                <span class="text-primary fs-5">Seconds </span>
+                                <span class="text-primary fs-5 gaza-count-down">Seconds </span>
                             </div>
                         </div>
 

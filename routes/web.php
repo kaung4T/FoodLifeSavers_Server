@@ -9,8 +9,20 @@ use App\Http\Controllers\admin\AdminController;
 use App\Http\Controllers\agent\AgentController;
 use App\Http\Controllers\Backend\RoleController;
 use App\Http\Controllers\Backend\PropertyTypeController;
-use App\Http\Controllers\ContactController;
 use Symfony\Component\HttpKernel\Event\ControllerEvent;
+
+use App\Http\Controllers\AboutController;
+use App\Http\Controllers\EarningsController;
+use App\Http\Controllers\OurWorkController;
+use App\Http\Controllers\ContactController;
+
+use App\Http\Controllers\Products\LGChemController;
+use App\Http\Controllers\Products\SamsungSDIController;
+use App\Http\Controllers\Products\TeslaPanasonicController;
+
+use App\Http\Controllers\Milestones\InvestmentController;
+use App\Http\Controllers\Milestones\ManifestingController;
+use App\Http\Controllers\Milestones\TradingReportController;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,9 +45,23 @@ Route::get('/panasonic', [ProductController::class, 'Panasonic'])->name('panason
 // EMAIL Subscribe sign up
 Route::post('/email_subscribe', [Controller::class, 'email_subscribe'])->name('email_subscribe');
 
+Route::get('/about', [AboutController::class, 'about'])->name('about');
+Route::get('/earning', [EarningsController::class, 'earning'])->name('earning');
+Route::get('/our_work', [OurWorkController::class, 'our_work'])->name('our_work');
+Route::get('/contact', [ContactController::class, 'contact'])->name('contact');
+
+Route::get('/chem', [LGChemController::class, 'chem'])->name('chem');
+Route::get('/panasonic', [SamsungSDIController::class, 'panasonic'])->name('panasonic');
+Route::get('/samsung', [TeslaPanasonicController::class, 'samsung'])->name('samsung');
+
+Route::get('/investment', [InvestmentController::class, 'investment'])->name('investment');
+Route::get('/manifesting', [ManifestingController::class, 'manifesting'])->name('manifesting');
+Route::get('/trading', [TradingReportController::class, 'trading'])->name('trading');
+
+
 Route::controller(ContactController::class)->group(function () {
-    Route::get('/about', 'about')->name('about.page');
-    Route::get('/contact', 'contact')->name('contact.page');
+    // Route::get('/about', 'about')->name('about.page');
+    // Route::get('/contact', 'contact')->name('contact.page');
 });
 
 

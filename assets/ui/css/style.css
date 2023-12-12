@@ -28,6 +28,10 @@ body{
   display: flex;
 }
 
+.gaza-div-group {
+
+}
+
 #gaza-date-time-group {
   display: flex;
   align-items: center;
@@ -1174,3 +1178,23 @@ padding-left: 8px;
   }
 }
 
+@media (max-width: 570px) { 
+  .dhms {
+    margin: 1rem;
+  }
+}
+
+@media (max-width: 420px) { 
+  .gaza-count-down {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 400px) { 
+  #gaza-date-time-group {
+    display: contents;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+  }
+}
