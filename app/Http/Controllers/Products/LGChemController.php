@@ -9,6 +9,6 @@ class LGChemController extends Controller
 {
     public function chem ()
     {
-        return view('chem');
+        return view('products.chem');
     }
 }

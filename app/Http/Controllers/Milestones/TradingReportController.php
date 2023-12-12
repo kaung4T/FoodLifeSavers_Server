@@ -9,6 +9,6 @@ class TradingReportController extends Controller
 {
     public function trading ()
     {
-        return view('trading');
+        return view('milestone.trading');
     }
 }

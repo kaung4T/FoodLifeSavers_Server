@@ -9,6 +9,6 @@ class TeslaPanasonicController extends Controller
 {
     public function panasonic ()
     {
-        return view('panasonic');
+        return view('products.panasonic');
     }
 }

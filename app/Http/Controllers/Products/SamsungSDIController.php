@@ -9,6 +9,6 @@ class SamsungSDIController extends Controller
 {
     public function samsung ()
     {
-        return view('samsung');
+        return view('products.samsung');
     }
 }

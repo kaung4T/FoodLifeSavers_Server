@@ -9,6 +9,6 @@ class ManifestingController extends Controller
 {
     public function manifesting ()
     {
-        return view('manifesting');
+        return view('milestone.manifesting');
     }
 }
