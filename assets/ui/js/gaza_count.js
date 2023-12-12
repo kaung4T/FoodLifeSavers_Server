@@ -4,9 +4,9 @@
 const today = new Date();
 let today_day = today.getDate();
 // Please write your specific end date in endDate
-let endDate = "17"; 
+let endDate = "10"; 
 // end
-let specialDate = `December ${endDate} 2023 00:00:00`;
+let specialDate = `February ${endDate} 2024 00:00:00`;
 
 const days = document.querySelector("#days");
 const hours = document.querySelector("#hours");
@@ -21,13 +21,22 @@ const day = hour * 24;
 const birthdayTime = new Date(specialDate);
 
 const setTime = () => {
-  const currentTime = new Date; // Move to here.
-  let specialTime = birthdayTime.getTime() - currentTime.getTime(); // And this.
+  const currentTime = new Date;
+  let specialTime = birthdayTime.getTime() - currentTime.getTime();
   const specialHour = Math.floor((specialTime % day) / hour);
   const specialMinute = Math.floor((specialTime % hour) / minute);
   const specialSecond = Math.floor((specialTime % minute) / second);
 
-  days.innerHTML = Number(endDate) - today_day;
+    
+    const countDownDate = new Date(specialDate).getTime();
+    const now = new Date().getTime();
+    const timeleft = countDownDate - now;
+    const letf_days = Math.floor(timeleft / (1000 * 60 * 60 * 24));
+
+    days.innerText = letf_days;
+
+
+
   hours.innerText = specialHour;
   minutes.innerText = specialMinute;
   seconds.innerText = specialSecond;
