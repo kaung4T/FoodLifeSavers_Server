@@ -51,8 +51,8 @@ Route::get('/our_work', [OurWorkController::class, 'our_work'])->name('our_work'
 Route::get('/contact', [ContactController::class, 'contact'])->name('contact');
 
 Route::get('/chem', [LGChemController::class, 'chem'])->name('chem');
-Route::get('/samsung', [SamsungSDIController::class, 'samsung'])->name('panasonic');
-Route::get('/panasonic', [TeslaPanasonicController::class, 'panasonic'])->name('samsung');
+Route::get('/samsung', [SamsungSDIController::class, 'samsung'])->name('samsung');
+Route::get('/panasonic', [TeslaPanasonicController::class, 'panasonic'])->name('panasonic');
 
 Route::get('/investment', [InvestmentController::class, 'investment'])->name('investment');
 Route::get('/manifesting', [ManifestingController::class, 'manifesting'])->name('manifesting');

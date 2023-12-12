@@ -14,35 +14,35 @@
               <div class="nav-item dropdown">
                 <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Products</a>
                 <div class="dropdown-menu shadow-sm m-0">
-                    <a href="#" class="dropdown-item">Tesla / Panasonic</a>
-                    <a href="#" class="dropdown-item">LG Chem</a>
-                    <a href="#" class="dropdown-item">Samsung SDI</a>
+                    <a href="{{ route('panasonic') }}" class="dropdown-item">Tesla / Panasonic</a>
+                    <a href="{{ route('chem') }}" class="dropdown-item">LG Chem</a>
+                    <a href="{{ route('samsung') }}" class="dropdown-item">Samsung SDI</a>
                 </div>
             </div>
 
               <div class="nav-item dropdown">
-                <a href="#" class="nav-link" data-bs-toggle="dropdown">Earnings</a>
+                <a href="{{ route('earning') }}" class="nav-link">Earnings</a>
             </div>
 
               <div class="nav-item dropdown">
                 <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Milestones</a>
                 <div class="dropdown-menu shadow-sm m-0">
-                    <a href="#" class="dropdown-item"> Investment </a>
-                    <a href="#" class="dropdown-item"> Manifesting </a>
-                    <a href="#" class="dropdown-item"> Trading Report </a>
+                    <a href="{{ route('investment') }}" class="dropdown-item"> Investment </a>
+                    <a href="{{ route('manifesting') }}" class="dropdown-item"> Manifesting </a>
+                    <a href="{{ route('trading') }}" class="dropdown-item"> Trading Report </a>
                 </div>
             </div>
 
                 <div class="nav-item dropdown">
-                    <a href="#" class="nav-link" data-bs-toggle="dropdown">Our Work</a>
+                    <a href="{{ route('our_work') }}" class="nav-link">Our Work</a>
                 </div>
 
                 <div class="nav-item dropdown">
-                    <a href="#" class="nav-link" data-bs-toggle="dropdown">About Us</a>
+                    <a href="{{ route('about') }}" class="nav-link">About Us</a>
                 </div>
 
                 <div class="nav-item dropdown">
-                    <a href="#" class="nav-link" data-bs-toggle="dropdown">Contact</a>
+                    <a href="{{ route('contact') }}" class="nav-link">Contact</a>
                 </div>
              
             </div>
