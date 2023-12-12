@@ -19,8 +19,9 @@ body{
 
 
 .header_img {
-  width: 5.5rem;
-  height: 4.5rem;
+  margin-top: -5px;
+  width: 130px;
+  height: 120px;
 }
 
 #countDiv {
@@ -378,7 +379,7 @@ h6,
 
 .navbar-expand-lg
 {
-  height: 75px;
+  height: 120px;
   background: #f5ffff;
   z-index: 100;
 }
@@ -410,6 +411,17 @@ h6,
 }
 
 @media (max-width: 991.98px) {
+  
+    .header_img {
+      width: 90px;
+      height: 80px;
+    }
+
+    .navbar-expand-lg
+    {
+      height: 75px;
+    }
+
     .navbar .navbar-nav .nav-link  {
         margin-right: 0;
         padding: 10px 0;
