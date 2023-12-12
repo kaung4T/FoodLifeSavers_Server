@@ -287,8 +287,29 @@
             <div class="row g-3 justify-content-center">
                 <div class="col-6 col-md-3 wow fadeIn" data-wow-delay="0.1s">
                     <div class="bg-white text-center p-3">
-                        <h1 class="mb-0">60</h1>
-                        <span class="text-primary fs-5">Days</span>
+
+                        <!-- <h1 class="mb-0 gaza-count-down">60</h1> -->
+                        <!-- <span class="text-primary fs-5">Days</span> -->
+
+                        <div id="gaza-date-time-group">
+                            <div class="dhms">
+                                <h1 id="days" class="mb-0"></h1>
+                                <span class="text-primary fs-5">Days </span>
+                            </div>
+                            <div class="dhms">
+                                <h1 id="hours" class="mb-0 gaza-count-down"></h1>
+                                <span class="text-primary fs-5">Hours </span>
+                            </div>
+                            <div class="dhms">
+                                <h1 id="minutes" class="mb-0 gaza-count-down"></h1>
+                                <span class="text-primary fs-5">Minutes </span>
+                            </div>
+                            <div class="dhms">
+                                <h1 id="seconds" class="mb-0 gaza-count-down"></h1>
+                                <span class="text-primary fs-5">Seconds </span>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
                 
@@ -373,5 +394,6 @@
 
  {{-- =================End of Main Content --}}
 	
+    <script src="{{asset('assets/ui/js/gaza_count.js')}}"></script>
 
 @endsection
