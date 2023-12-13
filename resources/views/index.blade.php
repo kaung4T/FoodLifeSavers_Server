@@ -99,7 +99,7 @@
                         <div class="ps-4">
                             <h5 class="mb-3 text-primary"> Lifesaving Impact </h5>
                             <span>
-                                <p class="short_description">
+                                <p>
                                     Your donations directly save lives and ease the suffering of Gaza refugees facing critical shortages.
                                 </p>
                             </span>
@@ -112,7 +112,7 @@
                         <div class="ps-4">
                             <h5 class="mb-3 text-primary"> Immediate Relief </h5>
                             <span> 
-                                <p class="short_description">
+                                <p>
                                     The urgent situation in Gaza demands swift action, and your charity provides timely assistance to those in need.
                                 </p>    
                             </span>
@@ -125,7 +125,7 @@
                         <div class="ps-4">
                             <h5 class="mb-3 text-primary"> Comprehensive Assistance </h5>
                             <span>
-                                <p class="short_description">
+                                <p>
                                     Addressing multiple aspects of the crisis, including food and medical aid, ensures a well-rounded impact from donor contributions.
                                 </p>
                             </span>
@@ -138,7 +138,7 @@
                         <div class="ps-4">
                             <h5 class="mb-3 text-primary"> Transparent Accountability </h5>
                             <span>
-                                <p class="short_description">
+                                <p>
                                     Regular updates on fund utilization build trust, demonstrating a commitment to transparency and accountability.
                                 </p>
                             </span>
@@ -151,7 +151,7 @@
                         <div class="ps-4">
                             <h5 class="mb-3 text-primary"> Sustainable Solutions </h5>
                             <span> 
-                               <p class="short_description">
+                               <p>
                                     Beyond immediate relief, your charity focuses on long-term development projects for lasting impact and stability.
                                 </p>
                             </span>
@@ -164,7 +164,7 @@
                         <div class="ps-4">
                             <h5 class="mb-3 text-primary"> Global Support </h5>
                             <span> 
-                                <p class="short_description">
+                                <p>
                                     Donors become part of a global effort, contributing to the collective responsibility of the international community in supporting Gaza's affected populations.
                                 </p>    
                             </span>
