@@ -47,6 +47,11 @@ body{
   margin-top: 40px;
 }
 
+.short_description {
+  text-align: justify;
+  /* word-break: break-all; */
+}
+
 /* Preloader
 ============================= */
 #preloader {

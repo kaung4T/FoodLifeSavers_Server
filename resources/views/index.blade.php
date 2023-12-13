@@ -99,7 +99,7 @@
                         <div class="ps-4">
                             <h5 class="mb-3 text-primary"> Lifesaving Impact </h5>
                             <span>
-                                <p>
+                                <p class="short_description">
                                     Your donations directly save lives and ease the suffering of Gaza refugees facing critical shortages.
                                 </p>
                             </span>
@@ -112,7 +112,7 @@
                         <div class="ps-4">
                             <h5 class="mb-3 text-primary"> Immediate Relief </h5>
                             <span> 
-                                <p>
+                                <p class="short_description">
                                     The urgent situation in Gaza demands swift action, and your charity provides timely assistance to those in need.
                                 </p>    
                             </span>
@@ -125,7 +125,7 @@
                         <div class="ps-4">
                             <h5 class="mb-3 text-primary"> Comprehensive Assistance </h5>
                             <span>
-                                <p>
+                                <p class="short_description">
                                     Addressing multiple aspects of the crisis, including food and medical aid, ensures a well-rounded impact from donor contributions.
                                 </p>
                             </span>
@@ -138,7 +138,7 @@
                         <div class="ps-4">
                             <h5 class="mb-3 text-primary"> Transparent Accountability </h5>
                             <span>
-                                <p>
+                                <p class="short_description">
                                     Regular updates on fund utilization build trust, demonstrating a commitment to transparency and accountability.
                                 </p>
                             </span>
@@ -151,7 +151,7 @@
                         <div class="ps-4">
                             <h5 class="mb-3 text-primary"> Sustainable Solutions </h5>
                             <span> 
-                               <p>
+                               <p class="short_description">
                                     Beyond immediate relief, your charity focuses on long-term development projects for lasting impact and stability.
                                 </p>
                             </span>
@@ -164,7 +164,7 @@
                         <div class="ps-4">
                             <h5 class="mb-3 text-primary"> Global Support </h5>
                             <span> 
-                                <p>
+                                <p class="short_description">
                                     Donors become part of a global effort, contributing to the collective responsibility of the international community in supporting Gaza's affected populations.
                                 </p>    
                             </span>
@@ -192,7 +192,7 @@
                         <h5 class="mb-3 text-primary"> Gaza's Toll </h5>
                         </div>
                         
-                        <p> Gaza faced devastating strikes, with 10,800 reported deaths, 26,000 injuries, and 1.5 million displaced, creating a dire humanitarian situation. </p>
+                        <p class="short_description"> Gaza faced devastating strikes, with 10,800 reported deaths, 26,000 injuries, and 1.5 million displaced, creating a dire humanitarian situation. </p>
                         <a href="#" class="btn btn-primary btn-sm float-end"> Read More <i class="fa fa-arrow-right ms-2"></i></a>
                     </div>
                 </div>
@@ -203,7 +203,7 @@
                         <h5 class="mb-3 text-primary"> Global Impact </h5>
                         </div>
                         
-                        <p> Protests worldwide demand a ceasefire, emphasizing the urgent need for international support to address the escalating crisis.
+                        <p class="short_description"> Protests worldwide demand a ceasefire, emphasizing the urgent need for international support to address the escalating crisis.
                         </p>
                         <a href="" class="btn btn-primary btn-sm float-end"> Read More <i class="fa fa-arrow-right ms-2"></i></a>
                     </div>
@@ -215,7 +215,7 @@
                           <img class="img-fluid mb-4 rounded-5" src="{{asset('assets/ui/img/icon-2.png')}}" alt="">
                         <h5 class="mb-3 text-primary"> International Response - I </h5>
                       </div>
-                        <p> 
+                        <p class="short_description"> 
                            Despite international calls, the conflict continues, prompting Israel to implement four-hour pauses in fighting in specific areas of 
                             northern Gaza.
                         </p>
@@ -231,7 +231,7 @@
                         <h5 class="mb-3 text-primary"> International Response - II </h5>
                         </div>
                        
-                        <p> 
+                        <p class="short_description"> 
                            to facilitate humanitarian aid delivery Despite international calls, the conflict continues, prompting Israel to implement four-hour pauses in fighting in specific areas of 
                             northern Gaza to facilitate humanitarian aid delivery.
                         </p>
