@@ -64,17 +64,17 @@
     <div class="container-xxl bg-light py-5 my-5">
         <div class="container py-5">
             <div class="row g-5">
-                <div class="col-lg-4 col-md-6 text-center wow fadeIn" data-wow-delay="0.1s">
+                <div class="col-lg-4 col-md-6 text-center wow fadeIn motion_item_bottom" data-wow-delay="0.1s">
                     <img class="img-fluid mb-4 rounded-5" src="{{asset('assets/ui/img/hero-2.png')}}" alt="">
                     <h1 class="display-4"> 18 </h1>
                     <p class="fs-5 text-primary mb-0"> Today Donations </p>
                 </div>
-                <div class="col-lg-4 col-md-6 text-center wow fadeIn" data-wow-delay="0.3s">
+                <div class="col-lg-4 col-md-6 text-center wow fadeIn motion_item_bottom" data-wow-delay="0.3s">
                     <img class="img-fluid mb-4 rounded-5" src="{{asset('assets/ui/img/icon-1.png')}}" alt="">
                     <h1 class="display-4"> 810 </h1>
                     <p class="fs-5 text-primary mb-0"> Monthly Donations </p>
                 </div>
-                <div class="col-lg-4 col-md-6 text-center wow fadeIn" data-wow-delay="0.5s">
+                <div class="col-lg-4 col-md-6 text-center wow fadeIn motion_item_bottom" data-wow-delay="0.5s">
                     <img class="img-fluid mb-4 rounded-5" src="{{asset('assets/ui/img/total_donation.png')}}" alt="">
                     <h1 class="display-4"> 1200 </h1>
                     <p class="fs-5 text-primary mb-0"> Total Donations </p>
@@ -88,12 +88,12 @@
     <!-- Features Start -->
     <div class="container-xxl py-5">
         <div class="container">
-            <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+            <div class="text-center mx-auto wow fadeInUp motion_item_top" data-wow-delay="0.1s" style="max-width: 500px;">
                 <h1 class="display-6">Why Us!</h1>
                 <p class="text-primary fs-5 mb-5"> Why Should You Donate? </p>
             </div>
             <div class="row g-5">
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="col-lg-4 col-md-6 wow fadeInUp motion_item_top" data-wow-delay="0.1s">
                     <div class="d-flex align-items-start">
                         <img class="img-fluid flex-shrink-0" src="{{asset('assets/ui/img/icon-7.png')}}" alt="">
                         <div class="ps-4">
@@ -106,7 +106,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="col-lg-4 col-md-6 wow fadeInUp motion_item_top" data-wow-delay="0.3s">
                     <div class="d-flex align-items-start">
                         <img class="img-fluid flex-shrink-0 rounded-5" src="{{asset('assets/ui/img/icon-6.png')}}" alt="">
                         <div class="ps-4">
@@ -119,7 +119,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="col-lg-4 col-md-6 wow fadeInUp motion_item_top" data-wow-delay="0.5s">
                     <div class="d-flex align-items-start">
                         <img class="img-fluid flex-shrink-0 rounded-5" src="{{asset('assets/ui/img/icon-5.png')}}" alt="">
                         <div class="ps-4">
@@ -132,7 +132,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="col-lg-4 col-md-6 wow fadeInUp motion_item_top" data-wow-delay="0.1s">
                     <div class="d-flex align-items-start">
                         <img class="img-fluid flex-shrink-0 rounded-2" src="{{asset('assets/ui/img/icon-4.png')}}" alt="">
                         <div class="ps-4">
@@ -145,7 +145,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="col-lg-4 col-md-6 wow fadeInUp motion_item_top" data-wow-delay="0.3s">
                     <div class="d-flex align-items-start">
                         <img class="img-fluid flex-shrink-0 rounded-5" src="{{asset('assets/ui/img/icon-3.png')}}" alt="">
                         <div class="ps-4">
@@ -158,7 +158,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="col-lg-4 col-md-6 wow fadeInUp motion_item_top" data-wow-delay="0.5s">
                     <div class="d-flex align-items-start">
                         <img class="img-fluid flex-shrink-0 rounded-5" src="{{asset('assets/ui/img/icon-8.png')}}" alt="">
                         <div class="ps-4">
@@ -180,12 +180,12 @@
     <!-- Service Start -->
     <div class="container-xxl bg-light py-5 my-5">
         <div class="container py-5">
-            <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+            <div class="text-center mx-auto wow fadeInUp motion_item_top" data-wow-delay="0.1s" style="max-width: 500px;">
                 <h1 class="display-6">Services</h1>
                 <p class="text-primary fs-5 mb-5"> Crisis News and Latest Updates </p>
             </div>
             <div class="row g-4">
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="col-lg-4 col-md-6 wow fadeInUp motion_item_top" data-wow-delay="0.1s">
                     <div class="service-item bg-white p-5">
                         <div class="text-center">
                             <img class="img-fluid mb-4 rounded-5" src="{{asset('assets/ui/img/icon-9.png')}}" alt="">
@@ -196,7 +196,7 @@
                         <a href="#" class="btn btn-primary btn-sm float-end"> Read More <i class="fa fa-arrow-right ms-2"></i></a>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="col-lg-4 col-md-6 wow fadeInUp motion_item_top" data-wow-delay="0.3s">
                     <div class="service-item bg-white p-5">
                         <div class="text-center">
                             <img class="img-fluid mb-4 rounded-5" src="{{asset('assets/ui/img/icon-10.png')}}" alt="">
@@ -209,7 +209,7 @@
                     </div>
                 </div>
 
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="col-lg-4 col-md-6 wow fadeInUp motion_item_top" data-wow-delay="0.5s">
                     <div class="service-item bg-white p-5">
                       <div class="text-center">
                           <img class="img-fluid mb-4 rounded-5" src="{{asset('assets/ui/img/icon-2.png')}}" alt="">
@@ -224,7 +224,7 @@
                 </div>
 
                   
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="col-lg-4 col-md-6 wow fadeInUp motion_item_top" data-wow-delay="0.5s">
                     <div class="service-item bg-white p-5">
                         <div class="text-center">
                              <img class="img-fluid mb-4 rounded-5" src="{{asset('assets/ui/img/icon-2.png')}}" alt="">
@@ -247,11 +247,11 @@
     <!-- Roadmap Start -->
     <div class="container-xxl py-5">
         <div class="container">
-            <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+            <div class="text-center mx-auto wow fadeInUp motion_item_top" data-wow-delay="0.1s" style="max-width: 500px;">
                 <h1 class="display-6"> Roadmap </h1>
                 <p class="text-primary fs-5 mb-5"> We Can Transform Your Support into Life-Saving Work </p>
             </div>
-            <div class="owl-carousel roadmap-carousel wow fadeInUp" data-wow-delay="0.1s">
+            <div class="owl-carousel roadmap-carousel wow fadeInUp motion_item_top" data-wow-delay="0.1s">
                 <div class="roadmap-item">
                     <div class="roadmap-point"><span></span></div>
                     <h5> October 2023 </h5>
@@ -280,7 +280,7 @@
     <!-- Token Sale Start -->
     <div class="container-xxl bg-light py-5 my-5">
         <div class="container py-5">
-            <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+            <div class="text-center mx-auto wow fadeInUp motion_item_top" data-wow-delay="0.1s" style="max-width: 500px;">
                 <h1 class="display-6">Gaza Winter Aid</h1>
                 <p class="text-primary fs-5 mb-5">Winter Supply Countdown</p>
             </div>
@@ -289,7 +289,7 @@
             <!-- <div class="row g-3 justify-content-center">
                 <div class="col-6 col-md-3 wow fadeIn" data-wow-delay="0.1s"> -->
             <div class="justify-content-center">
-                <div class="wow fadeIn" data-wow-delay="0.1s">
+                <div class="wow fadeIn motion_item_top" data-wow-delay="0.1s">
                     <div class="bg-white text-center p-3 gaza-div-group">
 
                         <!-- <h1 class="mb-0 gaza-count-down">60</h1> -->
@@ -334,12 +334,12 @@
  {{--================== Main Content ==================  --}}
 
 	<div class="container py-5">
-            <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
+            <div class="section-title text-center position-relative pb-3 mb-5 mx-auto motion_item_bottom" style="max-width: 600px;">
                 <h5 class="fw-bold text-primary text-uppercase">Our Donation Plans</h5>
                 <h3 class="mb-0"> We are Offering Competitive Plans for Other Lives </h3>
             </div>
             <div class="row g-0">
-                <div class="col-lg-4 wow slideInUp" data-wow-delay="0.6s" style="visibility: visible; animation-delay: 0.6s; animation-name: slideInUp;">
+                <div class="col-lg-4 wow slideInUp motion_item_bottom" data-wow-delay="0.6s" style="visibility: visible; animation-delay: 0.6s; animation-name: slideInUp;">
                     <div class="bg-light rounded">
                         <div class="border-bottom py-4 px-5 mb-4">
                             <h4 class="text-primary mb-1">Daily Plan</h4>
@@ -357,7 +357,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 wow slideInUp" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: slideInUp;">
+                <div class="col-lg-4 wow motion_item_bottom" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: slideInUp;">
                     <div class="bg-white rounded shadow position-relative" style="z-index: 1;">
                         <div class="border-bottom py-4 px-5 mb-4">
                             <h4 class="text-primary mb-1">Monthly Plan</h4>
@@ -375,7 +375,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 wow slideInUp" data-wow-delay="0.9s" style="visibility: visible; animation-delay: 0.9s; animation-name: slideInUp;">
+                <div class="col-lg-4 wow motion_item_bottom" data-wow-delay="0.9s" style="visibility: visible; animation-delay: 0.9s; animation-name: slideInUp;">
                     <div class="bg-light rounded">
                         <div class="border-bottom py-4 px-5 mb-4">
                             <h4 class="text-primary mb-1">Advanced Plan</h4>
