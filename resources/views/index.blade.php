@@ -3,10 +3,10 @@
 @section('content')
 	
 <!-- Header Start -->
-    <div class="container-fluid hero-header bg-light py-5 mb-5">
+    <div class="container-fluid hero-header bg-light py-5 mb-5 index_header">
         <div class="container py-5">
             <div class="row g-5 align-items-center">
-                <div class="col-lg-6">
+                <div class="col-lg-6 motion_item_left">
                     <h1 class="display-4 mb-3 animated slideInDown">Make Better Life With Your Donation Now </h1>
                     <p class="animated slideInDown">
                        In Gaza, there are severe shortages of water, food, fuel, and medical supplies. FoodLifeSaver is urgently organizing aid to Gaza to support Palestine Refugees in need.
@@ -14,7 +14,7 @@
                     </p>
                     <a href="#" class="btn btn-primary btn-sm py-2 px-2 animated slideInDown">DONATE NOW</a>
                 </div>
-                <div class="col-lg-6 animated fadeIn">  
+                <div class="col-lg-6 animated fadeIn motion_item_right">  
                     <img class="img-fluid animated pulse infinite" style="animation-duration: 3s;" src="{{asset('assets/ui/img/hero-1.png')}}" alt="">
                 </div>
             </div>
@@ -27,10 +27,10 @@
     <div class="container-xxl py-5">
         <div class="container">
             <div class="row g-5 align-items-center">
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="col-lg-6 wow fadeInUp motion_item_left" data-wow-delay="0.1s">
                     <img class="img-fluid" src="{{asset('assets/ui/img/about.png')}}" alt="">
                 </div>
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="col-lg-6 wow fadeInUp motion_item_right" data-wow-delay="0.5s">
                     <div class="h-100">
                         <h1 class="display-6">About Us</h1>
                         <p class="text-primary fs-5 mb-4"> One Small Step to Make Big Changes </p>
@@ -399,5 +399,6 @@
  {{-- =================End of Main Content --}}
 	
     <script src="{{asset('assets/ui/js/gaza_count.js')}}"></script>
+    <script src="{{asset('assets/ui/js/page_motion.js')}}"></script>
 
 @endsection

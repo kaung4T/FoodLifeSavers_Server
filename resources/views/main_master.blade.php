@@ -8,6 +8,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>@yield('title','EV Power')</title>
 
+    <!-- scroll motion api -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
     <!-- web icon -->
     <link class="favicon" rel="icon" type="image/x-icon" href="{{asset('assets/ui/img/foodlifesavers LOGO v1.png')}}">
 

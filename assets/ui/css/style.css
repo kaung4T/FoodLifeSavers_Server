@@ -43,6 +43,9 @@ body{
   margin: 2rem;
 }
 
+.index_header {
+  margin-top: 40px;
+}
 
 /* Preloader
 ============================= */
