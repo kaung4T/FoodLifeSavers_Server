@@ -8,6 +8,7 @@
 // Is the same as...
 
 ScrollReveal().reveal('.motion_item_left', {
+    scale: 0.1,
 
     distance: '70px',
     origin: 'left',
@@ -17,6 +18,7 @@ ScrollReveal().reveal('.motion_item_left', {
 });
 
 ScrollReveal().reveal('.motion_item_right', {
+    scale: 0.1,
 
     distance: '70px',
     origin: 'right',
@@ -26,6 +28,7 @@ ScrollReveal().reveal('.motion_item_right', {
 });
 
 ScrollReveal().reveal('.motion_item_top', {
+    scale: 0.1,
 
     distance: '60px',
     origin: 'top',
@@ -35,7 +38,7 @@ ScrollReveal().reveal('.motion_item_top', {
 });
 
 ScrollReveal().reveal('.motion_item_bottom', {
-
+    scale: 0.1,
     distance: '60px',
     origin: 'bottom',
     delay: 300,
