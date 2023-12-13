@@ -6,13 +6,13 @@
     <div class="container-fluid hero-header bg-light py-5 mb-5 index_header">
         <div class="container py-5">
             <div class="row g-5 align-items-center">
-                <div class="col-lg-6 motion_item_left">
-                    <h1 class="display-4 mb-3 animated slideInDown">Make Better Life With Your Donation Now </h1>
-                    <p class="animated slideInDown">
+                <div class="col-lg-6">
+                    <h1 class="display-4 mb-3 animated slideInDown motion_item_left">Make Better Life With Your Donation Now </h1>
+                    <p class="animated slideInDown motion_item_left">
                        In Gaza, there are severe shortages of water, food, fuel, and medical supplies. FoodLifeSaver is urgently organizing aid to Gaza to support Palestine Refugees in need.
                         Just one week ago, FoodLifeSaver delivered a truck carrying 45,000 water bottles to Gaza. Your donation to the FoodLifeSaver's Charity Fund directly supports these important humanitarian relief efforts.
                     </p>
-                    <a href="#" class="btn btn-primary btn-sm py-2 px-2 animated slideInDown">DONATE NOW</a>
+                    <a href="#" class="btn btn-primary btn-sm py-2 px-2 animated slideInDown motion_item_left">DONATE NOW</a>
                 </div>
                 <div class="col-lg-6 animated fadeIn motion_item_right">  
                     <img class="img-fluid animated pulse infinite" style="animation-duration: 3s;" src="{{asset('assets/ui/img/hero-1.png')}}" alt="">
