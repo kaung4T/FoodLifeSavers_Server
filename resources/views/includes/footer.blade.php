@@ -31,9 +31,9 @@
         </div>
         <div class="col-lg-3 col-md-6">
             <h5 class="mb-4">Get In Touch</h5>
-            <p><i class="fa fa-map-marker-alt me-3"></i> Myanmar </p>
-            <p><i class="fa fa-phone-alt me-3"></i> +959 12345678</p>
-            <p><i class="fa fa-envelope me-3"></i>info@evpower.eco</p>
+            <p class="footer_git"><i class="footer_git_logo1 fa fa-map-marker-alt me-3"></i> Myanmar </p>
+            <p class="footer_git"><i class="footer_git_logo2 fa fa-phone-alt me-3"></i> +959 12345678</p>
+            <p class="footer_git"><i class="footer_git_logo3 bi bi-envelope-fill"></i> info@evpower.eco</p>
         </div>
         <div class="col-lg-3 col-md-6">
             <h5 class="mb-4">Our Services</h5>
