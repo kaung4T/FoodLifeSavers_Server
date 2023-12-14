@@ -435,17 +435,17 @@ h6,
   }
 }
 
-@media (max-width: 1240px) { 
+/* @media (max-width: 1240px) { 
   .responsive_header_nav {
       font-size: 0.7rem;
   }
-}
+} */
 
-@media (max-width: 1140px) { 
+/* @media (max-width: 1140px) { 
   .responsive_header_nav {
       font-size: 0.6rem;
   }
-}
+} */
 
 @media (max-width: 991.98px) {
 
