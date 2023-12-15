@@ -55,7 +55,7 @@ class Mail_Sender extends Mailable
 
     public function build()
     {
-        return $this->from('kaungkaung4T@gmail.com', 'wefoweijfoiewjf')
+        return $this->from('kaungkaung4T@gmail.com', 'Food Life Saver')
         ->subject($this->data["title"])
         ->view('email_template.mail')
         ->with("data", $this->data);
