@@ -43,7 +43,7 @@ Route::get('/', [Controller::class, 'index']);
 Route::get('/panasonic', [ProductController::class, 'Panasonic'])->name('panasonic');
 
 // EMAIL Subscribe sign up
-Route::get('/email_subscribe', [Controller::class, 'email_subscribe'])->name('email_subscribe');
+Route::post('/email_subscribe', [Controller::class, 'email_subscribe'])->name('email_subscribe');
 
 Route::get('/about', [AboutController::class, 'about'])->name('about');
 Route::get('/earning', [EarningsController::class, 'earning'])->name('earning');

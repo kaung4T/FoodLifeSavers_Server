@@ -1,6 +1,7 @@
 
 
 
-<h1>weofjewfjiojewif</h1>
-<h2>{{ $data["body"] }}</h2>
+<h1>{{ $data["title"] }}</h1>
+
+<p>User Email or text: </p> <span><b>{{ $data["body"] }}</b></span>
 

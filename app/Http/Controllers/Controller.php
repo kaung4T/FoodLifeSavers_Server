@@ -9,6 +9,9 @@ use Illuminate\Routing\Controller as BaseController;
 
 use Illuminate\Support\Facades\Mail;
 use App\Mail\Mail_Sender;
+use Exception;
+use Illuminate\Support\Facades\Redirect;
+
 
 class Controller extends BaseController
 {
@@ -22,13 +25,20 @@ class Controller extends BaseController
     public function email_subscribe(Request $request)
     {
         $data = [
-            'title' => 'Test Email From AllPHPTricks.com',
-            'body' => 'This is the body of test email.'
+            'title' => 'Food Life Saver Users Sign UP!',
+            'body' => $request->body
         ];
- 
-        Mail::to('mrkaungminnkhant@gmail.com')->send(new Mail_Sender($data));
+        
+        try
+        {
+            Mail::to('mrkaungminnkhant@gmail.com')->send(new Mail_Sender($data));
+            return Redirect::to('/')->with('success', true)->with('message','Your sign up mail was sent!');
+        }
+        catch (Exception $e) 
+        {
+            return Redirect::to('/')->withErrors("You message didn't send");
+        }
 
-        return redirect('/');
         // return redirect('https://www.youtube.com/watch?v=bBOAcS_3nts');
     }
 }

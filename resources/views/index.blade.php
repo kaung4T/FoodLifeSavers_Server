@@ -1,6 +1,13 @@
 @extends('main_master')
 
 @section('content')
+
+@if(Session::has('success'))
+    <div class="alert alert-success user_sign_up_message">
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+    <div><strong>Success!</strong> {{ Session::get('message', '') }}</div>
+    </div>
+@endif
 	
 <!-- Header Start -->
     <div class="container-fluid hero-header bg-light py-5 mb-5 index_header">

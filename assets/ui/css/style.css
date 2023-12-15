@@ -68,6 +68,13 @@ body{
   min-width: 200px;
 }
 
+.user_sign_up_message {
+  margin: auto;
+  width: 300px;
+  margin-top: 140px;
+  text-align: center;
+}
+
 /* Preloader
 ============================= */
 #preloader {
@@ -1281,7 +1288,17 @@ padding-left: 8px;
   }
 }
 
-@media (max-width: 400px) { 
+@media (max-width: 400px) {
+  .user_sign_up_message {
+    margin: auto;
+    width: auto;
+    min-width: 110px;
+    margin-top: 140px;
+    text-align: center;
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+  
   #gaza-date-time-group {
     display: contents;
     align-items: center;
