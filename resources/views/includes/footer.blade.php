@@ -4,8 +4,8 @@
     <div class="row g-5">
         <div class="col-md-6">
             <h1 class="text-primary mb-4">
-                <img class="img-fluid me-2" src="{{asset('page/img/icon-1.png')}}" alt=""
-                    style="width: 45px;"> FoodLiveSavers </h1>
+                <img class="img-fluid me-2 footer_web_logo" src="{{asset('assets/ui/img/foodlifesavers LOGO v1.png')}}" 
+                alt=""> FoodLiveSavers </h1>
             <span>
                 <p>
                 FoodLifeSavers is dedicated to providing essential sustenance and medical aid to those in need. 

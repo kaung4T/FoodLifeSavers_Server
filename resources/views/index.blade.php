@@ -195,7 +195,7 @@
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="service-item bg-white p-5">
                         <div class="text-center">
-                            <img class="img-fluid mb-4 rounded-5" src="{{asset('assets/ui/img/icon-9.png')}}" alt="">
+                            <img class="img-fluid mb-4" src="{{asset('assets/ui/img/icon-9.png')}}" alt="">
                         <h5 class="mb-3 text-primary"> Gaza's Toll </h5>
                         </div>
                         
@@ -206,7 +206,7 @@
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="service-item bg-white p-5">
                         <div class="text-center">
-                            <img class="img-fluid mb-4 rounded-5" src="{{asset('assets/ui/img/icon-10.png')}}" alt="">
+                            <img class="img-fluid mb-4" src="{{asset('assets/ui/img/icon-10.png')}}" alt="">
                         <h5 class="mb-3 text-primary"> Global Impact </h5>
                         </div>
                         
@@ -219,7 +219,7 @@
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
                     <div class="service-item bg-white p-5">
                       <div class="text-center">
-                          <img class="img-fluid mb-4 rounded-5" src="{{asset('assets/ui/img/icon-2.png')}}" alt="">
+                          <img class="img-fluid mb-4" src="{{asset('assets/ui/img/icon-2.png')}}" alt="">
                         <h5 class="mb-3 text-primary"> International Response - I </h5>
                       </div>
                         <p class="short_description"> 
@@ -234,7 +234,7 @@
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
                     <div class="service-item bg-white p-5">
                         <div class="text-center">
-                             <img class="img-fluid mb-4 rounded-5" src="{{asset('assets/ui/img/icon-2.png')}}" alt="">
+                             <img class="img-fluid mb-4" src="{{asset('assets/ui/img/icon-2.png')}}" alt="">
                         <h5 class="mb-3 text-primary"> International Response - II </h5>
                         </div>
                        

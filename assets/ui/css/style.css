@@ -75,6 +75,12 @@ body{
   text-align: center;
 }
 
+.footer_web_logo {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 10px;
+}
+
 /* Preloader
 ============================= */
 #preloader {
@@ -645,6 +651,7 @@ h6,
     position: relative;
     padding-top: 150px;
     text-align: center;
+    margin-right: 30px;
 }
 
 .roadmap-carousel .roadmap-item::before {
