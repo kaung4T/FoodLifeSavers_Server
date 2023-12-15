@@ -251,7 +251,7 @@
                 <h1 class="display-6"> Roadmap </h1>
                 <p class="text-primary fs-5 mb-5"> We Can Transform Your Support into Life-Saving Work </p>
             </div>
-            <div class="owl-carousel roadmap-carousel wow fadeInUp" data-wow-delay="0.1s">
+            <div class="roadmap-carousel wow fadeInUp" data-wow-delay="0.1s">
                 <div class="roadmap-item">
                     <div class="roadmap-point"><span></span></div>
                     <h5> October 2023 </h5>
