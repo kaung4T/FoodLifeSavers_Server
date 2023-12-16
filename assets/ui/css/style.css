@@ -40,10 +40,6 @@ body{
   justify-content: center;
 }
 
-.dhms {
-  margin: 2rem;
-}
-
 .index_header {
   margin-top: 40px;
 }
@@ -79,6 +75,42 @@ body{
   width: 80px;
   height: 80px;
   margin-bottom: 10px;
+}
+
+.display_budget {
+  margin: auto;
+  width: 450px;
+}
+
+.display_budget_text {
+
+}
+
+.display_budget_text b {
+  color: #16D5FF;
+}
+
+.display_budget_bar {
+  margin-left: -30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #d0d0d0;
+}
+
+.dhms {
+  margin: 0.5rem;
+}
+
+.dhms_due {
+  margin-right: 50px;
+  font-weight: 600;
+}
+
+.gaza-count-down {
+  font-size: 1.5rem;
+}
+
+.gaza-count-down-span {
+  font-size: 1rem;
 }
 
 /* Preloader
@@ -1285,13 +1317,44 @@ padding-left: 8px;
 
 @media (max-width: 570px) {
   .dhms {
-    margin: 1rem;
+    margin: 0.5rem;
+  }
+  .gaza-count-down {
+    font-size: 1.1rem;
+  }
+  
+  .gaza-count-down-span {
+    font-size: 0.8rem;
+  }
+  .display_budget {
+    margin: auto;
+    width: 300px;
   }
 }
 
 @media (max-width: 420px) { 
   .gaza-count-down {
     font-size: 1.4rem;
+  }
+  .dhms_due {
+    margin-right: 0px;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+  }
+  
+  #gaza-date-time-group {
+    display: contents;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+  }
+  .gaza-count-down {
+    font-size: 1.5rem;
+  }
+  
+  .gaza-count-down-span {
+    font-size: 1rem;
   }
 }
 
@@ -1306,12 +1369,15 @@ padding-left: 8px;
     margin-right: 40px;
   }
   
-  #gaza-date-time-group {
-    display: contents;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
+  .display_budget {
+    margin: auto;
+    width: 250px;
   }
 }
 
-
+@media (max-width: 290px) {
+  .display_budget {
+    margin: auto;
+    width: 160px;
+  }
+}

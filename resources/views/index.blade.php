@@ -8,7 +8,10 @@
     <div><strong>Success!</strong> {{ Session::get('message', '') }}</div>
     </div>
 @endif
-	
+
+    <!-- JS apex Chart install -->
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
 <!-- Header Start -->
     <div class="container-fluid hero-header bg-light py-5 mb-5 index_header">
         <div class="container py-5">
@@ -293,6 +296,11 @@
                 <p class="text-primary fs-5 mb-5">Winter Supply Countdown</p>
             </div>
 
+            <div class="mx-auto display_budget">
+                    <div class="display_budget_text"><b>RM7,000</b> of RM10,000 raised</div>
+                    <div class="display_budget_bar"></div>
+            </div>
+
             <!-- Default setup with row and col -->
             <!-- <div class="row g-3 justify-content-center">
                 <div class="col-6 col-md-3 wow fadeIn" data-wow-delay="0.1s"> -->
@@ -304,21 +312,24 @@
                         <!-- <span class="text-primary fs-5">Days</span> -->
 
                         <div id="gaza-date-time-group">
+
+                        <div class="dhms_due">Due in</div>
+
                             <div class="dhms">
                                 <h1 id="days" class="mb-0 gaza-count-down"></h1>
-                                <span class="text-primary fs-5 gaza-count-down">Days </span>
+                                <span class="text-primary gaza-count-down-span">Days </span>
                             </div>
                             <div class="dhms">
                                 <h1 id="hours" class="mb-0 gaza-count-down"></h1>
-                                <span class="text-primary fs-5 gaza-count-down">Hours </span>
+                                <span class="text-primary gaza-count-down-span">Hours </span>
                             </div>
                             <div class="dhms">
                                 <h1 id="minutes" class="mb-0 gaza-count-down"></h1>
-                                <span class="text-primary fs-5 gaza-count-down">Minutes </span>
+                                <span class="text-primary gaza-count-down-span">Minutes </span>
                             </div>
                             <div class="dhms">
                                 <h1 id="seconds" class="mb-0 gaza-count-down"></h1>
-                                <span class="text-primary fs-5 gaza-count-down">Seconds </span>
+                                <span class="text-primary gaza-count-down-span">Seconds </span>
                             </div>
                         </div>
 
@@ -409,5 +420,6 @@
     <script src="{{asset('assets/ui/js/gaza_count.js')}}"></script>
     <script src="{{asset('assets/ui/js/page_motion.js')}}"></script>
     <script src="{{asset('assets/ui/js/number_count.js')}}"></script>
+    <script src="{{asset('assets/ui/js/budget_bar.js')}}"></script>
 
 @endsection
