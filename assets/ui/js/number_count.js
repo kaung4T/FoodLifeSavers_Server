@@ -12,7 +12,7 @@ let main_month_donation_num = month_donation_num.innerHTML;
 let main_total_donation_num = total_donation_num.innerHTML;
 
 let activated = false;
-alert(donation_div.offsetHeight)
+
 window.addEventListener("scroll", () => {
 
     if (window.pageYOffset > donation_div.offsetTop - donation_div.offsetHeight - 200 && activated === false) {
