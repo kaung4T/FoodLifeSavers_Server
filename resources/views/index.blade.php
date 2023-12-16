@@ -68,22 +68,22 @@
 
 
     <!-- Facts Start -->
-    <div class="container-xxl bg-light py-5 my-5">
+    <div class="container-xxl bg-light py-5 my-5 donation_div">
         <div class="container py-5">
             <div class="row g-5">
                 <div class="col-lg-4 col-md-6 text-center wow fadeIn" data-wow-delay="0.1s">
                     <img class="img-fluid mb-4 rounded-5" src="{{asset('assets/ui/img/hero-2.png')}}" alt="">
-                    <h1 class="display-4"> 18 </h1>
+                    <h1 class="display-4" id="today_donation_num"> 18 </h1>
                     <p class="fs-5 text-primary mb-0"> Today Donations </p>
                 </div>
                 <div class="col-lg-4 col-md-6 text-center wow fadeIn" data-wow-delay="0.3s">
                     <img class="img-fluid mb-4 rounded-5" src="{{asset('assets/ui/img/icon-1.png')}}" alt="">
-                    <h1 class="display-4"> 810 </h1>
+                    <h1 class="display-4" id="month_donation_num"> 810 </h1>
                     <p class="fs-5 text-primary mb-0"> Monthly Donations </p>
                 </div>
                 <div class="col-lg-4 col-md-6 text-center wow fadeIn" data-wow-delay="0.5s">
                     <img class="img-fluid mb-4 rounded-5" src="{{asset('assets/ui/img/total_donation.png')}}" alt="">
-                    <h1 class="display-4"> 1200 </h1>
+                    <h1 class="display-4" id="total_donation_num"> 1200 </h1>
                     <p class="fs-5 text-primary mb-0"> Total Donations </p>
                 </div>
             </div>
@@ -408,5 +408,6 @@
 	
     <script src="{{asset('assets/ui/js/gaza_count.js')}}"></script>
     <script src="{{asset('assets/ui/js/page_motion.js')}}"></script>
+    <script src="{{asset('assets/ui/js/number_count.js')}}"></script>
 
 @endsection
