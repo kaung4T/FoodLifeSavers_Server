@@ -12,8 +12,8 @@
         });
 
         // Initiate the wowjs
-        wowAnimation();
-        new WOW().init();
+        // wowAnimation();
+        // new WOW().init();
 
 
         // // Sticky Navbar
