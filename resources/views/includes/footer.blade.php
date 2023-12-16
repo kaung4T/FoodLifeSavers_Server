@@ -2,7 +2,7 @@
 <div class="container-fluid bg-light footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
 <div class="container py-5">
     <div class="row g-5">
-        <div class="col-md-6">
+        <div class="col-md-6 footer_top_left">
             <h1 class="text-primary mb-4">
                 <img class="img-fluid me-2 footer_web_logo" src="{{asset('assets/ui/img/foodlifesavers LOGO v1.png')}}" 
                 alt=""> FoodLiveSavers </h1>
