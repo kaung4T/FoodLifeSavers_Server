@@ -118,6 +118,14 @@ body{
   font-size: 1rem;
 }
 
+.web_image_cover {
+  margin-top: -120px;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 10;
+}
+
 /* Preloader
 ============================= */
 #preloader {
@@ -472,10 +480,10 @@ h6,
 
 .navbar-expand-lg
 {
-  height: 720px;
-  background: #f5ffff;
+  height: 120px;
+  background: transparent;
   z-index: 100;
-  background-image: url('assets/ui/img/header_cover.gif');
+  /* background-image: url('assets/ui/img/header_cover.gif'); */
   background-repeat:no-repeat;
   background-size: cover;
 }
@@ -538,6 +546,10 @@ h6,
 } */
 
 @media (max-width: 991.98px) {
+    .web_image_cover {
+      height: 150px;
+      object-fit: cover;
+    }
 
     .responsive_header_nav {
       background-color:#f5ffff;
@@ -1419,5 +1431,8 @@ padding-left: 8px;
   .display_budget {
     margin: auto;
     width: 160px;
+  }
+  .web_image_cover {
+    min-width: 260px;
   }
 }

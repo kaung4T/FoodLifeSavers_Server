@@ -2,6 +2,10 @@
 
 @section('content')
 
+
+<img class="web_image_cover" src="assets/ui/img/header_cover3.gif" alt="">
+
+
 @if(Session::has('success'))
     <div class="alert alert-success user_sign_up_message">
         <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>

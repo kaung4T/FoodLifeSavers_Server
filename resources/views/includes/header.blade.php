@@ -1,7 +1,8 @@
 
 <!-- <nav class="navbar navbar-expand-lg fixed-top p-0 px-4 px-lg-5" style="background-image: url('assets/ui/img/header_cover.gif');"> -->
-<nav class="navbar navbar-expand-lg " style="background-image: url('assets/ui/img/header_cover3.gif');
-                ">
+<!-- <nav class="navbar navbar-expand-lg " style="background-image: url('assets/ui/img/header_cover3.gif'); -->
+<nav class="navbar navbar-expand-lg";
+                >
         <a href="{{url('/')}}" class="navbar-brand d-flex align-items-center">
             <h2 class="m-0 text-primary">
                 <img class="img-fluid me-2 rounded-5 header_img" src="{{asset('assets/ui/img/foodlifesavers LOGO v2.png')}}" alt=""></h2>
