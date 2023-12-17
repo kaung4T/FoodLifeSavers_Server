@@ -15,6 +15,7 @@ use App\Http\Controllers\AboutController;
 use App\Http\Controllers\EarningsController;
 use App\Http\Controllers\OurWorkController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\TandC;
 
 use App\Http\Controllers\Products\LGChemController;
 use App\Http\Controllers\Products\SamsungSDIController;
@@ -49,6 +50,7 @@ Route::get('/about', [AboutController::class, 'about'])->name('about');
 Route::get('/earning', [EarningsController::class, 'earning'])->name('earning');
 Route::get('/our_work', [OurWorkController::class, 'our_work'])->name('our_work');
 Route::get('/contact', [ContactController::class, 'contact'])->name('contact');
+Route::get('/tandc', [TandC::class, 'tandc'])->name('tandc');
 
 Route::get('/chem', [LGChemController::class, 'chem'])->name('chem');
 Route::get('/samsung', [SamsungSDIController::class, 'samsung'])->name('samsung');

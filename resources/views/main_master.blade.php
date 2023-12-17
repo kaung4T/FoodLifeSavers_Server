@@ -49,6 +49,7 @@
 
     <!-- Template Stylesheet -->
     <link href="{{asset('assets/ui/css/style.css')}}" rel="stylesheet">
+    <link href="{{asset('assets/ui/css/style2.css')}}" rel="stylesheet">
     <!-- Template Stylesheet with public folder -->
     <link href="{{asset('ui/css/style.css')}}" rel="stylesheet">
 
