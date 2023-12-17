@@ -1,5 +1,7 @@
 
-<nav class="navbar navbar-expand-lg fixed-top p-0 px-4 px-lg-5">
+<!-- <nav class="navbar navbar-expand-lg fixed-top p-0 px-4 px-lg-5" style="background-image: url('assets/ui/img/header_cover.gif');"> -->
+<nav class="navbar navbar-expand-lg " style="background-image: url('assets/ui/img/header_cover3.gif');
+                ">
         <a href="{{url('/')}}" class="navbar-brand d-flex align-items-center">
             <h2 class="m-0 text-primary">
                 <img class="img-fluid me-2 rounded-5 header_img" src="{{asset('assets/ui/img/foodlifesavers LOGO v2.png')}}" alt=""></h2>
@@ -47,7 +49,7 @@
              
             </div>
             <!-- <div class="h-100 d-lg-inline-flex align-items-center d-block"> -->
-            <div class="d-lg-inline-flex align-items-center d-block mobile_header_donate">
+            <div class="d-block mobile_header_donate">
                 <!-- <a type="button" class="btn btn-primary btn-sm text-light me-2 responsive_header_nav" href="{{route('login')}}">DONATE</a> -->
                 <a type="button" class="btn btn-primary btn-sm text-light me-2" href="{{route('login')}}">DONATE</a>
             </div>
