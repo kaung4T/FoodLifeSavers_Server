@@ -8,7 +8,10 @@
   Your browser does not support the video tag.
 </video>
 
-
+<div class="web_text_cover">
+<h1>Give free one donate for all of humanity</h2>
+<button class="btn btn-sm btn-outline-dark">Learn about Food Life Savers</button>
+</div>
 
 @if(Session::has('success'))
     <div class="alert alert-success user_sign_up_message">

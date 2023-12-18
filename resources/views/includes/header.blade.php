@@ -8,7 +8,9 @@
                 <img class="img-fluid me-2 rounded-5 header_img" src="{{asset('assets/ui/img/foodlifesavers LOGO v2.png')}}" alt=""></h2>
         </a>
         <button type="button" class="navbar-toggler" id="nav_header_setting" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-            <span class="navbar-toggler-icon"></span>
+            <span class="navbar-toggler-icon">
+            <i class="fas fa-bars"></i>
+            </span>
         </button>
         <div class="collapse navbar-collapse responsive_header_nav" id="navbarCollapse">
             <div class="navbar-nav ms-auto py-4 py-lg-0 responsive_header_nav_second">
