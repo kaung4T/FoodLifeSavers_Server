@@ -64,11 +64,14 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                &copy; <a href="#"> EV Power Co., Ltd. </a>, All Right Reserved!
+                &copy; <a href="#"> 2023 FoodLifeSavers Co., Ltd. </a>, All Rights Reserved!
+                <div>
+                    Development:<a href="#"> FLS Humanitarian Group </a> Distribution:<a
+                        href="https:www.evpower.eco"> FoodLifeSavers </a>
+                </div>
             </div>
             <div class="col-md-6 text-center text-md-end">
-                Developed By <a href="#"> EV Power Group </a> Distributed By <a
-                    href="https:www.evpower.eco"> EV-Power </a>
+                Dedicated to improving lives through innovative food solutions.
             </div>
         </div>
     </div>
