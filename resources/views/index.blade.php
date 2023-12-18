@@ -3,7 +3,11 @@
 @section('content')
 
 
-<img class="web_image_cover" src="assets/ui/img/header_cover3.gif" alt="">
+<video class="web_image_cover" autoplay loop muted>
+  <source src="assets/ui/img/header_cover.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
 
 
 @if(Session::has('success'))
