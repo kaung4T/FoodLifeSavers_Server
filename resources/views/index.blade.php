@@ -4,7 +4,7 @@
 
 
 <video class="web_image_cover" autoplay loop muted>
-  <source src="assets/ui/img/header_cover.mp4" type="video/mp4">
+  <source src="assets/ui/img/header_cover2.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
