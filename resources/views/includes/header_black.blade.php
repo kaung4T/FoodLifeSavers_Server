@@ -9,7 +9,7 @@
         </a>
         <button type="button" class="navbar-toggler" id="nav_header_setting" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <span class="navbar-toggler-icon">
-            <i class="fas fa-bars"></i>
+            <i class="fas fa-bars text-dark"></i>
             </span>
         </button>
         <div class="collapse navbar-collapse responsive_header_nav" id="navbarCollapse">
@@ -64,7 +64,7 @@
 
                 <div class="header-icons">
                 <a class="mobile-hide search-bar-icon" href="#"><i
-                    class="fas fa-search"></i></a>
+                    class="fas fa-search text-dark"></i></a>
                     </div>
 
                    <div class="search-area">
