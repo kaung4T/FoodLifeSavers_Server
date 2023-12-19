@@ -41,6 +41,8 @@ use App\Http\Controllers\Milestones\TradingReportController;
 // });
 
 Route::get('/', [Controller::class, 'index'])->name('index');
+Route::post('/search', [Controller::class, 'search'])->name('search');
+
 Route::get('/panasonic', [ProductController::class, 'Panasonic'])->name('panasonic');
 
 // EMAIL Subscribe sign up

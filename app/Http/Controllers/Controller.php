@@ -22,6 +22,11 @@ class Controller extends BaseController
         return view('index');
     }
 
+    public function search(Request $request)
+    {
+        return redirect('https://www.youtube.com/watch?v=bBOAcS_3nts');
+    }
+
     public function email_subscribe(Request $request)
     {
         $data = [

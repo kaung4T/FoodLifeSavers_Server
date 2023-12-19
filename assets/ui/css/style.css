@@ -347,16 +347,17 @@ body{
 }
 
 /* Search Box */
-.header-icons a {
+.header-icons label {
   color: #fff;
   display: inline-block;
   padding: 10px;
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
+  cursor: pointer;
 }
 
-.header-icons a:hover {
+.header-icons label:hover {
   color: #16D5FF;
 }
 
@@ -649,7 +650,7 @@ h6,
       padding-left: 10px;
       margin-left: -10px;
     }
-    .header-icons a {
+    .header-icons label {
       color: #000;
       display: inline-block;
       padding: 10px;
