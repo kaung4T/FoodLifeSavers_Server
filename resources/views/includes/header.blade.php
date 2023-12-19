@@ -64,7 +64,7 @@
 
                 <div class="header-icons">
 
-                <label class="mobile-hide search-bar-icon" href="#"><i
+                <label class="mobile-hide search-bar-icon"><i
                     class="fas fa-search"></i></label>
                     </div>
 

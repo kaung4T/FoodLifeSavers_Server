@@ -63,8 +63,9 @@
                 </div>
 
                 <div class="header-icons">
-                <a class="mobile-hide search-bar-icon" href="#"><i
-                    class="fas fa-search text-dark"></i></a>
+
+                <label class="mobile-hide search-bar-icon"><i
+                    class="fas fa-search text-dark"></i></label>
                     </div>
 
                    <div class="search-area">
@@ -74,9 +75,12 @@
 					<span class="close-btn"><i class="fas fa-window-close"></i></span>
 					<div class="search-bar">
 						<div class="search-bar-tablecell">
-							<h3>Search For:</h3>
-							<input type="text" placeholder="Keywords">
-							<button type="submit">Search <i class="fas fa-search"></i></button>
+                            <form action="{{ route('search') }}" method="POST" enctype="multipart/form-data">
+                                @csrf
+                                <h3>Search For:</h3>
+                                <input type="text" placeholder="Keywords">
+                                <button type="submit">Search <i class="fas fa-search"></i></button>
+                            </form>
 						</div>
 					</div>
 				</div>
