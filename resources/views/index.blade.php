@@ -72,7 +72,7 @@
                             <i class="fa fa-check bg-light text-primary btn-sm-square rounded-circle me-3 fw-bold"></i>
                             <span> Collaborate with organizations to ensure comprehensive aid for refugees in both food and medical domains. </span>
                         </div>
-                        <a class="btn btn-primary py-2 px-3" href=""> Read More </a>
+                        <a class="btn btn-primary py-2 px-3" href="{{ route('about') }}"> Read More </a>
                     </div>
                 </div>
             </div>
