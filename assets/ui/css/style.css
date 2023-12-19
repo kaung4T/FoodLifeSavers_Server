@@ -140,7 +140,7 @@ body{
   z-index: 1;
 }
 
-.web_text_cover h1, .web_text_cover button {
+.web_text_cover h1, .web_text_cover a {
   color: #fff;
 }
 

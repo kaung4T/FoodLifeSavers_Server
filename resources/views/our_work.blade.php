@@ -9,7 +9,7 @@
             <div class="row">
                 <h2 class="text-start">Our Work</h2>
                 <ul>
-                    <li> <a href="#"><i class="bi bi-house-door"></i> Home</a></li>
+                    <li> <a href="{{ route('index') }}"><i class="bi bi-house-door"></i> Home</a></li>
                     <li><i class="bi bi-chevron-double-right pe-2"></i> Our Work</li>
                 </ul>
             </div>

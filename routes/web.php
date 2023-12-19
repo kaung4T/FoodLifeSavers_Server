@@ -40,7 +40,7 @@ use App\Http\Controllers\Milestones\TradingReportController;
 //     return view('index');
 // });
 
-Route::get('/', [Controller::class, 'index']);
+Route::get('/', [Controller::class, 'index'])->name('index');
 Route::get('/panasonic', [ProductController::class, 'Panasonic'])->name('panasonic');
 
 // EMAIL Subscribe sign up

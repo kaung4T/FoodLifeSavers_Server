@@ -10,7 +10,7 @@
 
 <div class="web_text_cover">
 <h1>Give free one donate for all of humanity</h2>
-<button class="btn btn-sm btn-outline-dark">Learn about Food Life Savers</button>
+<a href="{{ route('our_work') }}" class="btn btn-sm btn-outline-dark">Learn about Food Life Savers</a>
 </div>
 
 @if(Session::has('success'))
