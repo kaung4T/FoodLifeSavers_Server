@@ -64,7 +64,7 @@
 
                 <div class="header-icons">
 
-                <label class="mobile-hide search-bar-icon"><i
+                <label class="mobile-hide search-bar-icon" id="search_pop"><i
                     class="fas fa-search text-dark"></i></label>
                     </div>
 
@@ -91,5 +91,6 @@
     </nav>
 
     <script src="{{asset('assets/ui/js/nav_header_setting.js')}}"></script>
+    <script src="{{asset('assets/ui/js/search.js')}}"></script>
     
 
