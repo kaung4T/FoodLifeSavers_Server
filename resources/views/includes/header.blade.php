@@ -78,7 +78,7 @@
                             <form action="{{ route('search') }}" method="POST" enctype="multipart/form-data">
                                 @csrf
                                 <h3>Search For:</h3>
-                                <input type="text" placeholder="Keywords">
+                                <input type="text" name="search" placeholder="Keywords">
                                 <button type="submit">Search <i class="fas fa-search"></i></button>
                             </form>
 						</div>

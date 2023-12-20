@@ -160,6 +160,16 @@ body{
   font-size:28px
 }
 
+.search_body {
+  margin: auto;
+  margin-top: 65px;
+  width: 85%;
+}
+
+.search_body_result {
+  margin-top: 50px;
+}
+
 /* Preloader
 ============================= */
 #preloader {

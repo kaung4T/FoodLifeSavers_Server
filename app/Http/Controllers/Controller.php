@@ -12,6 +12,8 @@ use App\Mail\Mail_Sender;
 use Exception;
 use Illuminate\Support\Facades\Redirect;
 
+use App\Models\Product;
+use PhpOption\None;
 
 class Controller extends BaseController
 {
@@ -24,7 +26,30 @@ class Controller extends BaseController
 
     public function search(Request $request)
     {
-        return redirect('https://www.youtube.com/watch?v=bBOAcS_3nts');
+        $search = $request->search;
+
+        $product = Product::where('name', '=', $search)->get();
+        
+        $item_count = count($product);
+
+        if (!$product->isEmpty()) {
+            $context = [
+                "search"=> $search,
+                "product"=> $product,
+                "nothing"=> null,
+                "item_count"=> $item_count
+            ];
+        }
+        else {
+            $context = [
+                "search"=> $search,
+                "product"=> $product,
+                "nothing"=> "No results found!"
+            ];
+        }
+        
+
+        return view('search', $context);
     }
 
     public function email_subscribe(Request $request)
