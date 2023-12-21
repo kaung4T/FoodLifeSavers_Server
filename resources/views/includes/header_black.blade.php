@@ -14,7 +14,7 @@
         </button>
         <div class="collapse navbar-collapse responsive_header_nav" id="navbarCollapse">
             <div class="navbar-nav ms-auto py-4 py-lg-0 responsive_header_nav_second">
-                 <a href="{{url('/')}}" class="nav-item nav-link active">Home</a>
+                 <a href="{{url('/')}}" class="nav-link text-dark">Home</a>
                 
               <!-- <div class="nav-item dropdown">
                 <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Products</a>
@@ -92,5 +92,5 @@
 
     <script src="{{asset('assets/ui/js/nav_header_setting.js')}}"></script>
     <script src="{{asset('assets/ui/js/search.js')}}"></script>
-    
+    <script src="{{asset('assets/ui/js/header_active.js')}}"></script>
 
