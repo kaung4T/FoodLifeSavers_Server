@@ -25,6 +25,8 @@ use App\Http\Controllers\Milestones\InvestmentController;
 use App\Http\Controllers\Milestones\ManifestingController;
 use App\Http\Controllers\Milestones\TradingReportController;
 
+use App\Http\Controllers\Auth\Logout;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -72,6 +74,9 @@ Route::controller(ContactController::class)->group(function () {
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
+
+Route::post('/logout', [Logout::class, 'out'])->name('logout');
+
 
 Route::middleware('auth',)->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

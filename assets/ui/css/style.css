@@ -170,6 +170,15 @@ body{
   margin-top: 50px;
 }
 
+.icon_register {
+  margin-left: 10px;
+  margin-top: -20px;
+}
+
+.country_icon_register {
+  margin-left: 10px;
+}
+
 /* Preloader
 ============================= */
 #preloader {

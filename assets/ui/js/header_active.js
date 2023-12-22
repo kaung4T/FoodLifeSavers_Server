@@ -13,7 +13,7 @@
 let profile_current = location.href;
 
 let responsive_header_nav = document.querySelector(".responsive_header_nav");
-let profile_a = responsive_header_nav.querySelectorAll("a");
+let profile_a = responsive_header_nav.querySelectorAll(".nav-link");
 
 
 for (var num=0;num<profile_a.length;num++) {
