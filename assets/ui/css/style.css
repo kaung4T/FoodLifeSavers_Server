@@ -179,6 +179,18 @@ body{
   margin-left: 10px;
 }
 
+.profile_body {
+  margin: auto;
+  margin-top: 65px;
+  width: 85%;
+}
+
+.dasboard_body {
+  margin: auto;
+  margin-top: 65px;
+  width: 85%;
+}
+
 /* Preloader
 ============================= */
 #preloader {
