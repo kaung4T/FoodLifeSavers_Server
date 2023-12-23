@@ -191,16 +191,24 @@ body{
   width: 85%;
 }
 
-.profile_info {
 
+
+.profile_info {
+  height: 800px;
+  max-height: 800px;
+  min-height: 800px;
 }
 
 .profile_update {
-
+  height: 700px;
+  max-height: 700px;
+  min-height: 700px;
 }
 
 .profile_delete {
-
+  height: 250px;
+  max-height: 250px;
+  min-height: 250px;
 }
 
 /* Preloader
