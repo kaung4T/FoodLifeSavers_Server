@@ -54,7 +54,7 @@
             <!-- <div class="h-100 d-lg-inline-flex align-items-center d-block"> -->
             <div class="d-block mobile_header_donate">
                 <!-- <a type="button" class="btn btn-primary btn-sm text-light me-2 responsive_header_nav" href="{{route('login')}}">DONATE</a> -->
-                <a type="button" class="btn btn-primary btn-sm text-light me-2" href="{{route('login')}}">DONATE</a>
+                <a type="button" class="btn btn-primary btn-sm text-light me-2" href="{{route('login')}}">Donate</a>
             </div>
 
              <div class="googleNav">

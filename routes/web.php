@@ -26,6 +26,8 @@ use App\Http\Controllers\Milestones\ManifestingController;
 use App\Http\Controllers\Milestones\TradingReportController;
 
 use App\Http\Controllers\Auth\Logout;
+use App\Http\Controllers\Donation\Donate;
+use App\Http\Controllers\Dashboard;
 
 /*
 |--------------------------------------------------------------------------
@@ -71,9 +73,9 @@ Route::controller(ContactController::class)->group(function () {
 });
 
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/donate', [Donate::class, 'donate'])->middleware(['auth', 'verified'])->name('donate');
+
+Route::get('/dashboard', [Dashboard::class, 'dashboard'])->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::post('/logout', [Logout::class, 'out'])->name('logout');
 

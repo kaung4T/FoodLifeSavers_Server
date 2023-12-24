@@ -19,10 +19,14 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
-  <link rel="icon" type="image/png" href="../assets/img/favicon.png">
+  <!-- <link rel="icon" type="image/png" href="../assets/img/favicon.png"> -->
   <title>
-    Material Dashboard 2 by Creative Tim
+    FoodLifeSavers
   </title>
+  
+  <!-- web icon -->
+  <link class="favicon" rel="icon" type="image/x-icon" href="{{asset('assets/ui/img/foodlifesavers LOGO v1.png')}}">
+
   <!--     Fonts and icons     -->
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700" />
   <!-- Nucleo Icons -->
@@ -43,7 +47,7 @@
   <aside class="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3   bg-gradient-dark" id="sidenav-main">
     <div class="sidenav-header">
       <i class="fas fa-times p-3 cursor-pointer text-white opacity-5 position-absolute end-0 top-0 d-none d-xl-none" aria-hidden="true" id="iconSidenav"></i>
-      <a class="navbar-brand m-0" href=" https://demos.creative-tim.com/material-dashboard/pages/dashboard " target="_blank">
+      <a class="navbar-brand m-0" href="{{ route('index') }}" target="_blank">
         <img src="{{asset('assets/ui/img/foodlifesavers LOGO v2.png')}}" class="navbar-brand-img h-100" alt="main_logo">
         <span class="ms-1 font-weight-bold text-white">Food Life Saver</span>
       </a>
@@ -60,7 +64,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white " href="../pages/tables.html">
+          <a class="nav-link text-white " href="">
             <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
               <i class="material-icons opacity-10">table_view</i>
             </div>
@@ -68,7 +72,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white " href="../pages/billing.html">
+          <a class="nav-link text-white " href="">
             <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
               <i class="material-icons opacity-10">receipt_long</i>
             </div>
@@ -131,12 +135,12 @@
         </li> -->
       </ul>
     </div>
-    <div class="sidenav-footer position-absolute w-100 bottom-0 ">
+    <!-- <div class="sidenav-footer position-absolute w-100 bottom-0 ">
       <div class="mx-3">
         <a class="btn btn-outline-primary mt-4 w-100" href="https://www.creative-tim.com/learning-lab/bootstrap/overview/material-dashboard?ref=sidebarfree" type="button">Documentation</a>
         <a class="btn bg-gradient-primary w-100" href="https://www.creative-tim.com/product/material-dashboard-pro?ref=sidebarfree" type="button">Upgrade to pro</a>
       </div>
-    </div>
+    </div> -->
   </aside>
   <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
     <!-- Navbar -->
@@ -144,7 +148,7 @@
       <div class="container-fluid py-1 px-3">
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb bg-transparent mb-0 pb-0 pt-1 px-0 me-sm-6 me-5">
-            <li class="breadcrumb-item text-sm"><a class="opacity-5 text-dark" href="javascript:;">Pages</a></li>
+            <li class="breadcrumb-item text-sm"><a class="opacity-5 text-dark" href="{{ route('index') }}">Home</a></li>
             <li class="breadcrumb-item text-sm text-dark active" aria-current="page">Dashboard</li>
           </ol>
           <h6 class="font-weight-bolder mb-0">Dashboard</h6>
@@ -439,7 +443,7 @@
                       <td>
                         <div class="d-flex px-2 py-1">
                           <div>
-                            <img src="../assets/img/small-logos/logo-xd.svg" class="avatar avatar-sm me-3" alt="xd">
+                            <img src="{{asset('assets/ui/img/icon-9.png')}}" class="avatar avatar-sm me-3" alt="xd">
                           </div>
                           <div class="d-flex flex-column justify-content-center">
                             <h6 class="mb-0 text-sm">Material XD Version</h6>
@@ -482,7 +486,7 @@
                       <td>
                         <div class="d-flex px-2 py-1">
                           <div>
-                            <img src="../assets/img/small-logos/logo-atlassian.svg" class="avatar avatar-sm me-3" alt="atlassian">
+                            <img src="{{asset('assets/ui/img/icon-10.png')}}" class="avatar avatar-sm me-3" alt="atlassian">
                           </div>
                           <div class="d-flex flex-column justify-content-center">
                             <h6 class="mb-0 text-sm">Add Progress Track</h6>
@@ -519,7 +523,7 @@
                       <td>
                         <div class="d-flex px-2 py-1">
                           <div>
-                            <img src="../assets/img/small-logos/logo-slack.svg" class="avatar avatar-sm me-3" alt="team7">
+                            <img src="{{asset('assets/ui/img/icon-2.png')}}" class="avatar avatar-sm me-3" alt="team7">
                           </div>
                           <div class="d-flex flex-column justify-content-center">
                             <h6 class="mb-0 text-sm">Fix Platform Errors</h6>
@@ -556,7 +560,7 @@
                       <td>
                         <div class="d-flex px-2 py-1">
                           <div>
-                            <img src="../assets/img/small-logos/logo-spotify.svg" class="avatar avatar-sm me-3" alt="spotify">
+                            <img src="{{asset('assets/ui/img/icon-9.png')}}" class="avatar avatar-sm me-3" alt="spotify">
                           </div>
                           <div class="d-flex flex-column justify-content-center">
                             <h6 class="mb-0 text-sm">Launch our Mobile App</h6>
@@ -599,7 +603,7 @@
                       <td>
                         <div class="d-flex px-2 py-1">
                           <div>
-                            <img src="../assets/img/small-logos/logo-jira.svg" class="avatar avatar-sm me-3" alt="jira">
+                            <img src="{{asset('assets/ui/img/icon-10.png')}}" class="avatar avatar-sm me-3" alt="jira">
                           </div>
                           <div class="d-flex flex-column justify-content-center">
                             <h6 class="mb-0 text-sm">Add the New Pricing Page</h6>
@@ -633,7 +637,7 @@
                       <td>
                         <div class="d-flex px-2 py-1">
                           <div>
-                            <img src="../assets/img/small-logos/logo-invision.svg" class="avatar avatar-sm me-3" alt="invision">
+                            <img src="{{asset('assets/ui/img/icon-2.png')}}" class="avatar avatar-sm me-3" alt="invision">
                           </div>
                           <div class="d-flex flex-column justify-content-center">
                             <h6 class="mb-0 text-sm">Redesign New Online Shop</h6>
@@ -750,12 +754,11 @@
                 © <script>
                   document.write(new Date().getFullYear())
                 </script>,
-                made with <i class="fa fa-heart"></i> by
-                <a href="https://www.creative-tim.com" class="font-weight-bold" target="_blank">Creative Tim</a>
-                for a better web.
+                <a href="https://www.creative-tim.com" class="font-weight-bold" target="_blank">FoodLifeSavers Co., Ltd.</a>
+                , All Rights Reserved!
               </div>
             </div>
-            <div class="col-lg-6">
+            <!-- <div class="col-lg-6">
               <ul class="nav nav-footer justify-content-center justify-content-lg-end">
                 <li class="nav-item">
                   <a href="https://www.creative-tim.com" class="nav-link text-muted" target="_blank">Creative Tim</a>
@@ -770,7 +773,7 @@
                   <a href="https://www.creative-tim.com/license" class="nav-link pe-0 text-muted" target="_blank">License</a>
                 </li>
               </ul>
-            </div>
+            </div> -->
           </div>
         </div>
       </footer>
