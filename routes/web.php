@@ -92,7 +92,7 @@ require __DIR__ . '/auth.php';
 
     Route::get('/admin/dashboard', [AdminController::class, 'AdminDashboard'])->middleware(['auth', 'roles:admin'])->name('admin.dashboard');
     
-Route::middleware(['auth', 'roles:admin'])->group(function () {
+// Route::middleware(['auth', 'roles:admin'])->group(function () {
     Route::get('/admin/logout', [AdminController::class, 'AdminLogout'])->name('admin.logout');
 
     Route::get('/admin/profile', [AdminController::class, 'AdminProfile'])->name('admin.profile');
@@ -102,7 +102,7 @@ Route::middleware(['auth', 'roles:admin'])->group(function () {
     Route::get('/admin/change/password', [AdminController::class, 'AdminChangePassword'])->name('admin.change.password');
 
     Route::post('/admin/update/password', [AdminController::class, 'AdminUpdatePassword'])->name('admin.update.password');
-});
+// });
 
 
 // Agent Group Middleware
