@@ -19,7 +19,7 @@ class Role
             return redirect('dashboard');
         }
 
-        return view('admin.dashboard');
+        return redirect('admin/dashboard');
         // return $next($request);
     }
 }
