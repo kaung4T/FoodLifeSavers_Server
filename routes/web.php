@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\User\UserController;
-use App\Http\Controllers\admin\AdminController;
+use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\agent\AgentController;
 use App\Http\Controllers\Backend\RoleController;
 use App\Http\Controllers\Backend\PropertyTypeController;
