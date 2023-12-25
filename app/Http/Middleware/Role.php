@@ -5,7 +5,6 @@ namespace App\Http\Middleware;
 use Closure;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
-use App\Http\Controllers\admin\AdminController;
 
 class Role
 {
@@ -20,6 +19,7 @@ class Role
             return redirect('dashboard');
         }
 
-        return $next($request);
+        return redirect('dashboard');
+        // return $next($request);
     }
 }
