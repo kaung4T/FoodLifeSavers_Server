@@ -300,10 +300,15 @@
           </li>
 
             <li class="nav-item">
-            <a href="#" class="nav-link">
+              
+            <label class="nav-link">
               <i class="link-icon fa-solid fa-right-from-bracket"></i>
-              <span class="link-title">Logout</span>
-            </a>
+              <form action="{{ route('logout') }}" method="POST">
+                  @csrf
+              <button type="submit" class="link-title" style="border: none;background: transparent;
+              color: inherit;margin-left: 24.6px;">Logout</button>
+              </form>
+            </label>
           </li>
 
 
