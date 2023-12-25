@@ -1,9 +1,10 @@
   <!-- partial:partials/_sidebar.html -->
     <nav class="sidebar">
       <div class="sidebar-header">
-        <a href="#" class="sidebar-brand">
-           <i class="fa fa-envira menu-icon" aria-hidden="true"></i>
-          EV<span> Power</span>
+        <a href="{{ route('index') }}" class="sidebar-brand">
+          <img src="{{asset('assets/ui/img/foodlifesavers LOGO v2.png')}}" alt="" style="width: 50px;">
+           <!-- <i class="fa fa-envira menu-icon" aria-hidden="true"></i>-->
+          <span style="font-size: 0.9rem;">FoodLifeSavers</span> 
         </a>
         <div class="sidebar-toggler not-active">
           <span></span>
@@ -21,7 +22,7 @@
             </a>
           </li>
           <li class="nav-item nav-category">EV-Power Information</li>
-          @if(Auth::user()->can('type.menu'))
+          <!-- @if(Auth::user()->can('type.menu'))
           <li class="nav-item">
             <a class="nav-link" data-bs-toggle="collapse" href="#account" role="button" aria-expanded="false"
               aria-controls="account">
@@ -50,7 +51,7 @@
               </ul>
             </div>
           </li>
-          @endif
+          @endif -->
         
           <li class="nav-item">
             <a class="nav-link" data-bs-toggle="collapse" href="#activate-key" role="button" aria-expanded="false"
@@ -74,8 +75,8 @@
 
           <li class="nav-item">
             <a href="pages/apps/calendar.html" class="nav-link">
-              <i class="link-icon" data-feather="calendar"></i>
-              <span class="link-title">Calendar</span>
+            <i class="bi bi-window-fullscreen"></i>
+              <span class="link-title" style="margin-left: 16.7px;">Services</span>
             </a>
           </li>
 

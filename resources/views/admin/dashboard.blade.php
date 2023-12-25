@@ -11,7 +11,7 @@
   <meta name="keywords"
     content="nobleui, bootstrap, bootstrap 5, bootstrap5, admin, dashboard, template, responsive, css, sass, html, theme, front-end, ui kit, web">
 
-  <title>@yield('title','EV Power')</title>
+  <title>@yield('title','FoodLifeSaver')</title>
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,27 +20,28 @@
   <!-- End fonts -->
 
   <!-- core:css -->
-  <link rel="stylesheet" href="{{asset('../assets/admin/vendors/core/core.css')}}">
+  <link rel="stylesheet" href="{{asset('assets/admin/vendors/core/core.css')}}">
+  <link rel="stylesheet" href="{{asset('assets/admin/css/demo1/style.css')}}">
   <!-- endinject -->
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
 
   <!-- Plugin css for this page -->
-  <link rel="stylesheet" href="{{asset('../assets/admin/vendors/flatpickr/flatpickr.min.css')}}">
+  <link rel="stylesheet" href="{{asset('assets/admin/vendors/flatpickr/flatpickr.min.css')}}">
   <!-- End plugin css for this page -->
 
   <!-- inject:css -->
-  <link rel="stylesheet" href="{{asset('../assets/admin/fonts/feather-font/css/iconfont.css')}}">
-  <link rel="stylesheet" href="{{asset('../assets/admin/vendors/flag-icon-css/css/flag-icon.min.css')}}">
+  <link rel="stylesheet" href="{{asset('assets/admin/fonts/feather-font/css/iconfont.css')}}">
+  <link rel="stylesheet" href="{{asset('assets/admin/vendors/flag-icon-css/css/flag-icon.min.css')}}">
   <!-- endinject -->
 
   <!-- Layout styles -->
-  <link rel="stylesheet" href="{{asset('../assets/admin/css/demo2/style.css')}}">
+  <link rel="stylesheet" href="{{asset('assets/admin/css/demo2/style.css')}}">
   <!-- End layout styles -->
 
-    <link rel="stylesheet" href="{{asset('../assets/admin/vendors/datatables.net-bs5/dataTables.bootstrap5.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/admin/vendors/datatables.net-bs5/dataTables.bootstrap5.css')}}">
 
-  <link rel="shortcut icon" href="{{asset('../assets/admin/images/favicon.png')}}" />
+  <link rel="shortcut icon" href="{{asset('assets/ui/img/foodlifesavers LOGO v1.png')}}" />
 
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" >
 </head>
@@ -61,15 +62,15 @@
     </div>
   </div>
 
-  <script src="{{asset('../assets/admin/vendors/core/core.js')}}"></script>
+  <script src="{{asset('assets/admin/vendors/core/core.js')}}"></script>
 
-  <script src="{{asset('../assets/admin/vendors/flatpickr/flatpickr.min.js')}}"></script>
-  <script src="{{asset('../assets/admin/vendors/apexcharts/apexcharts.min.js')}}"></script>
+  <script src="{{asset('assets/admin/vendors/flatpickr/flatpickr.min.js')}}"></script>
+  <script src="{{asset('assets/admin/vendors/apexcharts/apexcharts.min.js')}}"></script>
 
-  <script src="{{asset('../assets/admin/vendors/feather-icons/feather.min.js')}}"></script>
-  <script src="{{asset('../assets/admin/js/template.js')}}"></script>
+  <script src="{{asset('assets/admin/vendors/feather-icons/feather.min.js')}}"></script>
+  <script src="{{asset('assets/admin/js/template.js')}}"></script>
 
-  <script src="{{asset('../assets/admin/js/dashboard-dark.js')}}"></script>
+  <script src="{{asset('assets/admin/js/dashboard-dark.js')}}"></script>
 
   <script src="https://kit.fontawesome.com/27dabc0c76.js"></script>
 
@@ -77,15 +78,14 @@
 
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 
-   <script src="{{asset('../assets/admin/js/code/code.js')}}"></script>
+   <script src="{{asset('assets/admin/js/code/code.js')}}"></script>
+   <script src="{{asset('assets/admin/js/code/validate.min.js')}}"></script>
+  <script src="{{asset('assets/admin/js/data-table.js')}}"></script>
 
-   <script src="{{asset('../assets/admin/js/code/validate.min.js')}}"></script>
 
-  <script src="{{asset('../assets/admin/js/data-table.js')}}"></script>
+  <script src="{{asset('assets/admin/vendors/datatables.net/jquery.dataTables.js')}}"></script>
 
-  <script src="{{asset('../assets/admin/vendors/datatables.net/jquery.dataTables.js')}}"></script>
-
-  <script src="{{asset('../assets/admin/vendors/datatables.net-bs5/dataTables.bootstrap5.js')}}"></script>
+  <script src="{{asset('assets/admin/vendors/datatables.net-bs5/dataTables.bootstrap5.js')}}"></script>
 
 <script>
  @if(Session::has('message'))
