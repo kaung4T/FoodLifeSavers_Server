@@ -19,7 +19,6 @@ class Role
             return redirect('dashboard');
         }
 
-        return redirect()->route('admin.dashboard');
-        // return $next($request);
+        return $next($request);
     }
 }
