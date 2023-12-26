@@ -74,7 +74,7 @@
           </li>
 
           <li class="nav-item">
-            <a href="pages/apps/calendar.html" class="nav-link">
+            <a href="{{ route('admin.service') }}" class="nav-link">
             <i class="bi bi-window-fullscreen"></i>
               <span class="link-title" style="margin-left: 16.7px;">Services</span>
             </a>

@@ -86,6 +86,17 @@
   }
 }
 
+
+.service_body {
+  margin: auto;
+  margin-left: 6px;
+  width: 550px;
+}
+
+.service_button {
+  float: right;
+}
+
 body {
   margin: 0;
   font-family: var(--bs-body-font-family);
