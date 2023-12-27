@@ -95,6 +95,8 @@ Route::middleware(['auth', 'roles:admin'])->group(function () {
 
     Route::get('/admin/service', [AdminService::class, 'service'])->name('admin.service');
 
+    Route::post('/admin/service_store', [AdminService::class, 'store'])->name('admin.service_store');
+
     Route::get('/admin/logout', [AdminController::class, 'AdminLogout'])->name('admin.logout');
 
     Route::get('/admin/profile', [AdminController::class, 'AdminProfile'])->name('admin.profile');
