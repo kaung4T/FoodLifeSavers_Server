@@ -1,0 +1,59 @@
+@extends('admin.dashboard')
+
+@section('content')
+
+<div class="page-content">
+
+    <div class="customize_body">
+
+    <h4 class="mb-3">Add Service Item</h3>
+    <div class="mb-5">
+        <a href="{{ route('admin.service') }}" class="">Add Your Service</a>    
+    </div>
+
+    <h3 class="mb-4">Customize Your Service Item</h3>
+
+
+        <table class="table table-dark table-image mb-5">
+    <thead>
+        <tr>
+        <th scope="col">#</th>
+        <th scope="col">Image</th>
+        <th scope="col">Name</th>
+        <th scope="col">Text</th>
+        <th scope="col"></th>
+        <th scope="col"></th>
+        </tr>
+    </thead>
+    <tbody>
+        
+    <?php $i=1 ?>
+
+        @foreach ($all_service as $each_services)
+
+        <tr>
+      <th scope="row">{{ $i }}</th>
+                <td class="w-25">
+                    <img class="img-fluid img-thumbnail service_img rounded" src="{{ asset('storage/app/public/'.$each_services->file_path) }}" alt="">
+                </td>
+      <td>{{ $each_services->name }}</td>
+      <td>{{ Str::limit($each_services->text, 25, $end='...') }}</td>
+      <td><button class="btn btn-sm btn-outline-primary">Edit</button></td>
+      <td><button class="btn btn-sm btn-outline-danger">Delete</button></td>
+    </tr>
+        
+    <?php $i++ ?>
+
+        @endforeach
+
+        </tbody>
+    </table>
+
+
+
+    </div>
+
+</div>
+
+@endsection
+

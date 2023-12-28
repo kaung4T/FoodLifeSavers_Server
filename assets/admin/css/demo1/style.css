@@ -87,6 +87,24 @@
 }
 
 
+.customize_body {
+  margin: auto;
+  margin-left: 6px;
+}
+
+.table-image {
+  td, th {
+    vertical-align: middle;
+  }
+}
+
+.service_img {
+  position:relative;
+  border-radius: 0;
+  min-width: 80px;
+  min-height: 80px;
+}
+
 .service_body {
   margin: auto;
   margin-left: 6px;

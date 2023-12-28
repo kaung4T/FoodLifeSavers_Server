@@ -94,6 +94,7 @@ Route::middleware(['auth', 'roles:admin'])->group(function () {
     Route::get('/admin/dashboard', [AdminController::class, 'AdminDashboard'])->name('admin.dashboard');
 
     Route::get('/admin/service', [AdminService::class, 'service'])->name('admin.service');
+    Route::get('/admin/customize_service', [AdminService::class, 'customize_service'])->name('admin.customize_service');
 
     Route::post('/admin/service_store', [AdminService::class, 'store'])->name('admin.service_store');
 

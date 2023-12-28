@@ -45,4 +45,13 @@ class AdminService extends Controller
     public function service () {
         return view('admin.admin_add_service');
     }
+
+    public function customize_service () {
+        $all_service = Service::all();
+
+        $context = [
+            "all_service"=> $all_service
+        ];
+        return view('admin.admin_customize_service', $context);
+    }
 }
