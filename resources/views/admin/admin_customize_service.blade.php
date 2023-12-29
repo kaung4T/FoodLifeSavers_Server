@@ -38,8 +38,13 @@
                 </td>
       <td>{{ $each_services->name }}</td>
       <td>{{ Str::limit($each_services->text, 25, $end='...') }}</td>
-      <td><button class="btn btn-sm btn-outline-primary">Edit</button></td>
-      <td><button class="btn btn-sm btn-outline-danger">Delete</button></td>
+      <td><a href="{{ route('admin.update_service', $each_services->id) }}" class="btn btn-sm btn-outline-primary">Edit</a></td>
+      <td>
+            <form action="{{ route('admin.delete', $each_services->id) }}" method="POST">
+                @csrf
+        <button type="submit" class="btn btn-sm btn-outline-danger">Delete</button>
+            </form>
+      </td>
     </tr>
         
     <?php $i++ ?>

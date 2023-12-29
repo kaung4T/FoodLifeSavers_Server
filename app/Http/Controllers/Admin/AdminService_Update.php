@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace App\Http\Controllers\admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\Storage;
 
 use App\Models\Service;
 
-class AdminService extends Controller
+class AdminService_Update extends Controller
 {
     public function UploadFile(UploadedFile $file, $folder = null, $disk = 'public', $filename = null)
     {
@@ -23,16 +23,13 @@ class AdminService extends Controller
         );
     }
 
-    public function deleteFile($path, $disk = 'public')
+    public function update_store(Request $request, $id)
     {
-        Storage::disk($disk)->delete($path);
-    }
 
-    public function store(Request $request)
-    {
+        $service_item = Service::find($id);
 
         $path = $this->UploadFile($request->file('file'), 'Service_image');
-        Service::create([
+        $service_item->update([
             'name' => $request->name,
             'text' => $request->text,
             'price' => $request->price,
@@ -42,24 +39,16 @@ class AdminService extends Controller
  
     }
 
-    public function delete(Request $request, $id)
-    {
-        $service_item = Service::find($id);
-        $service_item->delete();
-        
-        return redirect()->route('admin.customize_service')->with('success', 'File Uploaded Successfully');
-    }
-    
-    public function service () {
-        return view('admin.admin_add_service');
-    }
+    public function update (Request $request, $id) {
 
-    public function customize_service () {
-        $all_service = Service::all();
+        $service_item = Service::find($id);
 
         $context = [
-            "all_service"=> $all_service
+            "service_item"=> $service_item,
+            "service_id"=> $id
         ];
-        return view('admin.admin_customize_service', $context);
+
+        return view('admin.admin_update_service', $context);
     }
+
 }

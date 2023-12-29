@@ -87,6 +87,12 @@
 }
 
 
+.update_body {
+  margin: auto;
+  margin-left: 6px;
+  width: 550px;
+}
+
 .customize_body {
   margin: auto;
   margin-left: 6px;

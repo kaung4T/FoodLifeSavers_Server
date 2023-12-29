@@ -7,6 +7,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\User\UserController;
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\AdminService;
+use App\Http\Controllers\Admin\AdminService_Update;
 use App\Http\Controllers\agent\AgentController;
 use App\Http\Controllers\Backend\RoleController;
 use App\Http\Controllers\Backend\PropertyTypeController;
@@ -93,10 +94,16 @@ require __DIR__ . '/auth.php';
 Route::middleware(['auth', 'roles:admin'])->group(function () {
     Route::get('/admin/dashboard', [AdminController::class, 'AdminDashboard'])->name('admin.dashboard');
 
-    Route::get('/admin/service', [AdminService::class, 'service'])->name('admin.service');
-    Route::get('/admin/customize_service', [AdminService::class, 'customize_service'])->name('admin.customize_service');
 
+    Route::get('/admin/service', [AdminService::class, 'service'])->name('admin.service');
     Route::post('/admin/service_store', [AdminService::class, 'store'])->name('admin.service_store');
+    Route::get('/admin/customize_service', [AdminService::class, 'customize_service'])->name('admin.customize_service');
+    Route::post('/admin/delete/{id}', [AdminService::class, 'delete'])->name('admin.delete');
+
+    Route::get('/admin/update_service/{id}', [AdminService_Update::class, 'update'])->name('admin.update_service');
+    Route::post('/admin/update_store/{id}', [AdminService_Update::class, 'update_store'])->name('admin.update_store');
+
+    
 
     Route::get('/admin/logout', [AdminController::class, 'AdminLogout'])->name('admin.logout');
 
