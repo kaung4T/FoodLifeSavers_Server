@@ -13,6 +13,8 @@ use Exception;
 use Illuminate\Support\Facades\Redirect;
 
 use App\Models\Product;
+use App\Models\Service;
+
 use PhpOption\None;
 
 class Controller extends BaseController
@@ -28,14 +30,15 @@ class Controller extends BaseController
     {
         $search = $request->search;
 
-        $product = Product::where('name', '=', $search)->get();
+        // $service = Service::where('name', '=', $search)->get();
+        $service = Service::where('name', 'LIKE', '%'.$search.'%')->get();
         
-        $item_count = count($product);
+        $item_count = count($service);
 
-        if (!$product->isEmpty()) {
+        if (!$service->isEmpty()) {
             $context = [
                 "search"=> $search,
-                "product"=> $product,
+                "service"=> $service,
                 "nothing"=> null,
                 "item_count"=> $item_count
             ];
@@ -43,7 +46,7 @@ class Controller extends BaseController
         else {
             $context = [
                 "search"=> $search,
-                "product"=> $product,
+                "service"=> $service,
                 "nothing"=> "No results found!"
             ];
         }

@@ -80,7 +80,7 @@
             </a>
           </li>
 
-          <li class="nav-item nav-category">Other Features</li>
+          <!-- <li class="nav-item nav-category">Other Features</li>
           <li class="nav-item">
             <a class="nav-link" data-bs-toggle="collapse" href="#transfer" role="button" aria-expanded="false"
               aria-controls="transfer">
@@ -165,9 +165,9 @@
                 </li> 
               </ul>
             </div>
-          </li>
+          </li> -->
 
-          <li class="nav-item nav-category">Reporting</li>
+          <!-- <li class="nav-item nav-category">Reporting</li>
            
           <li class="nav-item">
             <a class="nav-link" data-bs-toggle="collapse" href="#report" role="button" aria-expanded="false"
@@ -241,7 +241,7 @@
                 </li>
               </ul>
             </div>
-          </li>
+          </li> -->
          
           <li class="nav-item nav-category">Setting</li>
              <li class="nav-item">

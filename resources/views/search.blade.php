@@ -8,8 +8,10 @@
 <span>Result: @if ($nothing !== null) {{ $nothing }} @else {{ $item_count }} @endif</span>
 
 <div class="search_body_result">
-    @foreach ($product as $each_product)
-        {{ $each_product->name }}
+    @foreach ($service as $each_service)
+        {{ $each_service->name }}
+        <br>
+        <img src="{{ asset('storage/app/public/'.$each_service->file_path) }}" alt="">
     @endforeach
 </div>
 
