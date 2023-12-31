@@ -48,6 +48,7 @@ use App\Http\Controllers\Dashboard;
 
 Route::get('/', [Controller::class, 'index'])->name('index');
 Route::post('/search', [Controller::class, 'search'])->name('search');
+Route::get('/each_service/{id}', [Controller::class, 'each_service'])->name('each_service');
 
 Route::get('/panasonic', [ProductController::class, 'Panasonic'])->name('panasonic');
 

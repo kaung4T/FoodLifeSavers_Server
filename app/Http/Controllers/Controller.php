@@ -26,6 +26,16 @@ class Controller extends BaseController
         return view('index');
     }
 
+    public function each_service(Request $request, $id)
+    {
+        $service = Service::find($id);
+
+        $context = [
+            "service"=> $service
+        ];
+        return view('each_service', $context);
+    }
+
     public function search(Request $request)
     {
         $search = $request->search;

@@ -167,7 +167,10 @@ body{
 }
 
 .search_body_result {
+  display: flex;
+  flex-wrap: wrap;
   margin-top: 50px;
+  justify-content: space-between;
 }
 
 .icon_register {
