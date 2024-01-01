@@ -23,7 +23,12 @@ class Controller extends BaseController
 
     public function index()
     {
-        return view('index');
+        $service = Service::all();
+
+        $context = [
+            "service"=> $service
+        ];
+        return view('index', $context);
     }
 
     public function each_service(Request $request, $id)

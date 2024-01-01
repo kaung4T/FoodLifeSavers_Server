@@ -205,62 +205,22 @@
                 <h1 class="display-6">Services</h1>
                 <p class="text-primary fs-5 mb-5"> Crisis News and Latest Updates </p>
             </div>
-            <div class="row g-4">
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="service-item bg-white p-5">
-                        <div class="text-center">
-                            <img class="img-fluid mb-4" src="{{asset('assets/ui/img/icon-9.png')}}" alt="">
-                        <h5 class="mb-3 text-primary"> Gaza's Toll </h5>
-                        </div>
-                        
-                        <p class="short_description"> Gaza faced devastating strikes, with 10,800 reported deaths, 26,000 injuries, and 1.5 million displaced, creating a dire humanitarian situation. </p>
-                        <a href="#" class="btn btn-primary btn-sm float-end"> Read More <i class="fa fa-arrow-right ms-2"></i></a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="service-item bg-white p-5">
-                        <div class="text-center">
-                            <img class="img-fluid mb-4" src="{{asset('assets/ui/img/icon-10.png')}}" alt="">
-                        <h5 class="mb-3 text-primary"> Global Impact </h5>
-                        </div>
-                        
-                        <p class="short_description"> Protests worldwide demand a ceasefire, emphasizing the urgent need for international support to address the escalating crisis.
-                        </p>
-                        <a href="" class="btn btn-primary btn-sm float-end"> Read More <i class="fa fa-arrow-right ms-2"></i></a>
-                    </div>
-                </div>
 
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="service-item bg-white p-5">
-                      <div class="text-center">
-                          <img class="img-fluid mb-4" src="{{asset('assets/ui/img/icon-2.png')}}" alt="">
-                        <h5 class="mb-3 text-primary"> International Response - I </h5>
-                      </div>
-                        <p class="short_description"> 
-                           Despite international calls, the conflict continues, prompting Israel to implement four-hour pauses in fighting in specific areas of 
-                            northern Gaza.
-                        </p>
-                        <a href="" class="btn btn-primary btn-sm float-end"> Read More <i class="fa fa-arrow-right ms-2"></i></a>
-                    </div>
-                </div>
-
-                  
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="service-item bg-white p-5">
-                        <div class="text-center">
-                             <img class="img-fluid mb-4" src="{{asset('assets/ui/img/icon-2.png')}}" alt="">
-                        <h5 class="mb-3 text-primary"> International Response - II </h5>
+                <div class="row g-4">
+                    @foreach ($service as $each_service)
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="service-item bg-white p-5">
+                            <div class="text-center">
+                                <img class="img-fluid mb-4" src="{{ asset('storage/app/public/'.$each_service->file_path) }}" alt="">
+                            <h5 class="mb-3 text-primary"> {{ $each_service->name }} </h5>
+                            </div>
+                            
+                            <p class="short_description"> {{ $each_service->text }} </p>
+                            <a href="{{ route('each_service', $each_service->id) }}" class="btn btn-primary btn-sm float-end"> Read More <i class="fa fa-arrow-right ms-2"></i></a>
                         </div>
-                       
-                        <p class="short_description"> 
-                           to facilitate humanitarian aid delivery Despite international calls, the conflict continues, prompting Israel to implement four-hour pauses in fighting in specific areas of 
-                            northern Gaza to facilitate humanitarian aid delivery.
-                        </p>
-                        <a href="" class="btn btn-primary btn-sm float-end"> Read More <i class="fa fa-arrow-right ms-2"></i></a>
                     </div>
+                    @endforeach
                 </div>
-                
-            </div>
         </div>
     </div>
     <!-- Service End -->

@@ -11,8 +11,8 @@
 
 
 @foreach ($service as $each_service)
-<a href="{{ route('each_service', $each_service->id) }}" style="margin-right: 7px;margin-bottom:10px">
-    <div class="card" style="width: 24rem;">
+<div href="{{ route('each_service', $each_service->id) }}" style="margin-right: 7px;margin-bottom: 25px;">
+    <div class="card" style="width: 24rem;height:300px;">
 
     <div class="card-img-top" style="align-items:center;text-align:center;">
         <img class="" 
@@ -22,10 +22,13 @@
     
     <div class="card-body">
         <p class="card-text text-center">{{ $each_service->name }}</p>
-        <p class="card-text">{{ $each_service->text }}</p>
+        <p class="card-text">{{ Str::limit($each_service->text, 150, $end='...') }}</p>
+        <a href="{{ route('each_service', $each_service->id) }}" style="margin-top: 10px;"
+        class="btn btn-primary btn-sm float-end"> Read More <i class="fa fa-arrow-right ms-2"></i></a>
     </div>
+
     </div>
-</a>
+</div>
 
 
 @endforeach
