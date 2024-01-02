@@ -10,28 +10,22 @@
 <div class="search_body_result">
 
 
-@foreach ($service as $each_service)
-<div href="{{ route('each_service', $each_service->id) }}" style="margin-right: 7px;margin-bottom: 25px;">
-    <div class="card" style="width: 24rem;height:300px;">
 
-    <div class="card-img-top" style="align-items:center;text-align:center;">
-        <img class="" 
-        style="object-fit: contain;width:100px;height:100px;" 
-        src="{{ asset('storage/app/public/'.$each_service->file_path) }}" alt="">
+<div class="row g-4">
+    @foreach ($service as $each_service)
+    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="service-item bg-white p-5">
+            <div class="text-center">
+                <img class="img-fluid mb-4" src="{{ asset('storage/app/public/'.$each_service->file_path) }}" alt="">
+            <h5 class="mb-3 text-primary"> {{ $each_service->name }} </h5>
+            </div>
+            
+            <p class="short_description"> {{ $each_service->text }} </p>
+            <a href="{{ route('each_service', $each_service->id) }}" class="btn btn-primary btn-sm float-end"> Read More <i class="fa fa-arrow-right ms-2"></i></a>
+        </div>
     </div>
-    
-    <div class="card-body">
-        <p class="card-text text-center">{{ $each_service->name }}</p>
-        <p class="card-text">{{ Str::limit($each_service->text, 150, $end='...') }}</p>
-        <a href="{{ route('each_service', $each_service->id) }}" style="margin-top: 10px;"
-        class="btn btn-primary btn-sm float-end"> Read More <i class="fa fa-arrow-right ms-2"></i></a>
-    </div>
-
-    </div>
+    @endforeach
 </div>
-
-
-@endforeach
 
 
 

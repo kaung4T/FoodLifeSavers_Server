@@ -4,12 +4,21 @@
 
 
 
+<div class="each_service_card">
 
+<img class="card-img-top each_service_image" src="{{ asset('storage/app/public/'.$service->file_path) }}" alt="">
 
-{{$service->name}}
+<div class="each_service_body">
+    <h4>{{$service->name}}</h4>
 
-<img class="card-img-top w-25" src="{{ asset('storage/app/public/'.$service->file_path) }}" alt="">
+    <p>{{$service->text}}</p>
 
+    <a class="btn btn-sm btn-primary mt-3" 
+    href="">Donate</a>
+
+</div>
+
+</div>
 
 @endsection
 
