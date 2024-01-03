@@ -4,7 +4,7 @@
 
     <div class="loginWrapper">
         <div class="row justify-content-center">
-            <div class="col-md-4 col-lg-4">
+            <div class="col-md-7 col-lg-5">
             <div class="card">    
                 <div class="card-header">
                     <div class="picture">
@@ -40,17 +40,17 @@
             <div class="form-group mb-3 resetTick"> 
                <div class="tick">
                  <input type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}> 
-                <label for="remember" class="text-muted">Remember me</label> 
+                <label for="remember" class="text-muted login_text">Remember me</label> 
                </div>
-                <a href="{{ route('password.request') }}" id="forgot" class="font-weight-bold">Forgot password?</a>
+                <a href="{{ route('password.request') }}" id="forgot" class="font-weight-bold login_text">Forgot password?</a>
           </div>
 
                 <div class="form-group mb-3">
                     <button type="submit" class="w-100 rounded-0 btn btn-primary"> Login </button>
                 </div>
 
-                <div class="text-center text-muted regLink"> 
-                Don't have an account? <a href="{{url('register')}}"> Register </a>
+                <div class="text-center text-muted regLink login_text"> 
+                Don't have an account? <a href="{{url('register')}}" class="login_text"> Register </a>
              </div>
             </form>
 

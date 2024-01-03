@@ -1189,7 +1189,7 @@ padding-left: 8px;
   margin: 0;
   padding: 0;
   width: 100%;
-  height: 860px;
+  height: 600px;
   background: hsl(0, 2%, 56%);
 }
 
@@ -1204,13 +1204,15 @@ padding-left: 8px;
 
 .loginWrapper .card
 {
+
+  max-width: 100%;
   margin-top: 50px;
-  top: 15px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 730px;
-  width: 100%;
+  /* top: 15px; */
+  /* display: flex; */
+  /* align-items: center;
+  justify-content: center; */
+  /* height: 730px; */
+
   box-shadow: rgba(0, 0, 0, 0.2);
 }
 
@@ -1495,6 +1497,20 @@ padding-left: 8px;
 
 
 
+/* @media (max-width: 1240px) { 
+  .loginWrapper .card {
+    background-color: red;
+    margin-top: 50px;
+    /* top: 15px; */
+    /* display: flex; */
+    /* align-items: center;
+    justify-content: center; */
+    /* height: 730px; */
+    max-width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.2);
+  }
+} */
+
 @media (max-width: 767px) { 
   .roadmap-carousel {
     display: contents;
@@ -1567,6 +1583,59 @@ padding-left: 8px;
     width: 250px;
   }
 }
+
+@media (max-width: 380px) {
+  .login_text {
+    font-size: 0.7rem;
+  }
+ .loginWrapper {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 600px;
+    background: hsl(0, 2%, 56%);
+ }
+}
+
+@media (max-width: 306px) {
+ .loginWrapper {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 610px;
+    background: hsl(0, 2%, 56%);
+ }
+}
+
+@media (max-width: 283px) {
+  .loginWrapper {
+     margin: 0;
+     padding: 0;
+     width: 100%;
+     height: 620px;
+     background: hsl(0, 2%, 56%);
+  }
+ }
+
+ @media (max-width: 272px) {
+  .loginWrapper {
+     margin: 0;
+     padding: 0;
+     width: 100%;
+     height: 630px;
+     background: hsl(0, 2%, 56%);
+  }
+ }
+
+ @media (max-width: 208px) {
+  .loginWrapper {
+     margin: 0;
+     padding: 0;
+     width: 100%;
+     height: 650px;
+     background: hsl(0, 2%, 56%);
+  }
+ }
 
 @media (max-width: 290px) {
   .display_budget {
