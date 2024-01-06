@@ -3,7 +3,9 @@
 namespace App\Http\Controllers\Donation;
 
 use App\Http\Controllers\Controller;
+use App\Models\Order;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Http;
 
 
@@ -14,15 +16,15 @@ class Donate extends Controller {
 
       $number = mt_rand(100000000000000000, 999999999999999999);
 
-      // if ($this->barcodeNumberExists($number)) {
-      //     return $this->generate_order_id();
-      // }
+      if ($this->barcodeNumberExists($number)) {
+          return $this->generate_order_id();
+      }
 
       return $number;
       }
 
     public function barcodeNumberExists($number) {
-        // return User::whereBarcodeNumber($number)->exists();
+        return Order::where("order_id", "=", $number)->exists();
     } 
 
 
@@ -36,11 +38,22 @@ class Donate extends Controller {
 
     $order_id = $this->generate_order_id(); //generate order id
     
+
+    // $oreder_creation = Order::create([
+    //   'order_id'=> $order_id,
+    //   'user_id'=> Auth::id(),
+    //   'user'=> Auth::user()->name,
+    //   'service_name'=> "Gaza's Toll",
+    //   'amount'=> "10000",
+    //   'phone'=> Auth::user()->number,
+    //   'country'=> Auth::user()->country
+    // ]);
     $conext = [
       "order_id"=> $order_id
     ];
 
     return response()->json($conext); exit;
+
 
     $curlPost= array();
 
