@@ -38,21 +38,11 @@ class Donate extends Controller {
 
     $order_id = $this->generate_order_id(); //generate order id
     
+    // $conext = [
+    //   "order_id"=> $order_id
+    // ];
 
-    // $oreder_creation = Order::create([
-    //   'order_id'=> $order_id,
-    //   'user_id'=> Auth::id(),
-    //   'user'=> Auth::user()->name,
-    //   'service_name'=> "Gaza's Toll",
-    //   'amount'=> "10000",
-    //   'phone'=> Auth::user()->number,
-    //   'country'=> Auth::user()->country
-    // ]);
-    $conext = [
-      "order_id"=> $order_id
-    ];
-
-    return response()->json($conext); exit;
+    // return response()->json($conext); exit;
 
 
     $curlPost= array();
@@ -90,8 +80,8 @@ class Donate extends Controller {
     $curlPost["bill_phone"]="+65 62200944";
     $curlPost["id_order"]=$order_id; // should be unique by time() or your id_order is unique
     $curlPost["notify_url"]="https://yourdomain.com/notify.php";
-    $curlPost["success_url"]="https://yourdomain.com/success.php";
-    $curlPost["error_url"]="https://yourdomain.com/failed.php";
+    $curlPost["success_url"]="https://crowdestatepros.com/donate/success";
+    $curlPost["error_url"]="https://crowdestatepros.com/donate/fail";
     $curlPost["checkout_url"]="https://yourdomain.com/checkout_url.php";
 
     //<!--card details of .* customer -->
@@ -142,6 +132,17 @@ class Donate extends Controller {
     
     elseif($status_nm==1 || $status_nm==9){ // 1:Approved/Success,9:Test Transaction
       $redirecturl = $curlPost["success_url"];
+
+      $oreder_creation = Order::create([
+        'order_id'=> $order_id,
+        'user_id'=> Auth::id(),
+        'user'=> Auth::user()->name,
+        'service_name'=> "Gaza's Toll",
+        'amount'=> "10000",
+        'phone'=> Auth::user()->number,
+        'country'=> Auth::user()->country
+      ]);
+
       if(strpos($redirecturl,'?')!==false){
         $redirecturl = $redirecturl."&".$sub_query;
       }else{
