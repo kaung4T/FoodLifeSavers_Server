@@ -29,6 +29,7 @@ use App\Http\Controllers\Milestones\TradingReportController;
 
 use App\Http\Controllers\Auth\Logout;
 use App\Http\Controllers\Donation\Donate;
+use App\Http\Controllers\Donation\DonateItem;
 use App\Http\Controllers\Donation\Success;
 use App\Http\Controllers\Donation\Fail;
 use App\Http\Controllers\Dashboard;
@@ -78,9 +79,14 @@ Route::controller(ContactController::class)->group(function () {
 });
 
 
-Route::get('/donate', [Donate::class, 'donate'])->middleware(['auth', 'verified'])->name('donate');
+// Donation
+Route::post('/donate/{id}', [Donate::class, 'donate'])->middleware(['auth', 'verified'])->name('donate');
+Route::get('/all_donate', [DonateItem::class, 'all_donate'])->middleware(['auth', 'verified'])->name('all_donate');
+Route::get('/single_donate/{id}', [DonateItem::class, 'single_donate'])->middleware(['auth', 'verified'])->name('single_donate');
 Route::get('/donate/success', [Success::class, 'success'])->name('success');
 Route::get('/donate/fail', [Fail::class, 'fail'])->name('fail');
+
+
 
 Route::get('/dashboard', [Dashboard::class, 'dashboard'])->middleware(['auth', 'verified'])->name('dashboard');
 

@@ -12,8 +12,8 @@ class Order extends Model
         'order_id',
         'user_id',
         'user',
-        'service_name',
-        'amount',
+        'payment_plan',
+        'payment_amount',
         'phone',
         'country',
     ];

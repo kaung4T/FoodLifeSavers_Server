@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Donation;
 
 use App\Http\Controllers\Controller;
 use App\Models\Order;
+use App\Models\Service;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Http;
@@ -29,7 +30,9 @@ class Donate extends Controller {
 
 
 
-    public function donate (Request $request) {
+    public function donate (Request $request ,$payment_plan_id) {
+
+    $payment = Service::find($payment_plan_id);
 
     $gateway_url="https://merchant.cardpaymentz.com/directapi.do";
       
@@ -37,12 +40,23 @@ class Donate extends Controller {
     $referer=$protocol.$_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI'];
 
     $order_id = $this->generate_order_id(); //generate order id
-    
-    // $conext = [
-    //   "order_id"=> $order_id
-    // ];
 
-    // return response()->json($conext); exit;
+
+    $oreder_creation = Order::create([
+      'order_id'=> $order_id,
+      'user_id'=> Auth::id(),
+      'user'=> Auth::user()->name,
+      'payment_plan'=> $payment->name,
+      'payment_amount'=> "10000",
+      'phone'=> Auth::user()->number,
+      'country'=> Auth::user()->country
+    ]);
+    
+    $conext = [
+      "order_id"=> $order_id
+    ];
+
+    return response()->json($conext); exit;
 
 
     $curlPost= array();
@@ -137,8 +151,8 @@ class Donate extends Controller {
         'order_id'=> $order_id,
         'user_id'=> Auth::id(),
         'user'=> Auth::user()->name,
-        'service_name'=> "Gaza's Toll",
-        'amount'=> "10000",
+        'payment_plan'=> $payment->name,
+        'payment_amount'=> "10000",
         'phone'=> Auth::user()->number,
         'country'=> Auth::user()->country
       ]);
