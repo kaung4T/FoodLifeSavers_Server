@@ -12,18 +12,30 @@
 
       <div class="left-side">
         <div class="text-box">
-          <h3 class="home-heading">Advanced Plan</h3>
-          <p class="home-price"><em>$800.00 </em>/ Month</p>
-          <label class="text-uppercase left_plan_info">For Small Plan Amount </label>
+          <h3 class="home-heading">{{ $donation->plan_type }}</h3>
+          <p class="home-price"><em>${{ $donation->amount }}.00 </em>/ Month</p>
+          <label class="text-uppercase left_plan_info">{{ $donation->plan_info }} </label>
           <hr class="left-hr" />
           <div class="p-6 pt-0">
                             <h5 class="display-5 mb-3" style="font-size: 2.2rem;">
-                                <small class="align-top" style="font-size: 22px; line-height: 45px;">$</small>800.00<small class="align-bottom" style="font-size: 16px; line-height: 40px;">/ Month</small>
+                                <small class="align-top" style="font-size: 22px; line-height: 45px;">$</small>{{ $donation->amount }}.00<small class="align-bottom" style="font-size: 16px; line-height: 40px;">/ Month</small>
                             </h5>
+                            @if ($donation->plan_type == "Daily Plan")
                             <div class="d-flex justify-content-between mb-3"><span> Person-1 &amp; Person-2 </span><i class="fa fa-check text-primary pt-1"></i></div>
                             <div class="d-flex justify-content-between mb-3"><span> Person-2 &amp; Person-3 </span><i class="fa fa-check text-primary pt-1"></i></div>
                             <div class="d-flex justify-content-between mb-3"><span>Person-2 &amp; Person-3</span><i class="fa fa-times text-danger pt-1"></i></div>
                             <div class="d-flex justify-content-between mb-2"><span>Person-2 &amp; Person-3</span><i class="fa fa-times text-danger pt-1"></i></div>
+                                @elseif ($donation->plan_type == "Monthly Plan")
+                            <div class="d-flex justify-content-between mb-3"><span>Person-1 &amp; Person-2</span><i class="fa fa-check text-primary pt-1"></i></div>
+                            <div class="d-flex justify-content-between mb-3"><span>Person-2 &amp; Person-3</span><i class="fa fa-check text-primary pt-1"></i></div>
+                            <div class="d-flex justify-content-between mb-3"><span>Person-3 &amp; Person-4</span><i class="fa fa-check text-primary pt-1"></i></div>
+                            <div class="d-flex justify-content-between mb-2"><span>Person-3 &amp; Person-4</span><i class="fa fa-times text-danger pt-1"></i></div>
+                                @elseif ($donation->plan_type == "Advanced Plan")
+                            <div class="d-flex justify-content-between mb-3"><span>Person-3 &amp; Person-4</span><i class="fa fa-check text-primary pt-1"></i></div>
+                            <div class="d-flex justify-content-between mb-3"><span>Person-3 &amp; Person-4</span><i class="fa fa-check text-primary pt-1"></i></div>
+                            <div class="d-flex justify-content-between mb-3"><span>Person-3 &amp; Person-4</span><i class="fa fa-check text-primary pt-1"></i></div>
+                            <div class="d-flex justify-content-between mb-2"><span>Person-3 &amp; Person-4</span><i class="fa fa-check text-primary pt-1"></i></div>
+                                @endif
                         </div>
         </div>
       </div>
@@ -35,7 +47,7 @@
             <table class="table">
               <tr>
                 <td>Advanced Plan</td>
-                <td class="price">800.00 USD</td>
+                <td class="price">{{ $donation->amount }}.00 USD</td>
               </tr>
               <tr>
                 <td>Discount</td>
@@ -43,7 +55,7 @@
               </tr>
               <tr>
                 <td>Subtotal</td>
-                <td class="price">800.00 USD</td>
+                <td class="price">{{ $donation->amount }}.00 USD</td>
               </tr>
               <tr>
                 <td>Tax</td>
@@ -51,7 +63,7 @@
               </tr>
               <tr class="total">
                 <td>Total</td>
-                <td class="price">800.00 USD</td>
+                <td class="price">{{ $donation->amount }}.00 USD</td>
               </tr>
             </table>
           </div>

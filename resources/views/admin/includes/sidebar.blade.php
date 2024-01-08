@@ -80,8 +80,17 @@
             </a>
           </li>
 
-          <!-- <li class="nav-item nav-category">Other Features</li>
+          <li class="nav-item nav-category">Payment</li>
+
           <li class="nav-item">
+            <a href="{{ route('admin.plan') }}" class="nav-link">
+            <i class="bi bi-menu-button-fill"></i>
+              <span class="link-title" style="margin-left: 16.7px;">Donation Plan</span>
+            </a>
+          </li>
+
+
+          <!-- <li class="nav-item">
             <a class="nav-link" data-bs-toggle="collapse" href="#transfer" role="button" aria-expanded="false"
               aria-controls="transfer">
               {{-- <i class="link-icon" data-feather="feather"></i> --}}

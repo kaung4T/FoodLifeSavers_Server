@@ -8,6 +8,9 @@ use App\Http\Controllers\User\UserController;
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\AdminService;
 use App\Http\Controllers\Admin\AdminService_Update;
+
+use App\Http\Controllers\Admin\AdminPaymentPlan;
+
 use App\Http\Controllers\agent\AgentController;
 use App\Http\Controllers\Backend\RoleController;
 use App\Http\Controllers\Backend\PropertyTypeController;
@@ -105,6 +108,13 @@ require __DIR__ . '/auth.php';
 Route::middleware(['auth', 'roles:admin'])->group(function () {
     Route::get('/admin/dashboard', [AdminController::class, 'AdminDashboard'])->name('admin.dashboard');
 
+
+    Route::get('/admin/plan', [AdminPaymentPlan::class, 'plan'])->middleware(['auth', 'verified'])->name('admin.plan');
+    Route::post('/admin/plan_store', [AdminPaymentPlan::class, 'plan_store'])->middleware(['auth', 'verified'])->name('admin.plan_store');
+    Route::get('/admin/plan_update/{id}', [AdminPaymentPlan::class, 'plan_update_index'])->middleware(['auth', 'verified'])->name('admin.plan_update');
+    Route::post('/admin/plan_update_store/{id}', [AdminPaymentPlan::class, 'plan_update_store'])->middleware(['auth', 'verified'])->name('admin.plan_update_store');
+    Route::post('/admin/plan_delete/{id}', [AdminPaymentPlan::class, 'plan_delete'])->middleware(['auth', 'verified'])->name('admin.plan_delete');
+    
 
     Route::get('/admin/service', [AdminService::class, 'service'])->name('admin.service');
     Route::post('/admin/service_store', [AdminService::class, 'store'])->name('admin.service_store');

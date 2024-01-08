@@ -9,6 +9,7 @@ use Illuminate\Routing\Controller as BaseController;
 
 use Illuminate\Support\Facades\Mail;
 use App\Mail\Mail_Sender;
+use App\Models\DonationPlan;
 use Exception;
 use Illuminate\Support\Facades\Redirect;
 
@@ -24,9 +25,11 @@ class Controller extends BaseController
     public function index()
     {
         $service = Service::all();
+        $donation = DonationPlan::all();
 
         $context = [
-            "service"=> $service
+            "service"=> $service,
+            "donation"=> $donation
         ];
         return view('index', $context);
     }

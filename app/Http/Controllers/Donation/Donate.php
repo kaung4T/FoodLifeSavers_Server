@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Donation;
 
 use App\Http\Controllers\Controller;
+use App\Models\DonationPlan;
 use App\Models\Order;
 use App\Models\Service;
 use Illuminate\Http\Request;
@@ -32,7 +33,7 @@ class Donate extends Controller {
 
     public function donate (Request $request ,$payment_plan_id) {
 
-    $payment = Service::find($payment_plan_id);
+    $payment = DonationPlan::find($payment_plan_id);
 
     $gateway_url="https://merchant.cardpaymentz.com/directapi.do";
       
@@ -46,7 +47,7 @@ class Donate extends Controller {
       'order_id'=> $order_id,
       'user_id'=> Auth::id(),
       'user'=> Auth::user()->name,
-      'payment_plan'=> $payment->name,
+      'payment_plan'=> $payment->plan_type,
       'payment_amount'=> "10000",
       'phone'=> Auth::user()->number,
       'country'=> Auth::user()->country

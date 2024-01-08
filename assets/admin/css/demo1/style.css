@@ -87,6 +87,24 @@
 }
 
 
+
+.update_plan {
+  margin: auto;
+  margin-left: 6px;
+  width: 550px;
+}
+
+.create_plan {
+  margin: auto;
+  margin-left: 6px;
+  width: 550px;
+}
+
+.plan_body {
+  margin: auto;
+  margin-left: 6px;
+}
+
 .update_body {
   margin: auto;
   margin-left: 6px;

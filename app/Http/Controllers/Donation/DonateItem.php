@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Donation;
 
 use App\Http\Controllers\Controller;
+use App\Models\DonationPlan;
 use Illuminate\Http\Request;
 
 class DonateItem extends Controller
@@ -14,8 +15,11 @@ class DonateItem extends Controller
 
     public function single_donate (Request $request, $id) {
 
+        $donation = DonationPlan::find($id);
+
         $context = [
-            "payment_plan_id"=> $id
+            "payment_plan_id"=> $id,
+            "donation"=>$donation
         ];
 
         return view('donation.single_donate', $context);
