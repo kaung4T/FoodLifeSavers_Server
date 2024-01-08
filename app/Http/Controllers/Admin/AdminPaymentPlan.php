@@ -26,7 +26,7 @@ class AdminPaymentPlan extends Controller
             'amount' => $request->plan_amount
         ]);
         
-        return view('admin.payment_plan.plan');
+        return redirect()->route('admin.plan')->with('success', 'File Uploaded Successfully');
     }
 
     public function plan_update_index (Request $request, $id) {
