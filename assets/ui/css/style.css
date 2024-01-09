@@ -137,7 +137,6 @@ body{
   position: relative;
   bottom: 350px;
   margin-left: 330px;
-  z-index: 1;
 }
 
 .web_text_cover h1, .web_text_cover a {
@@ -664,7 +663,6 @@ h6,
       position: relative;
       bottom: 150px;
       margin-left: 50px;
-      z-index: 1;
     }
 
     .responsive_header_nav {
@@ -1523,7 +1521,6 @@ padding-left: 8px;
     position: relative;
     bottom: 150px;
     margin-left: 20px;
-    z-index: 1;
   }
   .dhms {
     margin: 0.5rem;
