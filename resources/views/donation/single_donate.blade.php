@@ -13,13 +13,21 @@
       <div class="left-side">
         <div class="text-box">
           <h3 class="home-heading">{{ $donation->plan_type }}</h3>
+          @if ($donation->discount)
+          <p class="home-price"><em>${{ $donation->discount }}.00 </em>/ Month</p>
+          @else
           <p class="home-price"><em>${{ $donation->amount }}.00 </em>/ Month</p>
+          @endif
           <label class="text-uppercase left_plan_info">{{ $donation->plan_info }} </label>
           <hr class="left-hr" />
           <div class="p-6 pt-0">
                             <h5 class="display-5 mb-3" style="font-size: 2.2rem;">
+                              @if ($donation->discount)
+                                <small class="align-top" style="font-size: 22px; line-height: 45px;">$</small>{{ $donation->discount }}.00<small class="align-bottom" style="font-size: 16px; line-height: 40px;">/ Month</small>
+                              @else
                                 <small class="align-top" style="font-size: 22px; line-height: 45px;">$</small>{{ $donation->amount }}.00<small class="align-bottom" style="font-size: 16px; line-height: 40px;">/ Month</small>
-                            </h5>
+                              @endif
+                              </h5>
                             @if ($donation->plan_type == "Daily Plan")
                             <div class="d-flex justify-content-between mb-3"><span> Person-1 &amp; Person-2 </span><i class="fa fa-check text-primary pt-1"></i></div>
                             <div class="d-flex justify-content-between mb-3"><span> Person-2 &amp; Person-3 </span><i class="fa fa-check text-primary pt-1"></i></div>
@@ -47,15 +55,27 @@
             <table class="table">
               <tr>
                 <td>Advanced Plan</td>
+                @if ($donation->discount)
+                <td class="price">{{ $donation->discount }}.00 USD</td>
+                @else
                 <td class="price">{{ $donation->amount }}.00 USD</td>
+                @endif
               </tr>
               <tr>
                 <td>Discount</td>
+                @if ($donation->discount)
+                <td class="price" style="text-decoration: line-through;">{{ $donation->amount }} USD</td>
+                @else
                 <td class="price">0.00 USD</td>
+                @endif
               </tr>
               <tr>
                 <td>Subtotal</td>
+                @if ($donation->discount)
+                <td class="price">{{ $donation->discount }}.00 USD</td>
+                @else
                 <td class="price">{{ $donation->amount }}.00 USD</td>
+                @endif
               </tr>
               <tr>
                 <td>Tax</td>
@@ -63,7 +83,11 @@
               </tr>
               <tr class="total">
                 <td>Total</td>
+                @if ($donation->discount)
+                <td class="price">{{ $donation->discount }}.00 USD</td>
+                @else
                 <td class="price">{{ $donation->amount }}.00 USD</td>
+                @endif
               </tr>
             </table>
           </div>

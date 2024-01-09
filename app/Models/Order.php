@@ -14,6 +14,7 @@ class Order extends Model
         'user',
         'payment_plan',
         'payment_amount',
+        'payment_discount',
         'phone',
         'country',
     ];

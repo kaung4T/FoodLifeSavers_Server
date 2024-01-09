@@ -61,6 +61,12 @@
         <input name="plan_amount" type="number" class="form-control" value="{{ $donation->amount }}" required>
         </div>
     </div>
+    <div class="form-group row mb-3">
+        <label class="col-sm-5 col-form-label">Discount</label>
+        <div class="col-sm-7">
+        <input name="plan_discount" type="number" class="form-control">
+        </div>
+    </div>
 
         <button type="submit" class="btn btn-outline-primary mt-3 service_button">Submit</button>
 

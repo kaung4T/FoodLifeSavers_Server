@@ -23,7 +23,8 @@ class AdminPaymentPlan extends Controller
         $donation = DonationPlan::create([
             'plan_type' => $request->plan_type,
             'plan_info' => $request->plan_text,
-            'amount' => $request->plan_amount
+            'amount' => $request->plan_amount,
+            'discount' => $request->plan_discount
         ]);
         
         return redirect()->route('admin.plan')->with('success', 'File Uploaded Successfully');
@@ -46,7 +47,8 @@ class AdminPaymentPlan extends Controller
         $donation_update = $donation->update([
             'plan_type' => $request->plan_type,
             'plan_info' => $request->plan_text,
-            'amount' => $request->plan_amount
+            'amount' => $request->plan_amount,
+            'discount' => $request->plan_discount
         ]);
         
         return redirect()->route('admin.plan')->with('success', 'File Uploaded Successfully');

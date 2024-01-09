@@ -48,7 +48,8 @@ class Donate extends Controller {
       'user_id'=> Auth::id(),
       'user'=> Auth::user()->name,
       'payment_plan'=> $payment->plan_type,
-      'payment_amount'=> "10000",
+      'payment_amount'=> $payment->amount,
+      'payment_discount'=> $payment->discount,
       'phone'=> Auth::user()->number,
       'country'=> Auth::user()->country
     ]);

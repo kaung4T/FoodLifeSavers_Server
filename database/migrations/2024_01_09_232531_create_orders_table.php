@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('user');
             $table->string('payment_plan');
             $table->string('payment_amount');
+            $table->string('payment_discount')->nullable();
             $table->string('phone');
             $table->string('country');
             $table->timestamps();

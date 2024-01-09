@@ -11,6 +11,7 @@ class DonationPlan extends Model
     protected $fillable = [
         'plan_type',
         'plan_info',
-        'amount'
+        'amount',
+        'discount'
     ];
 }

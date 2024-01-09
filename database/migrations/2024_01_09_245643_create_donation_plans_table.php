@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('plan_type');
             $table->string('plan_info');
             $table->string('amount');
+            $table->string('discount')->nullable();
             $table->timestamps();
         });
     }

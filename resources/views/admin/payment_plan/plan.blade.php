@@ -42,6 +42,12 @@
         <input name="plan_amount" type="number" class="form-control" required>
         </div>
     </div>
+    <div class="form-group row mb-3">
+        <label class="col-sm-5 col-form-label">Discount</label>
+        <div class="col-sm-7">
+        <input name="plan_discount" type="number" class="form-control">
+        </div>
+    </div>
 
         <button type="submit" class="btn btn-outline-primary mt-3 service_button">Submit</button>
 
@@ -71,9 +77,10 @@
         <th scope="col">#</th>
         <th scope="col">Plan Type</th>
         <th scope="col">Info</th>
-        <th scope="col">Amount</th>
-        <th scope="col"></th>
-        <th scope="col"></th>
+        <th scope="col" class="text-center">Amount</th>
+        <th scope="col" class="text-center">Discount</th>
+        <th scope="col" class="text-center"></th>
+        <th scope="col" class="text-center"></th>
         </tr>
     </thead>
     <tbody>
@@ -88,9 +95,15 @@
                     {{ $each_donation->plan_type }}
                 </td>
       <td>{{ Str::limit($each_donation->plan_info, 25, $end='...') }}</td>
-      <td>{{ $each_donation->amount }}</td>
-      <td><a href="{{ route('admin.plan_update', $each_donation->id) }}" class="btn btn-sm btn-outline-primary">Edit</a></td>
-      <td>
+      <td class="text-center">{{ $each_donation->amount }}</td>
+        
+        @if ($each_donation->discount)
+      <td class="text-center">{{ $each_donation->discount }}</td>
+        @else
+      <td class="text-center"> - </td>
+        @endif
+      <td class="text-center"><a href="{{ route('admin.plan_update', $each_donation->id) }}" class="btn btn-sm btn-outline-primary">Edit</a></td>
+      <td class="text-center">
             <form action="{{ route('admin.plan_delete', $each_donation->id) }}" method="POST">
                 @csrf
         <button type="submit" class="btn btn-sm btn-outline-danger">Delete</button>

@@ -342,8 +342,20 @@
                         </div>
                         <div class="p-5 pt-0">
                             <h1 class="display-5 mb-3">
+                                @if ($each_donation->discount)
+                                <small class="align-top" style="font-size: 22px; line-height: 45px;">$</small>{{ $each_donation->discount }}.00<small class="align-bottom" style="font-size: 16px; line-height: 40px;">/ Month</small>
+                                @else
                                 <small class="align-top" style="font-size: 22px; line-height: 45px;">$</small>{{ $each_donation->amount }}.00<small class="align-bottom" style="font-size: 16px; line-height: 40px;">/ Month</small>
+                                <br>
+                                <small class="text-uppercase" style="font-size: 15px;color: #9c9c9c;">Discount not available</small>
+                                @endif
+
+                                @if ($each_donation->discount)
+                                <br>
+                                <small class="" style="font-size: 20px; position: relative; bottom: 3px; text-decoration: line-through;">$</small><label style="font-size: 28px; text-decoration: line-through;">{{ $each_donation->amount }}.00</label><small class="align-bottom" style="font-size: 16px; line-height: 40px;">/ Month</small>
+                                @endif
                             </h1>
+                            
                                 @if ($each_donation->plan_type == "Daily Plan")
                             <div class="d-flex justify-content-between mb-3"><span> Person-1 &amp; Person-2 </span><i class="fa fa-check text-primary pt-1"></i></div>
                             <div class="d-flex justify-content-between mb-3"><span> Person-2 &amp; Person-3 </span><i class="fa fa-check text-primary pt-1"></i></div>
