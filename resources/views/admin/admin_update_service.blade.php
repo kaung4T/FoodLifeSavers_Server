@@ -10,9 +10,13 @@
     <a href="{{ route('admin.customize_service') }}"><i class="bi bi-arrow-left"></i> Back</a>
     </div>
 
-    <h3 class="mb-5">Update Item</h3>
+
+<div class="card mb-4">
+    <div class="card-body">
+
+    <h4 class="mb-4">Update Item</h4>
         
-        <form action="{{ route('admin.update_store', $service_item->id) }}" method="POST" enctype="multipart/form-data" class="mb-7">
+        <form action="{{ route('admin.update_store', $service_item->id) }}" method="POST" enctype="multipart/form-data">
             @csrf
             
             <div class="form-group row mb-3">
@@ -42,7 +46,8 @@
             <button type="submit" class="btn btn-outline-primary mt-3 service_button">Update</button>
     
         </form>
-    
+    </div>
+</div>
     
 
     </div>

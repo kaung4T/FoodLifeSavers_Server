@@ -7,9 +7,12 @@
 
 <div class="service_body">
 
-<h3 class="mb-5">Add Service Item</h3>
+<div class="card mb-4">
+    <div class="card-body">
+
+<h4 class="mb-4">Add Service Item</h4>
         
-    <form action="{{ route('admin.service_store') }}" method="POST" enctype="multipart/form-data" class="mb-7">
+    <form action="{{ route('admin.service_store') }}" method="POST" enctype="multipart/form-data">
         @csrf
         
         <div class="form-group row mb-3">
@@ -40,13 +43,24 @@
 
     </form>
 
+    </div>
+</div>
+
+
+<div class="card">
+    <div class="card-body">
 
     <h4 class="mb-3">Customize Service Item</h4>
 
-    <div class="mb-7">
+    <div class="mb-2">
         <a href="{{ route('admin.customize_service') }}" class="">Your Service Group</a>    
     </div>
+
+
+    </div>
+</div>
     
+
 
 </div>
 

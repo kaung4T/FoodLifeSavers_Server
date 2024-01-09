@@ -6,15 +6,24 @@
 
     <div class="customize_body">
 
-    <h4 class="mb-3">Add Service Item</h3>
-    <div class="mb-5">
+
+<div class="card mb-4">
+    <div class="card-body">
+
+    <h4 class="mb-3">Add Service Item</h4>
+    <div class="mb-2">
         <a href="{{ route('admin.service') }}" class="">Add Your Service</a>    
     </div>
+    
+    </div>
+</div>
 
-    <h3 class="mb-4">Customize Your Service Item</h3>
 
+<div class="card">
+    <div class="card-body">
+        <h4 class="mb-4">Customize Your Service Item</h4>
 
-        <table class="table table-dark table-image mb-5">
+        <table class="table table-dark table-image mb-2">
     <thead>
         <tr>
         <th scope="col">#</th>
@@ -53,6 +62,9 @@
 
         </tbody>
     </table>
+
+    </div>
+</div>
 
 
 
