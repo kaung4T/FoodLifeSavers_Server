@@ -1495,19 +1495,19 @@ padding-left: 8px;
 
 
 
-/* @media (max-width: 1240px) { 
+@media (max-width: 1240px) { 
   .loginWrapper .card {
-    background-color: red;
-    margin-top: 50px;
+    /* background-color: red;
+    margin-top: 50px; */
     /* top: 15px; */
     /* display: flex; */
     /* align-items: center;
     justify-content: center; */
     /* height: 730px; */
-    max-width: 100%;
-    box-shadow: rgba(0, 0, 0, 0.2);
+    /* max-width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.2); */
   }
-} */
+}
 
 @media (max-width: 767px) { 
   .roadmap-carousel {

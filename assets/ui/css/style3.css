@@ -7,7 +7,6 @@
   font-size: 0.9rem;
 }
   .checkout-container {
-    /* background-color: red; */
     margin: auto;
     width: 750px;
     max-width: 1920px;
@@ -171,3 +170,45 @@
     border-radius: 8px;
   }
   
+
+
+  @media (max-width: 770px) {
+      .left-side {
+        margin-right: none;
+      }
+
+      .checkout-container {
+        
+        margin: auto;
+        width: auto;
+        max-width: 1920px;
+        height: auto;
+        display: block;
+        padding: 30px;
+      }
+      .right-side {
+        margin-left: 20px;
+        margin-top: 20px;
+        max-width: auto;
+        min-width: auto;
+
+      }
+      .check_out_des {
+
+      }
+  }
+  
+  
+  @media (max-width: 371px) {
+    .right-side {
+      margin-left: 20px;
+      margin-top: 20px;
+      max-width: auto;
+      min-width: auto;
+
+    }
+    .check_out_des {
+
+    }
+  }
+
