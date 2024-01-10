@@ -6,7 +6,7 @@
 
 
 
-<div class="create_plan mb-4">
+<div class="update_plan mb-4">
 
 
 <div class="mb-4">

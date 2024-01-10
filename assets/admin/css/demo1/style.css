@@ -88,32 +88,36 @@
 
 
 
+.order_body {
+  margin: auto;
+}
+
 .update_plan {
   margin: auto;
-  margin-left: 6px;
+  margin-left: 0px;
   width: 550px;
 }
 
 .create_plan {
   margin: auto;
-  margin-left: 6px;
+  margin-left: 0px;
   width: 550px;
 }
 
 .plan_body {
   margin: auto;
-  margin-left: 6px;
+  margin-left: 0px;
 }
 
 .update_body {
   margin: auto;
-  margin-left: 6px;
+  margin-left: 0px;
   width: 550px;
 }
 
 .customize_body {
   margin: auto;
-  margin-left: 6px;
+  margin-left: 0px;
 }
 
 .table-image {
@@ -131,7 +135,7 @@
 
 .service_body {
   margin: auto;
-  margin-left: 6px;
+  margin-left: 0px;
   width: 550px;
 }
 

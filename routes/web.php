@@ -11,6 +11,8 @@ use App\Http\Controllers\Admin\AdminService_Update;
 
 use App\Http\Controllers\Admin\AdminPaymentPlan;
 
+use App\Http\Controllers\Admin\AdminOrder;
+
 use App\Http\Controllers\agent\AgentController;
 use App\Http\Controllers\Backend\RoleController;
 use App\Http\Controllers\Backend\PropertyTypeController;
@@ -115,6 +117,9 @@ Route::middleware(['auth', 'roles:admin'])->group(function () {
     Route::post('/admin/plan_update_store/{id}', [AdminPaymentPlan::class, 'plan_update_store'])->middleware(['auth', 'verified'])->name('admin.plan_update_store');
     Route::post('/admin/plan_delete/{id}', [AdminPaymentPlan::class, 'plan_delete'])->middleware(['auth', 'verified'])->name('admin.plan_delete');
     
+
+    Route::get('/admin/order', [AdminOrder::class, 'order'])->name('admin.order');
+
 
     Route::get('/admin/service', [AdminService::class, 'service'])->name('admin.service');
     Route::post('/admin/service_store', [AdminService::class, 'store'])->name('admin.service_store');

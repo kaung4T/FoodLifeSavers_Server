@@ -89,6 +89,12 @@
             </a>
           </li>
 
+          <li class="nav-item">
+            <a href="{{ route('admin.order') }}" class="nav-link">
+            <i class="bi bi-diagram-3-fill"></i>
+              <span class="link-title" style="margin-left: 16.7px;">Order</span>
+            </a>
+          </li>
 
           <!-- <li class="nav-item">
             <a class="nav-link" data-bs-toggle="collapse" href="#transfer" role="button" aria-expanded="false"
