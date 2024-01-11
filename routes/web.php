@@ -88,8 +88,8 @@ Route::controller(ContactController::class)->group(function () {
 Route::post('/donate/{id}', [Donate::class, 'donate'])->middleware(['auth', 'verified'])->name('donate');
 Route::get('/all_donate', [DonateItem::class, 'all_donate'])->middleware(['auth', 'verified'])->name('all_donate');
 Route::get('/single_donate/{id}', [DonateItem::class, 'single_donate'])->middleware(['auth', 'verified'])->name('single_donate');
-Route::get('/donate/success', [Success::class, 'success'])->name('success');
-Route::get('/donate/fail', [Fail::class, 'fail'])->name('fail');
+Route::get('/donate/success/{id}', [Success::class, 'success'])->middleware(['auth', 'verified'])->name('success');
+Route::get('/donate/fail/{id}', [Fail::class, 'fail'])->middleware(['auth', 'verified'])->name('fail');
 
 
 

@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('order_id');
             $table->string('user_id');
             $table->string('user');
+            $table->string('payment_plan_id');
             $table->string('payment_plan');
             $table->string('payment_amount');
             $table->string('payment_discount')->nullable();
