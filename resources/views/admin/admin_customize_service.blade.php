@@ -23,6 +23,7 @@
     <div class="card-body">
         <h4 class="mb-4">Customize Your Service Item</h4>
 
+        <div class="table-responsive plan_table">
         <table class="table table-dark table-image mb-2">
     <thead>
         <tr>
@@ -62,6 +63,50 @@
 
         </tbody>
     </table>
+</div>
+
+
+
+
+<div class="table-responsive mobile_plan_table">
+    <table class="table table-dark table-image mb-2">
+        <thead>
+            <tr>
+            <th scope="col">#</th>
+            <th scope="col">Image</th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+        
+    <?php $i=1 ?>
+
+        @foreach ($all_service as $each_services)
+
+        <tr>
+      <th scope="row">{{ $i }}</th>
+                <td class="w-25">
+                    <img class="img-fluid img-thumbnail service_img rounded" src="{{ asset('storage/app/public/'.$each_services->file_path) }}" alt="">
+                </td>
+      <td><a href="{{ route('admin.update_service', $each_services->id) }}" class="btn btn-sm btn-outline-primary">Edit</a></td>
+      <td>
+            <form action="{{ route('admin.delete', $each_services->id) }}" method="POST">
+                @csrf
+        <button type="submit" class="btn btn-sm btn-outline-danger">Delete</button>
+            </form>
+      </td>
+    </tr>
+        
+    <?php $i++ ?>
+
+        @endforeach
+
+        </tbody>
+    </table>
+</div>
+
+
 
     </div>
 </div>

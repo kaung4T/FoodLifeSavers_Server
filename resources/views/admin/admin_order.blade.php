@@ -23,6 +23,7 @@
             </div>
 
 
+            <div class="table-responsive plan_table">
             <table class="table table-dark table-image mb-2">
     <thead>
         <tr>
@@ -76,6 +77,43 @@
 
         </tbody>
     </table>
+            </div>
+
+
+
+
+<div class="table-responsive mobile_plan_table">
+    <table class="table table-dark table-image mb-2">
+    <thead>
+        <tr>
+        <th scope="col">#</th>
+        <th scope="col" class="text-center">Order ID</th>
+        <th scope="col" class="text-center">User</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+    <?php $i=1 ?>
+
+        @foreach ($order as $each_order)
+
+        <tr>
+      <th scope="row">{{ $i }}</th>
+                <td class="text-center">{{ $each_order->order_id }}</td>
+                <td class="text-center">{{ $each_order->user }}</td>
+      
+    </tr>
+        
+    <?php $i++ ?>
+
+        @endforeach
+
+        </tbody>
+    </table>
+</div>
+
+
+
 
 
             </div>

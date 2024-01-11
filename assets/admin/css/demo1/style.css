@@ -88,6 +88,10 @@
 
 
 
+.mobile_plan_table {
+  display: none;
+}
+
 .order_body {
   margin: auto;
 }
@@ -22531,3 +22535,39 @@ div.tox .tox-dialog__body {
   margin: 0 0 0 0.7em;
 }
 /*# sourceMappingURL=../maps/demo1/style.css.map */
+
+
+@media (max-width: 585px) {
+
+  .create_plan {
+    margin: auto;
+    margin-left: 0px;
+    width: auto;
+  }
+  .update_plan {
+    margin: auto;
+    margin-left: 0px;
+    width: auto;
+  }
+  .update_body {
+    margin: auto;
+    margin-left: 0px;
+    width: auto;
+  }
+  .service_body {
+    margin: auto;
+    margin-left: 0px;
+    width: auto;
+  }
+}
+
+@media (max-width: 490px) {
+
+  .plan_table {
+    display: none;
+  }
+
+  .mobile_plan_table {
+    display: block;
+  }
+}

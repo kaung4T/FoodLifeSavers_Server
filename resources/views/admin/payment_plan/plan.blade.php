@@ -71,6 +71,8 @@
 <h4>Customize Donation Plan</h4>
     </div>
 
+
+    <div class="table-responsive plan_table">
 <table class="table table-dark table-image mb-2">
     <thead>
         <tr>
@@ -117,6 +119,49 @@
 
         </tbody>
     </table>
+</div>
+
+
+
+
+<div class="table-responsive mobile_plan_table">
+    <table class="table table-dark table-image mb-2">
+    <thead>
+        <tr>
+        <th scope="col">#</th>
+        <th scope="col">Plan Type</th>
+        <th scope="col" class="text-center"></th>
+        <th scope="col" class="text-center"></th>
+        </tr>
+    </thead>
+    <tbody>
+        
+    <?php $i=1 ?>
+
+        @foreach ($donation as $each_donation)
+
+        <tr>
+      <th scope="row">{{ $i }}</th>
+                <td class="w-25">
+                    {{ $each_donation->plan_type }}
+                </td>
+
+      <td class="text-center"><a href="{{ route('admin.plan_update', $each_donation->id) }}" class="btn btn-sm btn-outline-primary">Edit</a></td>
+      <td class="text-center">
+            <form action="{{ route('admin.plan_delete', $each_donation->id) }}" method="POST">
+                @csrf
+        <button type="submit" class="btn btn-sm btn-outline-danger">Delete</button>
+            </form>
+      </td>
+    </tr>
+        
+    <?php $i++ ?>
+
+        @endforeach
+
+        </tbody>
+    </table>
+</div>
 
 
 
