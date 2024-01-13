@@ -104,8 +104,8 @@
             <div>
               <label for="full-name">Full Name</label>
               <input
-                id="full-name"
-                name="full-name"
+                id="full_name"
+                name="full_name"
                 placeholder="Satoshi Nakamoto"
                 required
                 type="text"
@@ -113,7 +113,7 @@
             </div>
 
             <div>
-              <label for="credit-card-num"
+              <label for="credit_card_num"
                 >Card Number
                 <span class="card-logos">
                   <i class="card-logo fa-brands fa-cc-visa"></i>
@@ -122,9 +122,33 @@
                   <i class="card-logo fa-brands fa-cc-discover"></i> </span
               ></label>
               <input
-                id="credit-card-num"
-                name="credit-card-num"
+                id="credit_card_num"
+                name="credit_card_num"
                 placeholder="1111-2222-3333-4444"
+                required
+                type="text"
+              />
+            </div>
+
+            <div>
+              <label for="city"
+                >City
+              </label>
+            <input class="w-50"
+                id="city"
+                name="city"
+                required
+                type="text"
+              />
+            </div>
+
+            <div>
+              <label for="zip"
+                >ZIP Code
+              </label>
+            <input class="w-25"
+                id="zip"
+                name="zip"
                 required
                 type="text"
               />

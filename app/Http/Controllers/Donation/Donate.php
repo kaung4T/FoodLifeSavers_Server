@@ -80,25 +80,25 @@ class Donate extends Controller {
 
     //<!--product price,curr and product name * by cart total amount -->
 
-    $curlPost["price"]="30.00";
+    $curlPost["price"]= $payment->amount;
     $curlPost["curr"]="USD";
-    $curlPost["product_name"]="Testing Product";
+    $curlPost["product_name"]= $payment->plan_type;
 
     //<!--billing details of .* customer -->
 
-    $curlPost["fullname"]="Test Full Name";
-    $curlPost["email"]="test.4438@test.com";
-    $curlPost["bill_street_1"]="25A Alpha";
-    $curlPost["bill_street_2"]="tagore lane";
-    $curlPost["bill_city"]="Jurong";
-    $curlPost["bill_state"]="SG";
-    $curlPost["bill_country"]="SG";
-    $curlPost["bill_zip"]="787602";
-    $curlPost["bill_phone"]="+65 62200944";
+    $curlPost["fullname"]= $request->full_name;
+    $curlPost["email"]= Auth::user()->email;
+    $curlPost["bill_street_1"]= Auth::user()->address;
+    $curlPost["bill_street_2"]= "-";
+    $curlPost["bill_city"]= $request->city;
+    $curlPost["bill_state"]= Auth::user()->country;
+    $curlPost["bill_country"]= Auth::user()->country;
+    $curlPost["bill_zip"]= $request->zip;
+    $curlPost["bill_phone"]=  Auth::user()->number;
     $curlPost["id_order"]=$order_id; // should be unique by time() or your id_order is unique
     $curlPost["notify_url"]="https://yourdomain.com/notify.php";
-    $curlPost["success_url"]="https://crowdestatepros.com/donate/success";
-    $curlPost["error_url"]="https://crowdestatepros.com/donate/fail";
+    $curlPost["success_url"]="https://crowdestatepros.com/donate/success/$order_id";
+    $curlPost["error_url"]="https://crowdestatepros.com/donate/fail/$payment_plan_id";
     $curlPost["checkout_url"]="https://yourdomain.com/checkout_url.php";
 
     //<!--card details of .* customer -->
