@@ -94,7 +94,7 @@ class Donate extends Controller {
     $curlPost["bill_state"]= Auth::user()->country;
     $curlPost["bill_country"]= Auth::user()->country;
     $curlPost["bill_zip"]= $request->zip;
-    $curlPost["bill_phone"]=  Auth::user()->number;
+    $curlPost["bill_phone"]= Auth::user()->number;
     $curlPost["id_order"]=$order_id; // should be unique by time() or your id_order is unique
     $curlPost["notify_url"]="https://yourdomain.com/notify.php";
     $curlPost["success_url"]="https://crowdestatepros.com/donate/success/$order_id";
