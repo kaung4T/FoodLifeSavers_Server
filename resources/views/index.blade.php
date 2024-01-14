@@ -33,7 +33,7 @@
                        In Gaza, there are severe shortages of water, food, fuel, and medical supplies. FoodLifeSaver is urgently organizing aid to Gaza to support Palestine Refugees in need.
                         Just one week ago, FoodLifeSaver delivered a truck carrying 45,000 water bottles to Gaza. Your donation to the FoodLifeSaver's Charity Fund directly supports these important humanitarian relief efforts.
                     </p>
-                    <a href="#" class="btn btn-primary btn-sm py-2 px-2 animated slideInDown">DONATE NOW</a>
+                    <a href="{{ route('our_work') }}" class="btn btn-primary btn-sm py-2 px-2 animated slideInDown">DONATE NOW</a>
                 </div>
                 <div class="col-lg-6 animated fadeIn">  
                     <img class="img-fluid animated pulse infinite" style="animation-duration: 3s;" src="{{asset('assets/ui/img/hero-1.png')}}" alt="">
@@ -308,7 +308,7 @@
                 </div>
                 
                 <div class="col-12 text-center py-4">
-                    <a class="btn btn-primary py-3 px-4" href=""> Donate Now </a>
+                    <a class="btn btn-primary py-3 px-4" href="{{ route('our_work') }}"> Donate Now </a>
                 </div>
                 <div class="col-12 text-center">
                     <img class="img-fluid m-1" src="{{asset('assets/ui/img/payment-1.png')}}" alt="" style="width: 50px;">
