@@ -38,7 +38,7 @@ class AuthenticatedSessionController extends Controller
             $url = '/profile';
         }
         
-        return redirect()->intended($url)->with('message', 'IT WORKS!');
+        return redirect()->intended($url);
     }
 
     /**
