@@ -12,6 +12,16 @@
                     </div>
                 </div>
 
+
+                @if ($errors->has('email'))
+
+                <div class="alert alert-info w-50" role="alert" style="margin: auto;margin-top: 30px;margin-bottom: -30px;">
+            <b class="" role="alert">{{ $errors->first('email') }}</b>
+                </div>
+                
+                @endif
+
+
         <div class="card-body">
             <form action="{{route('login')}}" method="POST">
                 @csrf
@@ -21,7 +31,7 @@
                     <span class="fa-solid fa-user p-2"></span> 
                     <input type="text" name="login" id="login" class="form-control @error('login') is-invalid @enderror" placeholder="Enter ID" required>
              </div>
-               @error('login')
+               @error('failed')
                     <span class="invalid-feedback text-danger" role="alert"> {{$message}} </span>
                 @enderror 
                 </div>

@@ -1187,7 +1187,7 @@ padding-left: 8px;
   margin: 0;
   padding: 0;
   width: 100%;
-  height: 600px;
+  height: 850px;
   background: hsl(0, 2%, 56%);
 }
 
@@ -1196,7 +1196,7 @@ padding-left: 8px;
   margin: 0;
   padding: 0;
   width: 100%;
-  height: 860px;
+  height: 1090px;
   background: #928d8d;
 }
 
@@ -1585,53 +1585,53 @@ padding-left: 8px;
   .login_text {
     font-size: 0.7rem;
   }
- .loginWrapper {
+ /* .loginWrapper {
     margin: 0;
     padding: 0;
     width: 100%;
-    height: 600px;
+    height: 730px;
     background: hsl(0, 2%, 56%);
- }
+ } */
 }
 
 @media (max-width: 306px) {
- .loginWrapper {
+ /* .loginWrapper {
     margin: 0;
     padding: 0;
     width: 100%;
     height: 610px;
     background: hsl(0, 2%, 56%);
- }
+ } */
 }
 
 @media (max-width: 283px) {
-  .loginWrapper {
+  /* .loginWrapper {
      margin: 0;
      padding: 0;
      width: 100%;
      height: 620px;
      background: hsl(0, 2%, 56%);
-  }
+  } */
  }
 
  @media (max-width: 272px) {
-  .loginWrapper {
+  /* .loginWrapper {
      margin: 0;
      padding: 0;
      width: 100%;
      height: 630px;
      background: hsl(0, 2%, 56%);
-  }
+  } */
  }
 
  @media (max-width: 208px) {
-  .loginWrapper {
+  /* .loginWrapper {
      margin: 0;
      padding: 0;
      width: 100%;
      height: 650px;
      background: hsl(0, 2%, 56%);
-  }
+  } */
  }
 
 @media (max-width: 290px) {

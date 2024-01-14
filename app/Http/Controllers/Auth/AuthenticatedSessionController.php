@@ -37,8 +37,8 @@ class AuthenticatedSessionController extends Controller
         } elseif ($request->user()->role === 'user') {
             $url = '/profile';
         }
-
-        return redirect()->intended($url);
+        
+        return redirect()->intended($url)->with('message', 'IT WORKS!');
     }
 
     /**
