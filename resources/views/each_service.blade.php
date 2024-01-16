@@ -14,7 +14,7 @@
     <p>{{$service->text}}</p>
 
     <a class="btn btn-sm btn-primary mt-3" 
-    href="">Donate</a>
+    href="{{ route('our_work') }}">Donate</a>
 
 </div>
 

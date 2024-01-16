@@ -157,30 +157,32 @@
             <div>
               <p class="expires">Expires on:</p>
               <div class="card-experation">
-                <label for="expiration-month">Month</label>
-                <select id="expiration-month" name="expiration-month" required>
-                  <option value="">Month:</option>
-                  <option value="">January</option>
-                  <option value="">February</option>
-                  <option value="">March</option>
-                  <option value="">April</option>
-                  <option value="">May</option>
-                  <option value="">June</option>
-                  <option value="">July</option>
-                  <option value="">August</option>
-                  <option value="">September</option>
-                  <option value="">October</option>
-                  <option value="">November</option>
-                  <option value="">Decemeber</option>
+                <label for="expiration">Month</label>
+                <select id="expiration-month" name="expiration_month" required>
+                  <option value="01">01</option>
+                  <option value="02">02</option>
+                  <option value="03">03</option>
+                  <option value="04">04</option>
+                  <option value="05">05</option>
+                  <option value="06">06</option>
+                  <option value="07">07</option>
+                  <option value="08">08</option>
+                  <option value="09">09</option>
+                  <option value="10">10</option>
+                  <option value="11">11</option>
+                  <option value="12">12</option>
                 </select>
 
                 <label class="expiration-year">Year</label>
-                <select id="experation-year" name="experation-year" required>
-                  <option value="">Year</option>
-                  <option value="">2023</option>
-                  <option value="">2024</option>
-                  <option value="">2025</option>
-                  <option value="">2026</option>
+                <select id="experation-year" name="experation_year" required>
+                  <option value="23">23</option>
+                  <option value="24">24</option>
+                  <option value="25">25</option>
+                  <option value="26">26</option>
+                  <option value="27">27</option>
+                  <option value="28">28</option>
+                  <option value="29">29</option>
+                  <option value="30">30</option>
                 </select>
               </div>
             </div>

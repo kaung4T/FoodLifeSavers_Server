@@ -97,16 +97,16 @@ class Donate extends Controller {
     $curlPost["bill_phone"]= Auth::user()->number;
     $curlPost["id_order"]=$order_id; // should be unique by time() or your id_order is unique
     $curlPost["notify_url"]="https://yourdomain.com/notify.php";
-    $curlPost["success_url"]="https://crowdestatepros.com/donate/success/$order_id";
-    $curlPost["error_url"]="https://crowdestatepros.com/donate/fail/$payment_plan_id";
+    $curlPost["success_url"]="https://foodlifesavers.com/donate/success/$order_id";
+    $curlPost["error_url"]="https://foodlifesavers.com/donate/fail/$payment_plan_id";
     $curlPost["checkout_url"]="https://yourdomain.com/checkout_url.php";
 
     //<!--card details of .* customer -->
 
-    $curlPost["ccno"]="4242424242424242";
-    $curlPost["ccvv"]="123";
-    $curlPost["month"]="01";
-    $curlPost["year"]="30";
+    $curlPost["ccno"]= $request->credit_card_num;
+    $curlPost["ccvv"]= $request->cvv;
+    $curlPost["month"]= $request->expiration_month;
+    $curlPost["year"]= $request->experation_year;
     $curlPost["notes"]="Remark for transaction";
 
     
@@ -154,8 +154,10 @@ class Donate extends Controller {
         'order_id'=> $order_id,
         'user_id'=> Auth::id(),
         'user'=> Auth::user()->name,
-        'payment_plan'=> $payment->name,
-        'payment_amount'=> "10000",
+        'payment_plan_id'=> $payment->id,
+        'payment_plan'=> $payment->plan_type,
+        'payment_amount'=> $payment->amount,
+        'payment_discount'=> $payment->discount,
         'phone'=> Auth::user()->number,
         'country'=> Auth::user()->country
       ]);
