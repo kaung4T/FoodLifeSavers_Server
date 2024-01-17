@@ -65,10 +65,14 @@ body{
 }
 
 .user_sign_up_message {
-  margin: auto;
-  width: 300px;
-  margin-top: 140px;
+  position: absolute;
+  margin:-35px -35px 0 0;
+  top: 120px;
+  right: 40%;
+  left: 40%;
+  width: 270px;
   text-align: center;
+  z-index: 100;
 }
 
 .footer_web_logo {
@@ -1515,6 +1519,16 @@ padding-left: 8px;
   }
 }
 
+@media (max-width: 600px) {
+  .user_sign_up_message {
+    margin: auto;
+    top: 95px;
+    right: 35%;
+    left: 20%;
+    text-align: center;
+  }
+}
+
 @media (max-width: 570px) {
   .web_text_cover {
     width: auto;
@@ -1567,17 +1581,29 @@ padding-left: 8px;
 @media (max-width: 400px) {
   .user_sign_up_message {
     margin: auto;
-    width: auto;
-    min-width: 110px;
-    margin-top: 140px;
+    top: 95px;
+    right: 15%;
+
+    width: 170px;
+
     text-align: center;
-    margin-left: 40px;
-    margin-right: 40px;
   }
   
   .display_budget {
     margin: auto;
     width: 250px;
+  }
+}
+
+@media (max-width: 250px) {
+  .user_sign_up_message {
+    margin: auto;
+    top: 95px;
+    right: 5%;
+    left: 5%;
+    width: 170px;
+
+    text-align: center;
   }
 }
 

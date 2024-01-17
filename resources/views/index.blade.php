@@ -13,12 +13,14 @@
 <a href="{{ route('our_work') }}" class="btn btn-sm btn-outline-dark">Learn about Food Life Savers</a>
 </div>
 
+
 @if(Session::has('success'))
     <div class="alert alert-success user_sign_up_message">
-        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-    <div><strong>Success!</strong> {{ Session::get('message', '') }}</div>
-    </div>
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+        <div><strong>Success!</strong> {{ Session::get('message', '') }}</div>
+        </div>
 @endif
+    
 
     <!-- JS apex Chart install -->
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
