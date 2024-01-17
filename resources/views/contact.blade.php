@@ -17,8 +17,8 @@
        
            
     <div style="margin-top:0px;" class="row no-margin">
-        
-        <iframe style="width:100%" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d249759.19784092825!2d79.10145254589841!3d12.009924873581818!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1448883859107"  height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+    
+        <iframe style="width:100%" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d255278.11535243248!2d103.6592266916389!3d1.3440836686491993!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da1767b42b8ec9%3A0x400f7acaedaa420!2sSingapore!5e0!3m2!1sen!2smm!4v1705502836552!5m2!1sen!2smm"  height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
 
 
       </div>
@@ -30,7 +30,10 @@
           
             <div style="padding:20px" class="col-sm-7">
             <h2 >Contact Form</h2> <br>
-                <div class="row cont-row">
+
+            <form action="{{ route('email_message') }}" method="POST" enctype="multipart/form-data">
+                @csrf
+                <!-- <div class="row cont-row">
                     <div  class="col-sm-3"><label>Enter Name </label><span>:</span></div>
                     <div class="col-sm-8"><input type="text" placeholder="Enter Name" name="name" class="form-control input-sm"  ></div>
                 </div>
@@ -41,19 +44,21 @@
                  <div  class="row cont-row">
                     <div  class="col-sm-3"><label>Mobile Number</label><span>:</span></div>
                     <div class="col-sm-8"><input type="text" name="name" placeholder="Enter Mobile Number" class="form-control input-sm"  ></div>
-                </div>
+                </div> -->
                  <div  class="row cont-row">
                     <div  class="col-sm-3"><label>Enter Message</label><span>:</span></div>
                     <div class="col-sm-8">
-                      <textarea rows="5" placeholder="Enter Your Message" class="form-control input-sm"></textarea>
+                      <textarea rows="5" name="body" placeholder="Enter Your Message" class="form-control input-sm"></textarea>
                     </div>
                 </div>
                  <div style="margin-top:10px;" class="row">
                     <div style="padding-top:10px;" class="col-sm-3"><label></label></div>
                     <div class="col-sm-8">
-                     <button class="btn btn-primary">Send Message</button>
+                     <button type="submit" class="btn btn-primary">Send Message</button>
                     </div>
                 </div>
+            </form>
+
             </div>
              <div class="col-sm-5">    
                   <div style="margin:50px" class="serv"> 

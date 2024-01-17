@@ -62,6 +62,7 @@ Route::get('/panasonic', [ProductController::class, 'Panasonic'])->name('panason
 
 // EMAIL Subscribe sign up
 Route::post('/email_subscribe', [Controller::class, 'email_subscribe'])->name('email_subscribe');
+Route::post('/email_message', [Controller::class, 'email_message'])->name('email_message');
 
 Route::get('/about', [AboutController::class, 'about'])->name('about');
 Route::get('/earning', [EarningsController::class, 'earning'])->name('earning');

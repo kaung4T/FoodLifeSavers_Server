@@ -76,7 +76,7 @@ class Controller extends BaseController
     public function email_subscribe(Request $request)
     {
         $data = [
-            'title' => 'Food Life Saver Users Sign UP!',
+            'title' => 'FoodLifeSaver Users Sign UP!',
             'body' => $request->body
         ];
         
@@ -91,5 +91,24 @@ class Controller extends BaseController
         }
 
         // return redirect('https://www.youtube.com/watch?v=bBOAcS_3nts');
+    }
+
+    public function email_message(Request $request)
+    {
+        $data = [
+            'title' => 'FoodLifeSaver Message Mail of Users!',
+            'body' => $request->body
+        ];
+        
+        try
+        {
+            Mail::to('mrkaungminnkhant@gmail.com')->send(new Mail_Sender($data));
+            return Redirect::to('/contact')->with('success', true)->with('message','Your message mail was sent!');
+        }
+        catch (Exception $e) 
+        {
+            return Redirect::to('/contact')->withErrors("You message didn't send");
+        }
+
     }
 }
