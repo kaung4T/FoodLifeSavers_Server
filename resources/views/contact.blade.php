@@ -2,6 +2,14 @@
 
 @section('content')
 
+
+@if(Session::has('success'))
+    <div class="alert alert-success user_sign_up_message">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+        <div><strong>Success!</strong> {{ Session::get('message', '') }}</div>
+        </div>
+@endif
+
 <!--  ************************* Page Title Starts Here ************************** -->
 <div class="page-nav no-margin row">
         <div class="container">
