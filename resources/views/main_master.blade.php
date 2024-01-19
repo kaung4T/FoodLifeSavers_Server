@@ -12,8 +12,7 @@
     <script src="https://unpkg.com/scrollreveal"></script>
 
     <!-- web icon -->
-    <link class="favicon" rel="icon" type="image/x-icon" href="{{asset('assets/ui/img/foodlifesavers LOGO v1.png')}}">
-    <link class="favicon" rel="shortcut icon" type="image/png" href="{{asset('assets/ui/img/foodlifesavers LOGO v1.png')}}">
+    <link class="favicon" rel="icon" type="image/x-icon" href="{{asset('assets/ui/img/foodlifesavers LOGO v2.png')}}">
 
   
 	 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Roboto:wght@500;700&display=swap"
