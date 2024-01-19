@@ -128,8 +128,12 @@ body{
   background-repeat: no-repeat;
   background-size: cover;
   z-index: 10;
-  filter:brightness(50%);
+  filter:brightness(30%);
   pointer-events: none;
+
+  object-fit: cover;
+  width: 100%;
+  height: 615px;
 }
 
 .web_image_cover::-webkit-media-controls {
