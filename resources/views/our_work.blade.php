@@ -94,38 +94,42 @@
            <div class="container">
                <div class="section-title row">
                    <h2>What we do?</h2>
-                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac accumsan ante. Proin ac lectus porttitor, pharetra lorem sit amet, euismod tortor. Donec blandit accumsan elit</p>
+                   <p>
+                   FoodLifeSaver is urgently organizing aid to Gaza to support Palestine Refugees in need.  
+                    Your donation to the FoodLifeSaver's Charity Fund directly supports these important humanitarian relief efforts</p>
                </div>
                <div class="row mt-4 whd">
                    <div class="col-md-4 text-center mb-5">
                        <i class="bi text-primary fs-1 bi-egg-fried"></i>
                        <h4 class="fs-6 fw-bold mt-3">RAISE FUND FOR HEALTHY FOOD</h4>
-                       <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla  consectetur adipiscing elit. Sed ac accumsan hic deserunt facere et animi</p>
+                       <p>
+                       Addressing multiple aspects of the crisis, including food and medical aid, ensures a well-rounded impact from donor contributions
+                       </p>
                    </div>
                     <div class="col-md-4 text-center mb-5">
                        <i class="bi fs-1 text-primary bi-house-door"></i>
                        <h4 class="fs-6 fw-bold mt-3">HUGE HELP TO HOMELESS PUPIL</h4>
-                       <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla  consectetur adipiscing elit. Sed ac accumsan hic deserunt facere et animi</p>
+                       <p>Addressing multiple aspects of the crisis, including food and medical aid, ensures a well-rounded impact from donor contributions</p>
                    </div>
                     <div class="col-md-4 text-center mb-5">
                       <i class="bi fs-1 text-primary bi-book-half"></i>
                        <h4 class="fs-6 fw-bold mt-3">EDUCATION FOR POOR CHILDREN</h4>
-                       <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla  consectetur adipiscing elit. Sed ac accumsan hic deserunt facere et animi</p>
+                       <p>Beyond immediate relief, your charity focuses on long-term development projects for lasting impact and stability</p>
                    </div>
                      <div class="col-md-4 text-center mb-5">
                       <i class="bi fs-1 text-primary bi-currency-dollar"></i>
                        <h4 class="fs-6 fw-bold mt-3">MASSIVE DONATION TO POOR</h4>
-                       <p>Lorem ipsum dolor sit amet consectetur,  consectetur adipiscing elit. Sed ac accumsan adipisicing elit. Nulla hic deserunt facere et animi</p>
+                       <p>Regular updates on fund utilization build trust, demonstrating a commitment to transparency and accountability</p>
                    </div>
                     <div class="col-md-4 text-center mb-5">
                        <i class="bi fs-1 text-primary bi-building"></i>
                        <h4 class="fs-6 fw-bold mt-3">LET’S BUILD SOME HOMES</h4>
-                       <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla  consectetur adipiscing elit. Sed ac accumsan hic deserunt facere et animi</p>
+                       <p>The urgent situation in Gaza demands swift action, and your charity provides timely assistance to those in need</p>
                    </div>
                      <div class="col-md-4 text-center mb-5">
                        <i class="bi fs-1 text-primary bi-heart-pulse"></i>
                        <h4 class="fs-6 fw-bold mt-3">MEDICAL FACILITIES</h4>
-                       <p>Lorem ipsum dolor sit amet consectetur,  consectetur adipiscing elit. Sed ac accumsan adipisicing elit. Nulla hic deserunt facere et animi</p>
+                       <p>Your donations directly save lives and ease the suffering of Gaza refugees facing critical shortages</p>
                    </div>
                    
                   

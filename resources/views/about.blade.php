@@ -12,33 +12,45 @@
             <div class="about-row row">
                 <div class="col-md-8">
                     <div class="abut-detail">
-                         <h4>BUILDING SCHOOL IN AFRICAN COMMUNITIES.</h4>
-                        <p>Integer vulputate vehicula dolor a eleifend. Duis aliquam condimentum sapien, eget tempor justo. Aenean porttitor nibh metus, sollicitudin egestas metus posuere et . Fusce egestas volutpat metus, in sodales sem bibendum porta. Nunc hendrerit nunc sit </p> <p> Amet tellus posuere, at malesuada sem gravida. Integer maximus ultricies augue, at dapibus elit bibendum consequat. Cras faucibus tellus eleifend, fermentum purus in, dapibus sapien. Praesent nec ornare risus. Etiam iaculis, ligula vel gravida vestibulum, urna justo posuere ante, id pretium massa arcu sed mi. Nunc a sollicitudin sem. Duis tempus</p>
+                         <h4>One Small Step to Make Big Changes.</h4>
+
+        <label class="mb-4"> 
+            Every donation you make contributes to the improvement of Palestinian Lives. We're offering our help with everything we can to provide the daily needs of refugees.
+    </label>
+        
+        <div class="d-flex align-items-center mb-2">
+            <i class="fa fa-check bg-light text-primary btn-sm-square rounded-circle me-3 fw-bold"></i>
+            <span> Provide essential food support to refugees in need. </span>
+        </div>
+        <div class="d-flex align-items-center mb-2">
+            <i class="fa fa-check bg-light text-primary btn-sm-square rounded-circle me-3 fw-bold"></i>
+            <span> Offer medical assistance and care to refugees facing health challenges. </span>
+        </div>
+        <div class="d-flex align-items-center mb-4">
+            <i class="fa fa-check bg-light text-primary btn-sm-square rounded-circle me-3 fw-bold"></i>
+            <span> Collaborate with organizations to ensure comprehensive aid for refugees in both food and medical domains. </span>
+        </div>
+
                     </div>
                    
 
+                        
                     <div class="row diag-ro">
+
+                    @foreach ($donate_plan as $each_donate)
                         <div class="about-diag">
                             <div class="icon"><i class="fas fa-arrow-right"></i></div>
                             <div class="tex">
-                                <h5>$500</h5>
-                                <p>Raised by your help</p>
+                                    @if ($each_donate->discount)
+                                <h5>${{ $each_donate->discount }}</h5>
+                                    @else
+                                <h5>${{ $each_donate->amount }}</h5>
+                                    @endif
+                                <p>{{ $each_donate->plan_info }}</p>
                             </div>
                         </div>
-                        <div class="about-diag">
-                            <div class="icon"><i class="fas fa-arrow-right"></i></div>
-                            <div class="tex">
-                                <h5>$1000</h5>
-                                <p>Immediate Need</p>
-                            </div>
-                        </div>
-                        <div class="about-diag">
-                            <div class="icon"><i class="fas fa-arrow-right"></i></div>
-                            <div class="tex">
-                                <h5>$5000</h5>
-                                <p>Our initial target</p>
-                            </div>
-                        </div>
+                    @endforeach
+
                     </div>
                 </div>
                 <div class="col-md-4">
@@ -61,7 +73,7 @@
                        <div class="serv-cove shadow-md rounded bg-white p-3">
                             <div class="prf row mb-3">
                                 <div class="col-3">
-                                    <img class="rounded-pill" src="assets/ui/img/member-01.jpg" alt="">
+                                    <!-- <img class="rounded-pill" src="assets/ui/img/member-01.jpg" alt=""> -->
                                 </div>
                                 <div class="col-9 align-self-center">
                                     <h6 class="mb-0 fw-bolder">Vinoth Parkash</h6>
@@ -78,7 +90,7 @@
                        <div class="serv-cove shadow-md rounded bg-white p-3">
                             <div class="prf row mb-3">
                                 <div class="col-3">
-                                    <img class="rounded-pill" src="assets/ui/img/member-03.jpg" alt="">
+                                    <!-- <img class="rounded-pill" src="assets/ui/img/member-03.jpg" alt=""> -->
                                 </div>
                                 <div class="col-9 align-self-center">
                                     <h6 class="mb-0 fw-bolder">Jackson Daniel</h6>
@@ -95,7 +107,7 @@
                        <div class="serv-cove shadow-md rounded bg-white p-3">
                             <div class="prf row mb-3">
                                 <div class="col-3">
-                                    <img class="rounded-pill" src="assets/ui/img/member-02.jpg" alt="">
+                                    <!-- <img class="rounded-pill" src="assets/ui/img/member-02.jpg" alt=""> -->
                                 </div>
                                 <div class="col-9 align-self-center">
                                     <h6 class="mb-0 fw-bolder">Praveen Thaney</h6>
