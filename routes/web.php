@@ -38,6 +38,10 @@ use App\Http\Controllers\Donation\DonateItem;
 use App\Http\Controllers\Donation\Success;
 use App\Http\Controllers\Donation\Fail;
 use App\Http\Controllers\Dashboard;
+use App\Http\Controllers\Donation\Cancellation;
+use App\Http\Controllers\Donation\Notify;
+use App\Http\Controllers\Policy\Privacy;
+use App\Http\Controllers\Policy\Refund;
 
 /*
 |--------------------------------------------------------------------------
@@ -69,6 +73,10 @@ Route::get('/earning', [EarningsController::class, 'earning'])->name('earning');
 Route::get('/our_work', [OurWorkController::class, 'our_work'])->name('our_work');
 Route::get('/contact', [ContactController::class, 'contact'])->name('contact');
 Route::get('/tandc', [TandC::class, 'tandc'])->name('tandc');
+Route::get('/policy/privacy-policy', [Privacy::class, 'privacy'])->name('privacy');
+Route::get('/policy/refund-policy', [Refund::class, 'refund'])->name('refund');
+Route::post('/notify', [Notify::class, 'notify'])->name('notify');
+Route::get('/cancellation', [Cancellation::class, 'cancellation'])->name('cancellation');
 
 Route::get('/chem', [LGChemController::class, 'chem'])->name('chem');
 Route::get('/samsung', [SamsungSDIController::class, 'samsung'])->name('samsung');

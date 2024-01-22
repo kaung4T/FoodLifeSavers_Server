@@ -151,6 +151,18 @@ body{
   color: #fff;
 }
 
+.privacy_body {
+  margin: auto;
+  margin-top: 65px;
+  width: 85%;
+}
+
+.refund_body {
+  margin: auto;
+  margin-top: 65px;
+  width: 85%;
+}
+
 .tandc_body {
   margin: auto;
   margin-top: 65px;
