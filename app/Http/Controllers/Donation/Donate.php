@@ -162,17 +162,17 @@ class Donate extends Controller {
     elseif($status_nm==1 || $status_nm==9){ // 1:Approved/Success,9:Test Transaction
       $redirecturl = $curlPost["success_url"];
 
-      // $oreder_creation = Order::create([
-      //   'order_id'=> $order_id,
-      //   'user_id'=> Auth::id(),
-      //   'user'=> Auth::user()->name,
-      //   'payment_plan_id'=> $payment->id,
-      //   'payment_plan'=> $payment->plan_type,
-      //   'payment_amount'=> $payment->amount,
-      //   'payment_discount'=> $payment->discount,
-      //   'phone'=> Auth::user()->number,
-      //   'country'=> Auth::user()->country
-      // ]);
+      $oreder_creation = Order::create([
+        'order_id'=> $order_id,
+        'user_id'=> Auth::id(),
+        'user'=> Auth::user()->name,
+        'payment_plan_id'=> $payment->id,
+        'payment_plan'=> $payment->plan_type,
+        'payment_amount'=> $payment->amount,
+        'payment_discount'=> $payment->discount,
+        'phone'=> Auth::user()->number,
+        'country'=> Auth::user()->country
+      ]);
 
       if(strpos($redirecturl,'?')!==false){
         $redirecturl = $redirecturl."&".$sub_query;
