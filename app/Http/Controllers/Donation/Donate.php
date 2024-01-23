@@ -73,8 +73,19 @@ class Donate extends Controller {
     //<!--default (fixed) value * default -->
 
     $curlPost["cardsend"]="curl";
+    
+    // $curlPost["client_ip"]=($_SERVER['REMOTE_ADDR']);
     // $curlPost["client_ip"]=($_SERVER['HTTP_X_FORWARDED_FOR']?$_SERVER['HTTP_X_FORWARDED_FOR']:$_SERVER['REMOTE_ADDR']);
-    $curlPost["client_ip"]=($_SERVER['REMOTE_ADDR']);
+    // $curlPost["client_ip"]=(getenv('HTTP_X_FORWARDED_FOR')?getenv('HTTP_X_FORWARDED_FOR'):getenv('REMOTE_ADDR'));
+    if (getenv('HTTP_X_FORWARDED_FOR'))
+    {
+      $curlPost["client_ip"]= getenv('HTTP_X_FORWARDED_FOR');
+    }
+    else {
+      $curlPost["client_ip"]= getenv('REMOTE_ADDR');
+    }
+
+
     $curlPost["action"]="product";
     $curlPost["source"]="Curl-Direct-Card-Payment";
     $curlPost["source_url"]=$referer;
@@ -151,17 +162,17 @@ class Donate extends Controller {
     elseif($status_nm==1 || $status_nm==9){ // 1:Approved/Success,9:Test Transaction
       $redirecturl = $curlPost["success_url"];
 
-      $oreder_creation = Order::create([
-        'order_id'=> $order_id,
-        'user_id'=> Auth::id(),
-        'user'=> Auth::user()->name,
-        'payment_plan_id'=> $payment->id,
-        'payment_plan'=> $payment->plan_type,
-        'payment_amount'=> $payment->amount,
-        'payment_discount'=> $payment->discount,
-        'phone'=> Auth::user()->number,
-        'country'=> Auth::user()->country
-      ]);
+      // $oreder_creation = Order::create([
+      //   'order_id'=> $order_id,
+      //   'user_id'=> Auth::id(),
+      //   'user'=> Auth::user()->name,
+      //   'payment_plan_id'=> $payment->id,
+      //   'payment_plan'=> $payment->plan_type,
+      //   'payment_amount'=> $payment->amount,
+      //   'payment_discount'=> $payment->discount,
+      //   'phone'=> Auth::user()->number,
+      //   'country'=> Auth::user()->country
+      // ]);
 
       if(strpos($redirecturl,'?')!==false){
         $redirecturl = $redirecturl."&".$sub_query;
