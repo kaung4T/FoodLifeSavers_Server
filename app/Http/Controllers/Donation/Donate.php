@@ -43,31 +43,32 @@ class Donate extends Controller {
     $order_id = $this->generate_order_id(); //generate order id
 
 
-    $oreder_creation = Order::create([
-      'order_id'=> $order_id,
-      'user_id'=> Auth::id(),
-      'user'=> Auth::user()->name,
-      'payment_plan_id'=> $payment->id,
-      'payment_plan'=> $payment->plan_type,
-      'payment_amount'=> $payment->amount,
-      'payment_discount'=> $payment->discount,
-      'phone'=> Auth::user()->number,
-      'country'=> Auth::user()->country
-    ]);
+    // $oreder_creation = Order::create([
+    //   'order_id'=> $order_id,
+    //   'user_id'=> Auth::id(),
+    //   'user'=> Auth::user()->name,
+    //   'payment_plan_id'=> $payment->id,
+    //   'payment_plan'=> $payment->plan_type,
+    //   'payment_amount'=> $payment->amount,
+    //   'payment_discount'=> $payment->discount,
+    //   'phone'=> Auth::user()->number,
+    //   'country'=> Auth::user()->country
+    // ]);
     
-    $conext = [
-      "order_id"=> $order_id
-    ];
+    // TEST ORDER ID
+    // $conext = [
+    //   "order_id"=> $order_id
+    // ];
 
-    return response()->json($conext); exit;
+    // return response()->json($conext); exit;
 
 
     $curlPost= array();
 
     //<!--Replace of 2 very important parameters * your Website API Token and Website ID -->
 
-    $curlPost["api_token"]= "QZfMTEyMF8yMDE4MDcyNzEyMjgyNMj";
-    $curlPost["website_id"]= "1120";
+    $curlPost["api_token"]= "MTAwNjhfMzQ5OV8yMDI0MDEyNDAwNDgyMw";
+    $curlPost["website_id"]= "3499";
 
     //<!--default (fixed) value * default -->
 
