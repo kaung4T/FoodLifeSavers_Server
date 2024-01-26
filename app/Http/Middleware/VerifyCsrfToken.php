@@ -13,5 +13,9 @@ class VerifyCsrfToken extends Middleware
      */
     protected $except = [
         //
+        'http://localhost/EV-Power/notify',
+        'https://localhost/EV-Power/notify',
+        'http://foodlifesavers.com/notify',
+        'https://foodlifesavers.com/notify'
     ];
 }
