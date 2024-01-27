@@ -119,8 +119,8 @@ require __DIR__ . '/auth.php';
 
 // Admin Group Middleware
 Route::middleware(['auth', 'roles:admin'])->group(function () {
-    Route::get('/admin/A_dashboard', [AdminController::class, 'AdminDashboard'])->name('admin.dashboard');
-
+    Route::get('/admin/dashboard', [AdminController::class, 'AdminDashboard'])->name('admin.dashboard');
+    Route::get('/admin/user_dash', [Dashboard::class, 'dashboard'])->middleware(['auth', 'verified'])->name('admin.user_dash');
 
 
     Route::get('/admin/plan', [AdminPaymentPlan::class, 'plan'])->middleware(['auth', 'verified'])->name('admin.plan');

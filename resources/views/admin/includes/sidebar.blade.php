@@ -23,7 +23,7 @@
           </li>
           
           <li class="nav-item">
-            <a href="{{ route('dashboard') }}" class="nav-link">
+            <a href="{{ route('admin.user_dash') }}" class="nav-link">
             <i class="bi bi-person-fill-gear" style="margin-left: 0.3px;"></i>
               <span class="link-title" style="margin-left: 16.7px;">User Dashboard</span>
             </a>
