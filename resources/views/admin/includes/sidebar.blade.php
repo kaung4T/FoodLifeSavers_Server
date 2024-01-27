@@ -21,6 +21,14 @@
               <span class="link-title">Dashboard</span>
             </a>
           </li>
+          
+          <li class="nav-item">
+            <a href="{{ route('dashboard') }}" class="nav-link">
+            <i class="bi bi-person-fill-gear" style="margin-left: 0.3px;"></i>
+              <span class="link-title" style="margin-left: 16.7px;">User Dashboard</span>
+            </a>
+          </li>
+          
           <li class="nav-item nav-category">EV-Power Information</li>
           <!-- @if(Auth::user()->can('type.menu'))
           <li class="nav-item">

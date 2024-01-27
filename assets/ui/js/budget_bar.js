@@ -8,6 +8,11 @@ var options = {
   }],
   colors: ['#2BC153'],
     chart: {
+      toolbar: {
+        show: true,
+        tools: {
+          download: false
+        }},
     type: 'bar',
     height: 90
   },

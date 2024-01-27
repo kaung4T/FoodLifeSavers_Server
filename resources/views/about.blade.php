@@ -42,7 +42,10 @@
                             <div class="icon"><i class="fas fa-arrow-right"></i></div>
                             <div class="tex">
                                     @if ($each_donate->discount)
-                                <h5>${{ $each_donate->discount }}</h5>
+                                    <div style="display: flex;flex-wrap: wrap;">
+                                <h5 style="margin-right: 5px;">${{ $each_donate->discount }}</h5>
+                                <h5 class="text-muted" style="text-decoration: line-through;">${{ $each_donate->amount }}</h5>
+                                    </div>
                                     @else
                                 <h5>${{ $each_donate->amount }}</h5>
                                     @endif

@@ -10,7 +10,7 @@
 
 <div class="web_text_cover">
 <h1>Give free one donate for all of humanity</h2>
-<a href="{{ route('our_work') }}" class="btn btn-sm btn-outline-dark">Learn about Food Life Savers</a>
+<a href="{{ route('our_work') }}" class="btn btn-sm btn-outline-dark index_home_button">Learn about Food Life Savers</a>
 </div>
 
 
@@ -35,7 +35,7 @@
                        In Gaza, there are severe shortages of water, food, fuel, and medical supplies. FoodLifeSaver is urgently organizing aid to Gaza to support Palestine Refugees in need.
                         Just one week ago, FoodLifeSaver delivered a truck carrying 45,000 water bottles to Gaza. Your donation to the FoodLifeSaver's Charity Fund directly supports these important humanitarian relief efforts.
                     </p>
-                    <a href="{{ route('our_work') }}" class="btn btn-primary btn-sm py-2 px-2 animated slideInDown">DONATE NOW</a>
+                    <a href="{{ route('our_work') }}" class="btn btn-primary btn-sm py-2 px-2 animated slideInDown mt-3">DONATE NOW</a>
                 </div>
                 <div class="col-lg-6 animated fadeIn">  
                     <img class="img-fluid animated pulse infinite" style="animation-duration: 3s;" src="{{asset('assets/ui/img/hero-1.png')}}" alt="">

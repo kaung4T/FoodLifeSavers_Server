@@ -28,7 +28,7 @@
             
              <div class="mb-3">       
              <div class="form-group user-id">
-                    <span class="fa-solid fa-user p-2"></span> 
+                    <span class="fa-solid fa-user p-2" style="margin-top: -20px"></span> 
                     <input type="text" name="login" id="login" class="form-control @error('login') is-invalid @enderror" placeholder="Enter ID" required>
              </div>
                @error('failed')
@@ -38,9 +38,9 @@
               
 
             <div class="form-group user-id">
-                    <span class="fas fa-lock px-2"></span> 
+                    <span class="fas fa-lock px-2" style="margin-top: -20px"></span> 
                     <input type="password" name="password" id="password" class="form-control @error('password') is-invalid @enderror" placeholder="Enter Password">
-                     <span class="fa-regular fa-eye-slash" onclick="chg(this)"></span>
+                     <span class="fa-regular fa-eye-slash" onclick="chg(this)" style="margin-top: -20px"></span>
                 </div>
                   @error('password')
                     <span class="invalid-feedback text-danger" role="alert"> {{$message}} </span>

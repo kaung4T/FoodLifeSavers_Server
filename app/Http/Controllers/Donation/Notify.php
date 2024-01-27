@@ -24,8 +24,11 @@ class Notify extends Controller
 
         $notify->save();
 
-        return response()->json([
-                        "data"=> "User created successfully!"
-                    ], 201);
+        $return_notify_json = [
+            "notify_code" => "00",
+            "notify_msg" => "received"
+        ];
+
+        return response()->json($return_notify_json, 201);
     }
 }

@@ -206,7 +206,7 @@ class Donate extends Controller {
     }
 
     }
-}
+// }
 
 
 
@@ -217,8 +217,8 @@ class Donate extends Controller {
 
 
 // {
-//     public function donate (Request $request) {
-//         $res = Http::get('https://jsonplaceholder.typicode.com/users');
+    public function donate_2 (Request $request) {
+        $res = Http::get('https://jsonplaceholder.typicode.com/users');
 
 
 //         // post
@@ -271,10 +271,10 @@ class Donate extends Controller {
 //         //         "data"=> "wrong"
 //         //     ]);
 //         // }
-
-//         return response()->json([
-//             "data"=> $res->json()
-//         ]);
-//         // return view('Donation.donate');
-//     }
-// }
+        
+        return response()->json([
+            "data"=> $res->json()[0]["name"]
+        ]);
+        // return view('Donation.donate');
+    }
+}

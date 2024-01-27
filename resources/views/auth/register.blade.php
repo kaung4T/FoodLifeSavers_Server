@@ -34,19 +34,19 @@
                   <div class="form-group mb-3 user-id">
                     <span class="fas fa-lock icon_register"></span> 
                     <input type="password" name="password" id="password" class="form-control" placeholder="Enter Password">
-                     <span class="fa-regular fa-eye-slash" onclick="regChg(this)"></span>
+                     <span class="fa-regular fa-eye-slash" style="margin-top: -20px" onclick="regChg(this)"></span>
                 </div>
 
                   <div class="form-group mb-3 user-id">
                     <span class="fas fa-lock icon_register"></span> 
                     <input type="password" name="password_confirmation" id="c_password" class="form-control" autocomplete="new-password" value="{{old('password_confirmation')}}" placeholder="Enter Confirm Password">
-                     <span class="fa-regular fa-eye-slash" onclick="regChgco(this)"></span>
+                     <span class="fa-regular fa-eye-slash" style="margin-top: -20px" onclick="regChgco(this)"></span>
                 </div>
                 
-                <div class="form-group mb-3 user-id">
+                <!-- <div class="form-group mb-3 user-id">
                         <i class="fa-solid fa-address-book icon_register"></i>
                         <input type="text" name="address" id="address" class="form-control" value="{{old('address')}}" placeholder="Enter Address" autocomplete="address" required>
-                </div>
+                </div> -->
               
             <div class="form-group mb-3">
                     {{-- <span class="fa-solid fa-phone px-2"></span> --}}

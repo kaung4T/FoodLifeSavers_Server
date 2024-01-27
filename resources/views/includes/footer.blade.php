@@ -20,7 +20,7 @@
             </p>
             <div class="position-relative">
 
-                <form action="{{ route('email_subscribe') }}" method="POST" enctype="multipart/form-data">
+                <form action="{{ route('email_subscribe') }}" method="POST" enctype="multipart/form-data" class="mt-3">
                 @csrf
             <input type="text" name="body" class="form-control ps-4 pe-5 emailSignup" 
                     placeholder="Your email">

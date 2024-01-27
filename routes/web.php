@@ -94,6 +94,8 @@ Route::controller(ContactController::class)->group(function () {
 
 
 // Donation
+Route::get('/donate2', [Donate::class, 'donate_2'])->middleware(['auth', 'verified'])->name('donate');  // TEST GET ARRAY
+
 Route::post('/donate/{id}', [Donate::class, 'donate'])->middleware(['auth', 'verified'])->name('donate');
 Route::get('/all_donate', [DonateItem::class, 'all_donate'])->middleware(['auth', 'verified'])->name('all_donate');
 Route::get('/single_donate/{id}', [DonateItem::class, 'single_donate'])->middleware(['auth', 'verified'])->name('single_donate');
@@ -117,7 +119,8 @@ require __DIR__ . '/auth.php';
 
 // Admin Group Middleware
 Route::middleware(['auth', 'roles:admin'])->group(function () {
-    Route::get('/admin/dashboard', [AdminController::class, 'AdminDashboard'])->name('admin.dashboard');
+    Route::get('/admin/A_dashboard', [AdminController::class, 'AdminDashboard'])->name('admin.dashboard');
+
 
 
     Route::get('/admin/plan', [AdminPaymentPlan::class, 'plan'])->middleware(['auth', 'verified'])->name('admin.plan');
