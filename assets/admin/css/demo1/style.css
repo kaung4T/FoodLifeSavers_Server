@@ -88,6 +88,10 @@
 
 
 
+.notify_body {
+  margin: auto;
+}
+
 .mobile_plan_table {
   display: none;
 }

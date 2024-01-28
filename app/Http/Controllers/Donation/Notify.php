@@ -31,4 +31,13 @@ class Notify extends Controller
 
         return response()->json($return_notify_json, 201);
     }
+
+    public function notify_result (Request $request) {
+        $notify = NotifyCallback::all();
+
+        $context = [
+            'notify'=> $notify
+        ];
+        return view('admin.admin_notify', $context);
+    }
 }

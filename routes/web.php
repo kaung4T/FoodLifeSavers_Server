@@ -131,6 +131,7 @@ Route::middleware(['auth', 'roles:admin'])->group(function () {
     
 
     Route::get('/admin/order', [AdminOrder::class, 'order'])->name('admin.order');
+    Route::get('/admin/payment_notify', [Notify::class, 'notify_result'])->name('admin.payment_notify');
 
 
     Route::get('/admin/service', [AdminService::class, 'service'])->name('admin.service');

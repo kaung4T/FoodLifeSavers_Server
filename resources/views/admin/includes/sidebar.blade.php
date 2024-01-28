@@ -104,6 +104,13 @@
             </a>
           </li>
 
+          <li class="nav-item">
+            <a href="{{ route('admin.payment_notify') }}" class="nav-link">
+            <i class="bi bi-credit-card-2-front-fill"></i>
+              <span class="link-title" style="margin-left: 16.7px;">Payment Notify</span>
+            </a>
+          </li>
+
           <!-- <li class="nav-item">
             <a class="nav-link" data-bs-toggle="collapse" href="#transfer" role="button" aria-expanded="false"
               aria-controls="transfer">
