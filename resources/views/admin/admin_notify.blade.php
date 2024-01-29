@@ -19,7 +19,7 @@
 
 
             <div class="mb-4">
-        <h4>Donate Subscribers of Donation Plan</h4>
+        <h4>Payment Results</h4>
             </div>
 
 

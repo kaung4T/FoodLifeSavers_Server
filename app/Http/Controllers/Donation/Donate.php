@@ -100,7 +100,7 @@ class Donate extends Controller {
 
     $curlPost["fullname"]= $request->full_name;
     $curlPost["email"]= Auth::user()->email;
-    $curlPost["bill_street_1"]= Auth::user()->address;
+    $curlPost["bill_street_1"]= $request->address;
     $curlPost["bill_street_2"]= "-";
     $curlPost["bill_city"]= $request->city;
     $curlPost["bill_state"]= Auth::user()->country;

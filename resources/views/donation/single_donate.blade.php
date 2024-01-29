@@ -131,6 +131,18 @@
             </div>
 
             <div>
+              <label for="address"
+                >Address
+              </label>
+            <input class="w-50"
+                id="address"
+                name="address"
+                required
+                type="text"
+              />
+            </div>
+            
+            <div>
               <label for="city"
                 >City
               </label>
