@@ -13,6 +13,17 @@
 
   <title>@yield('title','FoodLifeSaver')</title>
 
+
+
+
+  <!-- Table Search and pagination -->
+  <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+  <link href="https://cdn.datatables.net/v/bs5/dt-1.13.8/datatables.min.css" rel="stylesheet">
+  <script src="https://cdn.datatables.net/v/bs5/dt-1.13.8/datatables.min.js"></script>
+  <!-- End Table  -->
+
+
+
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

@@ -73,7 +73,9 @@
 
 
     <div class="table-responsive plan_table">
-<table id="dataTableExample" class="table table-dark table-image mb-2">
+    <!-- <table id="dataTableExample" class="table table-dark table-image mb-2"> -->
+    <table id="" class="display table table-dark table-image mb-2">
+
     <thead>
         <tr>
         <th scope="col">#</th>
@@ -125,7 +127,9 @@
 
 
 <div class="table-responsive mobile_plan_table">
-    <table id="dataTableExample" class="table table-dark table-image mb-2">
+    <!-- <table id="dataTableExample" class="table table-dark table-image mb-2"> -->
+    <table id="" class="display table table-dark table-image mb-2">
+    
     <thead>
         <tr>
         <th scope="col">#</th>
@@ -171,6 +175,9 @@
 </div>
 
 
+
+    <!-- display table -->
+    <script src="{{asset('assets/admin/js/table_display.js')}}"></script>
 
 
 
