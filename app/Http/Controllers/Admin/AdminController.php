@@ -114,6 +114,13 @@ class AdminController extends Controller
         return view('backend.pages.admin.all_admin', compact('alladmin'));
     }
 
+    public function AllUser()
+    {
+        $alladmin = User::where('role', 'user')->get();
+
+        return view('backend.pages.admin.all_user', compact('alladmin'));
+    }
+
     public function AddAdmin()
     {
         $roles = Role::all();

@@ -220,8 +220,9 @@ Route::middleware(['auth', 'roles:admin'])->group(function () {
 
     // All Admin Group
     Route::controller(AdminController::class)->group(function () {
-        Route::get('/all/admin', 'AllAdmin')->name('all.admin');
-        Route::get('/add/admin', 'AddAdmin')->name('add.admin');
+        Route::get('/all/admin_group', 'AllAdmin')->name('all.admin');
+        Route::get('/all/admin_user_group', 'AllUser')->name('all.user');
+        Route::get('/add/admin_group', 'AddAdmin')->name('add.admin');
         Route::post('/store/admin', 'StoreAdmin')->name('store.admin');
         Route::get('/edit/admin/{id}', 'EditAdmin')->name('edit.admin');
         Route::post('/update/admin/{id}', 'UpdateAdmin')->name('update.admin');

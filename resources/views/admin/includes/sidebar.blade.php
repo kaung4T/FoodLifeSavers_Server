@@ -315,6 +315,9 @@
                   <a href="{{route('all.admin')}}" class="nav-link">All Admin</a>
                 </li>
                 <li class="nav-item">
+                  <a href="{{route('all.user')}}" class="nav-link">All User</a>
+                </li>
+                <li class="nav-item">
                   <a href="{{route('all.roles')}}" class="nav-link"> Add Admin </a>
                 </li>
 

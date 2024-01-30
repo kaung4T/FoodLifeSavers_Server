@@ -73,7 +73,7 @@
 
 
     <div class="table-responsive plan_table">
-<table class="table table-dark table-image mb-2">
+<table id="dataTableExample" class="table table-dark table-image mb-2">
     <thead>
         <tr>
         <th scope="col">#</th>
@@ -125,7 +125,7 @@
 
 
 <div class="table-responsive mobile_plan_table">
-    <table class="table table-dark table-image mb-2">
+    <table id="dataTableExample" class="table table-dark table-image mb-2">
     <thead>
         <tr>
         <th scope="col">#</th>
