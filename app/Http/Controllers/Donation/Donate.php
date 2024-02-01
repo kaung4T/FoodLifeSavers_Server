@@ -138,17 +138,6 @@ class Donate extends Controller {
     curl_close($curl);
 
     $results = json_decode($response,true);
-    $oreder_creation = Order::create([
-      'order_id'=> $order_id,
-      'user_id'=> Auth::id(),
-      'user'=> Auth::user()->name,
-      'payment_plan_id'=> $payment->id,
-      'payment_plan'=> $payment->plan_type,
-      'payment_amount'=> $payment->amount,
-      'payment_discount'=> $payment->discount,
-      'phone'=> Auth::user()->number,
-      'country'=> Auth::user()->country
-    ]);
 
     if((isset($results["Error"]) && ($results["Error"]))||(isset($results["error"]) && ($results["error"]))){
       return response()->json($results); exit;
