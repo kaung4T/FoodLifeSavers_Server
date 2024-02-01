@@ -14,12 +14,12 @@
                 <div class="col-md-12 grid-margin stretch-card">
             <div class="card">
               <div class="card-body">
-                <h6 class="card-title"> All USER </h6>
+                <h6 class="card-title"> {{ $user->name }} <span class="text-muted">( ID: {{ $user->id }})</span></h6> 
                 <div class="table-responsive">
                   <table id="dataTableExample" class="table table-bordered table-hover table-striped item-center">
                     <thead>
                       <tr>
-                        <th>ID</th>
+                        <th>ACC ID</th>
                         <th>Image</th>
                         <th>Name</th>
                         <th>Email</th>
@@ -29,28 +29,27 @@
                       </tr>
                     </thead>
                     <tbody>
-                        @foreach($alladmin as $key => $item)
+
                       <tr>
-                        <td><a href="{{route('all.single_user',$item->id)}}"> {{ $key+1 }} </a></td>
+                        <td> {{ $user->id }}</td>
                         <td> 
-                            <img src="{{(!empty($item->photo)) ? url('upload/admin_images/'.$item->photo) : url('upload/no_image.jpg')}}" style="width:70px; height:40px;" alt="">    
+                            <img src="{{(!empty($user->photo)) ? url('upload/admin_images/'.$user->photo) : url('upload/no_image.jpg')}}" style="width:70px; height:40px;" alt="">    
                         </td>
-                        <td><a href="{{route('all.single_user',$item->id)}}"> {{ $item->name }} </a></td>
-                        <td><a href="{{route('all.single_user',$item->id)}}"> {{ $item->email }} </a></td>
-                        <td> {{ $item->number }} </td>
+                        <td> {{ $user->name }} </td>
+                        <td> {{ $user->email }} </td>
+                        <td> {{ $user->number }} </td>
                         <td> 
-                            <!-- @foreach($item->roles as $role) -->
+                            <!-- @foreach($user->roles as $role) -->
                               <!-- <span class="badge badge-bill bg-danger"> {{ $role->name }} </span> -->
                             <!-- @endforeach   -->
-                            <span class="badge badge-bill bg-danger"> {{ $item->role }} </span>
+                            <span class="badge badge-bill bg-danger"> {{ $user->role }} </span>
                         </td>
                         <td>
-                            <a href="{{route('edit.admin',$item->id)}}" class="btn btn-inverse-warning"> Edit </a>
-                            <a href="{{route('delete.admin',$item->id)}}" class="btn btn-inverse-danger" id="delete"> Delete </a>
-                            <a href="{{route('all.single_user',$item->id)}}" class="btn btn-inverse-info"> View </a>
+                            <a href="{{route('edit.admin',$user->id)}}" class="btn btn-inverse-warning"> Edit </a>
+                            <a href="{{route('delete.admin',$user->id)}}" class="btn btn-inverse-danger" id="delete"> Delete </a>
                         </td>
                       </tr>   
-                         @endforeach                
+             
                     </tbody>
                   </table>
                 </div>

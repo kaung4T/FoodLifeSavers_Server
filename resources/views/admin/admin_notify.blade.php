@@ -48,7 +48,7 @@
         @foreach ($notify as $each_notify)
 
         <tr>
-      <th scope="row">{{ $i }}</th>
+      <th scope="row"><a href="{{route('all.single_user_noti',$each_notify->id_order)}}"> {{ $i }} </a></th>
       
                 <td class="text-center">{{ $each_notify->status_nm }}</td>
 
@@ -60,7 +60,7 @@
 
                 <td class="text-center">{{ $each_notify->amount }}</td>
 
-        <td class="text-center">{{ $each_notify->transaction_id }}</td>
+        <td class="text-center"><a href="{{route('all.single_user_noti',$each_notify->id_order)}}"> {{ $each_notify->transaction_id }} </a></td>
 
       <!-- <td class="text-center" style="max-width: 110px;white-space: normal;">{{ Str::limit($each_notify->descriptor, 25, $end='...') }}</td> -->
       <td class="text-center">{{ Str::limit($each_notify->descriptor, 25, $end='...') }}</td>
@@ -105,7 +105,7 @@
         @foreach ($notify as $each_notify)
 
         <tr>
-      <th scope="row">{{ $i }}</th>
+      <th scope="row"><a href="{{route('all.single_user_noti',$each_notify->id_order)}}"> {{ $i }} </a></th>
                 
                     @if ($each_notify->status == 'Success')
                 <td class="text-center text-success">{{ $each_notify->status }}</td>
@@ -113,7 +113,7 @@
                 <td class="text-center">{{ $each_notify->status }}</td>
                     @endif
 
-                <td class="text-center">{{ $each_notify->transaction_id }}</td>
+                <td class="text-center"><a href="{{route('all.single_user_noti',$each_notify->id_order)}}"> {{ $each_notify->transaction_id }} </a></td>
       
     </tr>
         

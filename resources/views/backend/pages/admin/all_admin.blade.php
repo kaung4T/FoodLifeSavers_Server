@@ -31,12 +31,12 @@
                     <tbody>
                         @foreach($alladmin as $key => $item)
                       <tr>
-                        <td>{{ $key+1 }}</td>
+                        <td><a href="{{route('all.single_user',$item->id)}}"> {{ $key+1 }} </a></td>
                         <td> 
                             <img src="{{(!empty($item->photo)) ? url('upload/admin_images/'.$item->photo) : url('upload/no_image.jpg')}}" style="width:70px; height:40px;" alt="">    
                         </td>
-                        <td> {{ $item->name }} </td>
-                        <td> {{ $item->email }} </td>
+                        <td><a href="{{route('all.single_user',$item->id)}}"> {{ $item->name }} </a></td>
+                        <td><a href="{{route('all.single_user',$item->id)}}"> {{ $item->email }} </a></td>
                         <td> {{ $item->number }} </td>
                         <td> 
                             <!-- @foreach($item->roles as $role) -->
@@ -47,6 +47,7 @@
                         <td>
                             <a href="{{route('edit.admin',$item->id)}}" class="btn btn-inverse-warning"> Edit </a>
                             <a href="{{route('delete.admin',$item->id)}}" class="btn btn-inverse-danger" id="delete"> Delete </a>
+                            <a href="{{route('all.single_user',$item->id)}}" class="btn btn-inverse-info"> View </a>
                         </td>
                       </tr>   
                          @endforeach                

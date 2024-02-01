@@ -222,6 +222,8 @@ Route::middleware(['auth', 'roles:admin'])->group(function () {
     Route::controller(AdminController::class)->group(function () {
         Route::get('/all/admin_group', 'AllAdmin')->name('all.admin');
         Route::get('/all/admin_user_group', 'AllUser')->name('all.user');
+        Route::get('/all/admin_single_user_group/{id}', 'SingleUser')->name('all.single_user');
+        Route::get('/all/admin_single_user_group_noti/{id}', 'SingleUserNoti')->name('all.single_user_noti');
         Route::get('/add/admin_group', 'AddAdmin')->name('add.admin');
         Route::post('/store/admin', 'StoreAdmin')->name('store.admin');
         Route::get('/edit/admin/{id}', 'EditAdmin')->name('edit.admin');

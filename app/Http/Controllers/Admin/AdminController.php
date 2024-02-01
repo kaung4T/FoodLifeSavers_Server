@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Spatie\Permission\Models\Role;
 use Spatie\Permission\Models\Permission;
 use App\Http\Controllers\Controller;
+use App\Models\Order;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Http\RedirectResponse;
@@ -119,6 +120,21 @@ class AdminController extends Controller
         $alladmin = User::where('role', 'user')->get();
 
         return view('backend.pages.admin.all_user', compact('alladmin'));
+    }
+
+    public function SingleUser(Request $request, $id)
+    {
+        $user = User::find($id);
+
+        return view('backend.pages.admin.single_user', compact('user'));
+    }
+
+    public function SingleUserNoti(Request $request, $id_order)
+    {
+        $order = Order::where('order_id', $id_order)->first();
+        $user = User::find($order->user_id);
+
+        return view('backend.pages.admin.single_user', compact('user'));
     }
 
     public function AddAdmin()

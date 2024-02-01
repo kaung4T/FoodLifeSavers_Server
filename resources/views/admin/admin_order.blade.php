@@ -46,10 +46,10 @@
         @foreach ($order as $each_order)
 
         <tr>
-      <th scope="row">{{ $i }}</th>
+      <th scope="row"><a href="{{route('all.single_user',$each_order->user_id)}}"> {{ $i }} </a></th>
                 <td class="text-center">{{ $each_order->order_id }}</td>
                 <td class="text-center">{{ $each_order->user_id }}</td>
-                <td class="text-center">{{ $each_order->user }}</td>
+                <td class="text-center"><a href="{{route('all.single_user',$each_order->user_id)}}"> {{ $each_order->user }} </a></td>
 
       <td class="text-center">{{ Str::limit($each_order->payment_plan, 25, $end='...') }}</td>
         
@@ -100,9 +100,9 @@
         @foreach ($order as $each_order)
 
         <tr>
-      <th scope="row">{{ $i }}</th>
+      <th scope="row"><a href="{{route('all.single_user',$each_order->user_id)}}"> {{ $i }} </a></th>
                 <td class="text-center">{{ $each_order->order_id }}</td>
-                <td class="text-center">{{ $each_order->user }}</td>
+                <td class="text-center"><a href="{{route('all.single_user',$each_order->user_id)}}"> {{ $each_order->user }} </a></td>
       
     </tr>
         
