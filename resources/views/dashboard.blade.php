@@ -25,6 +25,9 @@
     FoodLifeSavers
   </title>
   
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+
+
   <!-- web icon -->
   <link class="favicon" rel="icon" type="image/x-icon" href="{{asset('assets/ui/img/foodlifesavers LOGO v1.png')}}">
 
@@ -44,7 +47,7 @@
   <script defer data-site="YOUR_DOMAIN_HERE" src="https://api.nepcha.com/js/nepcha-analytics.js"></script>
 </head>
 
-<body class="g-sidenav-show  bg-gray-200">
+<body class="g-sidenav-show  bg-gray-200 dark-version">
   <aside class="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3   bg-gradient-dark" id="sidenav-main">
     <div class="sidenav-header">
       <i class="fas fa-times p-3 cursor-pointer text-white opacity-5 position-absolute end-0 top-0 d-none d-xl-none" aria-hidden="true" id="iconSidenav"></i>
@@ -64,22 +67,22 @@
             <span class="nav-link-text ms-1">Dashboard</span>
           </a>
         </li>
-        <li class="nav-item">
+        <!-- <li class="nav-item">
           <a class="nav-link text-white " href="">
             <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
               <i class="material-icons opacity-10">table_view</i>
             </div>
             <span class="nav-link-text ms-1">Tables</span>
           </a>
-        </li>
-        <li class="nav-item">
+        </li> -->
+        <!-- <li class="nav-item">
           <a class="nav-link text-white " href="">
             <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
               <i class="material-icons opacity-10">receipt_long</i>
             </div>
             <span class="nav-link-text ms-1">Billing</span>
           </a>
-        </li>
+        </li> -->
         <!-- <li class="nav-item">
           <a class="nav-link text-white " href="../pages/virtual-reality.html">
             <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
@@ -849,7 +852,26 @@
         <div class="mt-2 d-flex">
           <h6 class="mb-0">Light / Dark</h6>
           <div class="form-check form-switch ps-0 ms-auto my-auto">
-            <input class="form-check-input mt-1 ms-auto" type="checkbox" id="dark-version" onclick="darkMode(this)">
+          <!-- <input class="form-check-input mt-1 ms-auto" type="checkbox" id="dark-version" onclick="darkMode(this)" checked> -->
+          <input class="form-check-input mt-1 ms-auto" type="checkbox" id="dark-version" checked>
+            <script>
+
+              let first_time_click = true;
+              let dark = document.querySelector('#dark-version');
+              let body_page = document.body;
+              
+                dark.addEventListener('click', function () {
+                    if (first_time_click == true) {
+                      body_page.classList.remove("dark-version");
+                      first_time_click = false;
+                      }
+                    else {
+                      body_page.classList.add("dark-version");
+                      first_time_click = true;
+                    }
+                });
+
+            </script>
           </div>
         </div>
         <hr class="horizontal dark my-sm-4">
