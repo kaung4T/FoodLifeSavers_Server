@@ -64,10 +64,10 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                &copy; <a href="#"> 2023 FoodLifeSavers Co., Ltd. </a>, All Rights Reserved!
+                &copy; <a href="{{ route('index') }}"> 2023 FoodLifeSavers Co., Ltd. </a>, All Rights Reserved!
                 <div>
-                    Development:<a href="#"> FLS Humanitarian Group </a> Distribution:<a
-                        href="https:www.evpower.eco"> FoodLifeSavers </a>
+                    Development:<a> FLS Humanitarian Group </a> Distribution:<a
+                        href="{{ route('index') }}"> FoodLifeSavers </a>
                 </div>
             </div>
             <div class="col-md-6 text-center text-md-end">

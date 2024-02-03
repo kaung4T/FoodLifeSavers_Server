@@ -50,21 +50,26 @@ class Controller extends BaseController
 
         // $service = Service::where('name', '=', $search)->get();
         $service = Service::where('name', 'LIKE', '%'.$search.'%')->get();
+        $donation = DonationPlan::where('plan_type', 'LIKE', '%'.$search.'%')->get();
         
         $item_count = count($service);
+        $item_count2 = count($donation);
+        $total = $item_count + $item_count2;
 
-        if (!$service->isEmpty()) {
+        if (!$service->isEmpty() || !$donation->isEmpty()) {
             $context = [
                 "search"=> $search,
                 "service"=> $service,
+                "donation"=> $donation,
                 "nothing"=> null,
-                "item_count"=> $item_count
+                "item_count"=> $total
             ];
         }
         else {
             $context = [
                 "search"=> $search,
                 "service"=> $service,
+                "donation"=> $donation,
                 "nothing"=> "No results found!"
             ];
         }

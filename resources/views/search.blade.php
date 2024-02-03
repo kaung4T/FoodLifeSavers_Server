@@ -11,6 +11,70 @@
 
 
 
+
+
+<div class="container py-5">
+            <!-- <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
+                <h5 class="fw-bold text-primary text-uppercase">Our Donation Plans</h5>
+                <h3 class="mb-0"> We are Offering Competitive Plans for Other Lives </h3>
+            </div> -->
+            <div class="row g-0">
+                        
+                            @foreach ($donation as $each_donation)
+
+                <div class="col-lg-4 wow slideInUp" data-wow-delay="0.6s" style="visibility: visible; animation-delay: 0.6s; animation-name: slideInUp;">
+                    <div class="bg-light rounded">
+                        <div class="border-bottom py-4 px-5 mb-4">
+                            <h4 class="text-primary mb-1">{{ $each_donation->plan_type }}</h4>
+                            <small class="text-uppercase">{{ $each_donation->plan_info }}</small>
+                        </div>
+                        <div class="p-5 pt-0">
+                            <h1 class="display-5 mb-3">
+                                @if ($each_donation->discount)
+                                <small class="align-top" style="font-size: 22px; line-height: 45px;">$</small>{{ $each_donation->discount }}.00<small class="align-bottom" style="font-size: 16px; line-height: 40px;">/ Month</small>
+                                @else
+                                <small class="align-top" style="font-size: 22px; line-height: 45px;">$</small>{{ $each_donation->amount }}.00<small class="align-bottom" style="font-size: 16px; line-height: 40px;">/ Month</small>
+                                <br>
+                                <small class="text-uppercase" style="font-size: 15px;color: #9c9c9c;">Discount not available</small>
+                                @endif
+
+                                @if ($each_donation->discount)
+                                <br>
+                                <small class="" style="font-size: 20px; position: relative; bottom: 3px; text-decoration: line-through;">$</small><label style="font-size: 28px; text-decoration: line-through;">{{ $each_donation->amount }}.00</label><small class="align-bottom" style="font-size: 16px; line-height: 40px;">/ Month</small>
+                                @endif
+                            </h1>
+                            
+                                @if ($each_donation->plan_type == "Daily Plan")
+                            <div class="d-flex justify-content-between mb-3"><span> Person-1 &amp; Person-2 </span><i class="fa fa-check text-primary pt-1"></i></div>
+                            <div class="d-flex justify-content-between mb-3"><span> Person-2 &amp; Person-3 </span><i class="fa fa-check text-primary pt-1"></i></div>
+                            <div class="d-flex justify-content-between mb-3"><span>Person-2 &amp; Person-3</span><i class="fa fa-times text-danger pt-1"></i></div>
+                            <div class="d-flex justify-content-between mb-2"><span>Person-2 &amp; Person-3</span><i class="fa fa-times text-danger pt-1"></i></div>
+                                @elseif ($each_donation->plan_type == "Monthly Plan")
+                            <div class="d-flex justify-content-between mb-3"><span>Person-1 &amp; Person-2</span><i class="fa fa-check text-primary pt-1"></i></div>
+                            <div class="d-flex justify-content-between mb-3"><span>Person-2 &amp; Person-3</span><i class="fa fa-check text-primary pt-1"></i></div>
+                            <div class="d-flex justify-content-between mb-3"><span>Person-3 &amp; Person-4</span><i class="fa fa-check text-primary pt-1"></i></div>
+                            <div class="d-flex justify-content-between mb-2"><span>Person-3 &amp; Person-4</span><i class="fa fa-times text-danger pt-1"></i></div>
+                                @elseif ($each_donation->plan_type == "Advanced Plan")
+                            <div class="d-flex justify-content-between mb-3"><span>Person-3 &amp; Person-4</span><i class="fa fa-check text-primary pt-1"></i></div>
+                            <div class="d-flex justify-content-between mb-3"><span>Person-3 &amp; Person-4</span><i class="fa fa-check text-primary pt-1"></i></div>
+                            <div class="d-flex justify-content-between mb-3"><span>Person-3 &amp; Person-4</span><i class="fa fa-check text-primary pt-1"></i></div>
+                            <div class="d-flex justify-content-between mb-2"><span>Person-3 &amp; Person-4</span><i class="fa fa-check text-primary pt-1"></i></div>
+                                @endif
+
+                            <a href="{{ route('single_donate', $each_donation->id) }}" class="btn btn-primary py-2 px-4 mt-4">Donate Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                        @endforeach
+                
+            </div>
+        </div>
+
+
+
+
+
 <div class="row g-4">
     @foreach ($service as $each_service)
     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">

@@ -174,8 +174,8 @@
         <div class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4" id="navbar">
           <div class="ms-md-auto pe-md-3 d-flex align-items-center">
             <div class="input-group input-group-outline">
-              <label class="form-label">Type here...</label>
-              <input type="text" class="form-control">
+              <!-- <label class="form-label">Type here...</label> -->
+              <input type="text" class="form-control" placeholder="Type here...">
             </div>
           </div>
           <ul class="navbar-nav  justify-content-end">
@@ -772,7 +772,7 @@
                 © <script>
                   document.write(new Date().getFullYear())
                 </script>,
-                <a href="https://www.creative-tim.com" class="font-weight-bold" target="_blank">FoodLifeSavers Co., Ltd.</a>
+                <a href="{{ route('index') }}" class="font-weight-bold" target="_blank">FoodLifeSavers Co., Ltd.</a>
                 , All Rights Reserved!
               </div>
             </div>
