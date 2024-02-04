@@ -10,14 +10,17 @@
 <div class="search_body_result">
 
 
+@if ($donation == "[]" and $service == "[]")
+<div class="container py-5"></div>
+@endif
 
 
-
-<div class="container py-5">
-            <!-- <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
-                <h5 class="fw-bold text-primary text-uppercase">Our Donation Plans</h5>
-                <h3 class="mb-0"> We are Offering Competitive Plans for Other Lives </h3>
-            </div> -->
+            @if ($donation != "[]")
+            <div class="container py-3">
+                <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
+                    <h5 class="fw-bold text-primary text-uppercase">Our Donation Plans</h5>
+                    <h3 class="mb-0"> We are Offering Competitive Plans for Other Lives </h3>
+                </div>
             <div class="row g-0">
                         
                             @foreach ($donation as $each_donation)
@@ -70,26 +73,40 @@
                 
             </div>
         </div>
+        @endif
 
 
 
-
-
-<div class="row g-4">
-    @foreach ($service as $each_service)
-    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-        <div class="service-item bg-white p-5">
-            <div class="text-center">
-                <img class="img-fluid mb-4" src="{{ asset('storage/app/public/'.$each_service->file_path) }}" alt="">
-            <h5 class="mb-3 text-primary"> {{ $each_service->name }} </h5>
+        @if ($service != "[]")
+        <div class="container-xxl bg-light py-3 my-3">
+        <div class="container py-3">
+            <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+                <h1 class="display-6">Services</h1>
+                <p class="text-primary fs-5 mb-5"> Crisis News and Latest Updates </p>
             </div>
-            
-            <p class="short_description"> {{ $each_service->text }} </p>
-            <a href="{{ route('each_service', $each_service->id) }}" class="btn btn-primary btn-sm float-end"> Read More <i class="fa fa-arrow-right ms-2"></i></a>
+
+        <div class="row g-4">
+            @foreach ($service as $each_service)
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="service-item bg-white p-5">
+                    <div class="text-center">
+                        <img class="img-fluid mb-4" src="{{ asset('storage/app/public/'.$each_service->file_path) }}" alt="">
+                    <h5 class="mb-3 text-primary"> {{ $each_service->name }} </h5>
+                    </div>
+                    
+                    <p class="short_description"> {{ $each_service->text }} </p>
+                    <a href="{{ route('each_service', $each_service->id) }}" class="btn btn-primary btn-sm float-end"> Read More <i class="fa fa-arrow-right ms-2"></i></a>
+                </div>
+            </div>
+            @endforeach
+        </div>
+
         </div>
     </div>
-    @endforeach
-</div>
+    @endif
+
+
+
 
 
 

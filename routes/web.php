@@ -105,6 +105,7 @@ Route::get('/donate/fail/{id}', [Fail::class, 'fail'])->middleware(['auth', 'ver
 
 
 Route::get('/dashboard', [Dashboard::class, 'dashboard'])->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/dashboard/donation', [Dashboard::class, 'donation'])->middleware(['auth', 'verified'])->name('dashboard.donation');
 
 Route::post('/logout', [Logout::class, 'out'])->name('logout');
 
