@@ -165,7 +165,7 @@ class Donate extends Controller {
       $oreder_creation = Order::create([
         'order_id'=> $order_id,
         'user_id'=> Auth::id(),
-        'user'=> Auth::user()->name,
+        'user'=> $request->full_name,
         'payment_plan_id'=> $payment->id,
         'payment_plan'=> $payment->plan_type,
         'payment_amount'=> $payment->amount,

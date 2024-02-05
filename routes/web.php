@@ -33,11 +33,12 @@ use App\Http\Controllers\Milestones\ManifestingController;
 use App\Http\Controllers\Milestones\TradingReportController;
 
 use App\Http\Controllers\Auth\Logout;
+use App\Http\Controllers\User\Dashboard;
 use App\Http\Controllers\Donation\Donate;
 use App\Http\Controllers\Donation\DonateItem;
 use App\Http\Controllers\Donation\Success;
 use App\Http\Controllers\Donation\Fail;
-use App\Http\Controllers\Dashboard;
+
 use App\Http\Controllers\Donation\Cancellation;
 use App\Http\Controllers\Donation\Notify;
 use App\Http\Controllers\Policy\Privacy;
