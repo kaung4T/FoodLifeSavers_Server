@@ -25,6 +25,7 @@
         <th scope="col"  class="text-center">Order ID</th>
         <th scope="col" class="text-center">Amount</th>
         <th scope="col" class="text-center">Discount</th>
+        <th scope="col" class="text-center">Date</th>
         </tr>
     </thead>
     <tbody>
@@ -51,6 +52,7 @@
       <td class="text-center"> - </td>
         @endif
 
+    <td class="text-center">{{ date('Y-m-d', strtotime($each_user_order['created_at'])) }}</td>
       
     </tr>
         
@@ -74,6 +76,7 @@
         <th scope="col" class="text-center">#</th>
         <th scope="col"  class="text-center">User</th>
         <th scope="col" class="text-center">Plan Type</th>
+        <th scope="col" class="text-center">Date</th>
         </tr>
     </thead>
     <tbody>
@@ -90,6 +93,7 @@
       
       <td class="text-center">{{ $each_user_order->payment_plan }}</td>
 
+      <td class="text-center">{{ date('Y-m-d', strtotime($each_user_order['created_at'])) }}</td>
 
     </tr>
         

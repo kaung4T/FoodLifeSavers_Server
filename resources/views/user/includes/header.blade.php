@@ -235,7 +235,7 @@
                 </li>
               </ul>
             </li> -->
-            <li class="nav-item d-flex align-items-center" style="margin-top: 10px;">
+            <li class="nav-item d-flex align-items-center" style="margin-top: 30px;">
                 <form action="{{ route('logout') }}" method="POST">
                     @csrf
                 <button type="submit" href="{{ route('logout') }}" class="nav-link text-body font-weight-bold px-0 btn btn">
