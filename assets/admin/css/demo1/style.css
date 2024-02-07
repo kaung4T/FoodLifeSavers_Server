@@ -88,6 +88,18 @@
 
 
 
+
+.customize_count_down_body {
+  margin: auto;
+  margin-left: 0px;
+}
+
+.count_down_body {
+  margin: auto;
+  margin-left: 0px;
+  width: 550px;
+}
+
 .notify_body {
   margin: auto;
 }

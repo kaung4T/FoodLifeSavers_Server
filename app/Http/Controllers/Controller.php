@@ -26,8 +26,10 @@ class Controller extends BaseController
     {
         $service = Service::all();
         $donation = DonationPlan::all();
+        $name = "kaungkaung";
 
         $context = [
+            "name"=> $name,
             "service"=> $service,
             "donation"=> $donation
         ];

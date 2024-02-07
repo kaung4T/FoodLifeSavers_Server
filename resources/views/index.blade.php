@@ -386,6 +386,13 @@
         </div>
 
  {{-- =================End of Main Content --}}
+
+ <script>
+
+    let jobs = <?php echo json_encode($name); ?>;
+
+ </script>
+ 
 	
     <script src="{{asset('assets/ui/js/gaza_count.js')}}"></script>
     <script src="{{asset('assets/ui/js/page_motion.js')}}"></script>

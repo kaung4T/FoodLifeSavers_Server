@@ -33,6 +33,7 @@ use App\Http\Controllers\Milestones\ManifestingController;
 use App\Http\Controllers\Milestones\TradingReportController;
 
 use App\Http\Controllers\Auth\Logout;
+use App\Http\Controllers\CountDown\CountDown;
 use App\Http\Controllers\User\Dashboard;
 use App\Http\Controllers\Donation\Donate;
 use App\Http\Controllers\Donation\DonateItem;
@@ -123,6 +124,9 @@ require __DIR__ . '/auth.php';
 Route::middleware(['auth', 'roles:admin'])->group(function () {
     Route::get('/admin/dashboard', [AdminController::class, 'AdminDashboard'])->name('admin.dashboard');
     Route::get('/admin/user_dash', [Dashboard::class, 'dashboard'])->middleware(['auth', 'verified'])->name('admin.user_dash');
+
+
+    Route::get('/admin/count_down', [CountDown::class, 'countdown'])->middleware(['auth', 'verified'])->name('admin.count_down');
 
 
     Route::get('/admin/plan', [AdminPaymentPlan::class, 'plan'])->middleware(['auth', 'verified'])->name('admin.plan');

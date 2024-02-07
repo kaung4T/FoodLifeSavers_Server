@@ -88,6 +88,13 @@
             </a>
           </li>
 
+          <li class="nav-item">
+            <a href="{{ route('admin.count_down') }}" class="nav-link">
+            <i class="bi bi-clock-fill"></i>
+              <span class="link-title" style="margin-left: 16.7px;">Count Down</span>
+            </a>
+          </li>
+
           <li class="nav-item nav-category">Payment</li>
 
           <li class="nav-item">
