@@ -19,6 +19,7 @@ use App\Http\Controllers\Backend\PropertyTypeController;
 use Symfony\Component\HttpKernel\Event\ControllerEvent;
 
 use App\Http\Controllers\AboutController;
+use App\Http\Controllers\Admin\AdminCountDown;
 use App\Http\Controllers\EarningsController;
 use App\Http\Controllers\OurWorkController;
 use App\Http\Controllers\ContactController;
@@ -33,7 +34,6 @@ use App\Http\Controllers\Milestones\ManifestingController;
 use App\Http\Controllers\Milestones\TradingReportController;
 
 use App\Http\Controllers\Auth\Logout;
-use App\Http\Controllers\CountDown\CountDown;
 use App\Http\Controllers\User\Dashboard;
 use App\Http\Controllers\Donation\Donate;
 use App\Http\Controllers\Donation\DonateItem;
@@ -126,7 +126,12 @@ Route::middleware(['auth', 'roles:admin'])->group(function () {
     Route::get('/admin/user_dash', [Dashboard::class, 'dashboard'])->middleware(['auth', 'verified'])->name('admin.user_dash');
 
 
-    Route::get('/admin/count_down', [CountDown::class, 'countdown'])->middleware(['auth', 'verified'])->name('admin.count_down');
+    Route::get('/admin/count_down', [AdminCountDown::class, 'countdown'])->middleware(['auth', 'verified'])->name('admin.count_down');
+    Route::post('/admin/count_down_store', [AdminCountDown::class, 'countdown_store'])->middleware(['auth', 'verified'])->name('admin.count_down_store');
+    Route::get('/admin/count_down_update/{id}', [AdminCountDown::class, 'countdown_update_index'])->middleware(['auth', 'verified'])->name('admin.count_down_update');
+    Route::post('/admin/count_down_update_store/{id}', [AdminCountDown::class, 'countdown_update_store'])->middleware(['auth', 'verified'])->name('admin.count_down_update_store');
+    Route::post('/admin/count_down_delete/{id}', [AdminCountDown::class, 'countdown_delete'])->middleware(['auth', 'verified'])->name('admin.count_down_delete');
+
 
 
     Route::get('/admin/plan', [AdminPaymentPlan::class, 'plan'])->middleware(['auth', 'verified'])->name('admin.plan');
