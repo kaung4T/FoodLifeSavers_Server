@@ -89,6 +89,17 @@
 
 
 
+input[type="date"]::-webkit-calendar-picker-indicator {
+  color: rgba(0, 0, 0, 0);
+  opacity: 1;
+  display: block;
+  background-color: #1569e7;
+  border-radius: 30%;
+  padding: 3px;
+  cursor: pointer;
+  border-width: thin;
+}
+
 .update_count_down_body {
   margin: auto;
   margin-left: 0px;

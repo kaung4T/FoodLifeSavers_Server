@@ -9,6 +9,7 @@ use Illuminate\Routing\Controller as BaseController;
 
 use Illuminate\Support\Facades\Mail;
 use App\Mail\Mail_Sender;
+use App\Models\CountDown;
 use App\Models\DonationPlan;
 use Exception;
 use Illuminate\Support\Facades\Redirect;
@@ -21,15 +22,68 @@ use PhpOption\None;
 class Controller extends BaseController
 {
     use AuthorizesRequests, ValidatesRequests;
+    public $year, $month, $day;
 
     public function index()
     {
         $service = Service::all();
         $donation = DonationPlan::all();
-        $name = "kaungkaung";
+        
+        $cd = CountDown::all();
+
+        $cd->each(function ($cd) {
+            if ($cd->approved) {
+            $count_down_convert = $cd->end_date; //2024-02-13
+            $count_down = explode("-", $count_down_convert);
+            
+            if ($count_down[1] == "01") {
+                $count_down[1] = "January";
+            }
+            elseif ($count_down[1] == "02") {
+                $count_down[1] = "February";
+            }
+            elseif ($count_down[1] == "03") {
+                $count_down[1] = "March";
+            }
+            elseif ($count_down[1] == "04") {
+                $count_down[1] = "April";
+            }
+            elseif ($count_down[1] == "05") {
+                $count_down[1] = "May";
+            }
+            elseif ($count_down[1] == "06") {
+                $count_down[1] = "June";
+            }
+            elseif ($count_down[1] == "07") {
+                $count_down[1] = "July";
+            }
+            elseif ($count_down[1] == "08") {
+                $count_down[1] = "August";
+            }
+            elseif ($count_down[1] == "09") {
+                $count_down[1] = "September";
+            }
+            elseif ($count_down[1] == "10") {
+                $count_down[1] = "October";
+            }
+            elseif ($count_down[1] == "11") {
+                $count_down[1] = "November";
+            }
+            elseif ($count_down[1] == "12") {
+                $count_down[1] = "December";
+            }
+
+            $this->year = $count_down[0];
+            $this->month = $count_down[1];
+            $this->day = $count_down[2];
+            }
+        });
+
 
         $context = [
-            "name"=> $name,
+            "year"=> $this->year,
+            "month"=> $this->month,
+            "day"=> $this->day,
             "service"=> $service,
             "donation"=> $donation
         ];

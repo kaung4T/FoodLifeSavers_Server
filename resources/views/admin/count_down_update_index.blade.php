@@ -19,7 +19,7 @@
     <div class="card-body">
 
 <div class="mb-4">
-<h4>Update Donation Plan</h4>
+<h4>Update Count-Down</h4>
 </div>
 
 <form action="{{ route('admin.count_down_update_store', $count_down_id) }}" method="POST" enctype="multipart/form-data">
@@ -28,7 +28,8 @@
 <div class="form-group row mb-3">
         <label class="col-sm-5 col-form-label">End Date</label>
         <div class="col-sm-7">
-        <input name="end_date" type="number" class="form-control" placeholder="Enter End-Date" value="{{ $count_down->end_date }}">
+        <input type="date" id="birthday" name="end_date" class="form-control" value="{{ $count_down->end_date }}" required>
+        <!-- <input name="end_date" type="number" class="form-control" placeholder="Enter End-Date" value="{{ $count_down->end_date }}"> -->
         </div>
     </div>
 

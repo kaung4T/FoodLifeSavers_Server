@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('count_downs', function (Blueprint $table) {
             $table->id();
-            $table->integer('end_date');
+            $table->string('end_date');
             $table->string('user_id');
             $table->string('user');
             $table->boolean('approved')->default(false);

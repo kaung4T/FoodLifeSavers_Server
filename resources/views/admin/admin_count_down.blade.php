@@ -23,7 +23,8 @@
 <div class="form-group row mb-3">
         <label class="col-sm-5 col-form-label">End Date</label>
         <div class="col-sm-7">
-        <input name="end_date" type="number" class="form-control" placeholder="Enter End-Date" required>
+        <input type="date" id="birthday" name="end_date" class="form-control" required>
+        <!-- <input name="end_date" type="number" class="form-control" placeholder="Enter End-Date" required> -->
         </div>
     </div>
 
@@ -51,7 +52,7 @@
     <div class="card-body">
 
     <div class="mb-4">
-<h4>Customize Donation Plan</h4>
+<h4>Customize Count-Down</h4>
     </div>
 
     <div class="table-responsive plan_table">
