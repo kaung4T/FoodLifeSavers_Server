@@ -23,6 +23,7 @@ class AdminCountDown extends Controller
 
         $cd = CountDown::all();
 
+        // check approve from user
         if (isset($request->check_count_down)) {
             $cd->each(function ($cd) {
                 $cd->approved = false;
@@ -56,7 +57,7 @@ class AdminCountDown extends Controller
             "count_down"=>$count_down,
             "count_down_id"=>$id
         ];
-        return view('admin.count_down_update_index', $context);
+        return view('admin.admin_count_down_update_index', $context);
     }
 
     public function countdown_update_store (Request $request, $id) {
@@ -64,6 +65,7 @@ class AdminCountDown extends Controller
         $count_down = CountDown::find($id);
         $cd = CountDown::all();
         
+        // check approve from user
         if (isset($request->check_count_down)) {
             $cd->each(function ($cd) {
                 $cd->approved = false;

@@ -12,6 +12,7 @@ class Notify extends Controller
         
         $notify = new NotifyCallback;
 
+        // create a notify from payment merchant portal
         $notify->status_nm = $request->status_nm;
         $notify->status = $request->status;
         $notify->amount = $request->amount;

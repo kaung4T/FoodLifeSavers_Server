@@ -42,27 +42,6 @@ class Donate extends Controller {
 
     $order_id = $this->generate_order_id(); //generate order id
 
-
-    // $oreder_creation = Order::create([
-    //   'order_id'=> $order_id,
-    //   'user_id'=> Auth::id(),
-    //   'user'=> Auth::user()->name,
-    //   'payment_plan_id'=> $payment->id,
-    //   'payment_plan'=> $payment->plan_type,
-    //   'payment_amount'=> $payment->amount,
-    //   'payment_discount'=> $payment->discount,
-    //   'phone'=> Auth::user()->number,
-    //   'country'=> Auth::user()->country
-    // ]);
-    
-    // TEST ORDER ID
-    // $conext = [
-    //   "order_id"=> $order_id
-    // ];
-
-    // return response()->json($conext); exit;
-
-
     $curlPost= array();
 
     //<!--Replace of 2 very important parameters * your Website API Token and Website ID -->
@@ -162,6 +141,7 @@ class Donate extends Controller {
     elseif($status_nm==1 || $status_nm==9){ // 1:Approved/Success,9:Test Transaction
       $redirecturl = $curlPost["success_url"];
 
+      // create an order if the payment is success
       $oreder_creation = Order::create([
         'order_id'=> $order_id,
         'user_id'=> Auth::id(),

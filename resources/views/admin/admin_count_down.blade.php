@@ -75,9 +75,9 @@
         @foreach ($count_down as $each_count_down)
 
         <tr>
-      <th scope="row"><a href=""> {{ $i }} </a></th>
+      <th scope="row"><a href="{{ route('all.single_user', $each_count_down->user_id) }}"> {{ $i }} </a></th>
                 <td class="text-center">{{ $each_count_down->end_date }}</td>
-                <td class="text-center"><a href=""> {{ $each_count_down->user }} </a></td>
+                <td class="text-center"><a href="{{ route('all.single_user', $each_count_down->user_id) }}"> {{ $each_count_down->user }} </a></td>
                 <td class="text-center"> {{ $each_count_down->approved }} </td>
 
                 <td><a href="{{ route('admin.count_down_update', $each_count_down->id) }}" class="btn btn-sm btn-outline-primary">Edit</a></td>
@@ -119,9 +119,9 @@
         @foreach ($count_down as $each_count_down)
 
         <tr>
-      <th scope="row"><a href=""> {{ $i }} </a></th>
+      <th scope="row"><a href="{{ route('all.single_user', $each_count_down->user_id) }}"> {{ $i }} </a></th>
                 <td class="text-center">{{ $each_count_down->end_date }}</td>
-                <td class="text-center"><a href=""> {{ $each_count_down->user }} </a></td>
+                <td class="text-center"><a href="{{ route('all.single_user', $each_count_down->user_id) }}"> {{ $each_count_down->user }} </a></td>
                 <td class="text-center"> {{ $each_count_down->approved }} </td>
 
                 <td><a href="{{ route('admin.count_down_update', $each_count_down->id) }}" class="btn btn-sm btn-outline-primary">Edit</a></td>
