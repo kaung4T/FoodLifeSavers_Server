@@ -7,6 +7,9 @@ use Illuminate\Http\Request;
 
 class AboutController extends Controller
 {
+    /**
+     * Display the about us.
+     */
     public function about()
     {
         $donate_plan = DonationPlan::all();

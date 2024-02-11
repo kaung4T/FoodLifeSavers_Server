@@ -20,6 +20,7 @@ use Symfony\Component\HttpKernel\Event\ControllerEvent;
 
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\Admin\AdminCountDown;
+use App\Http\Controllers\Admin\AdminWebsite;
 use App\Http\Controllers\EarningsController;
 use App\Http\Controllers\OurWorkController;
 use App\Http\Controllers\ContactController;
@@ -126,6 +127,9 @@ Route::middleware(['auth', 'roles:admin'])->group(function () {
     Route::get('/admin/user_dash', [Dashboard::class, 'dashboard'])->middleware(['auth', 'verified'])->name('admin.user_dash');
 
 
+    Route::get('/admin/admin_website/web_info', [AdminWebsite::class, 'web_info'])->middleware(['auth', 'verified'])->name('admin.web_info');
+
+    
     Route::get('/admin/count_down', [AdminCountDown::class, 'countdown'])->middleware(['auth', 'verified'])->name('admin.count_down');
     Route::post('/admin/count_down_store', [AdminCountDown::class, 'countdown_store'])->middleware(['auth', 'verified'])->name('admin.count_down_store');
     Route::get('/admin/count_down_update/{id}', [AdminCountDown::class, 'countdown_update_index'])->middleware(['auth', 'verified'])->name('admin.count_down_update');

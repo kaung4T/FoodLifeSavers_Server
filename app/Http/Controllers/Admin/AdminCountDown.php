@@ -9,6 +9,9 @@ use Illuminate\Support\Facades\Auth;
 
 class AdminCountDown extends Controller
 {
+    /**
+     * Display the admin count-down.
+     */
     public function countdown()
     {
         $cd = CountDown::all();
@@ -19,6 +22,9 @@ class AdminCountDown extends Controller
         return view('admin.admin_count_down', $context);
     }
 
+    /**
+     * Store the admin count-down.
+     */
     public function countdown_store (Request $request) {
 
         $cd = CountDown::all();
@@ -49,6 +55,9 @@ class AdminCountDown extends Controller
         return redirect()->route('admin.count_down')->with('success', 'End-Date added Successfully');
     }
 
+    /**
+     * Display the admin count-down update.
+     */
     public function countdown_update_index (Request $request, $id) {
 
         $count_down = CountDown::find($id);
@@ -60,6 +69,9 @@ class AdminCountDown extends Controller
         return view('admin.admin_count_down_update_index', $context);
     }
 
+    /**
+     * Update the admin count-down update.
+     */
     public function countdown_update_store (Request $request, $id) {
 
         $count_down = CountDown::find($id);
@@ -91,6 +103,9 @@ class AdminCountDown extends Controller
         return redirect()->route('admin.count_down')->with('success', 'End-Date Updated Successfully');
     }
 
+    /**
+     * Delete the admin count-down.
+     */
     public function countdown_delete (Request $request, $id) {
 
         $count_down = CountDown::find($id);

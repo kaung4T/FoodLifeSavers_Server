@@ -82,6 +82,22 @@
           </li>
 
           <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="collapse" href="#website-pages" role="button" aria-expanded="false"
+              aria-controls="website-pages">
+              <i class="bi bi-globe"></i>
+              <span class="link-title" style="margin-left: 16.5px;">Website</span>
+              <i class="link-arrow" data-feather="chevron-down"></i>
+            </a>
+            <div class="collapse" id="website-pages">
+              <ul class="nav sub-menu">
+                <li class="nav-item">
+                  <a href="{{route('admin.web_info')}}" class="nav-link">Info</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="nav-item">
             <a href="{{ route('admin.service') }}" class="nav-link">
             <i class="bi bi-window-fullscreen"></i>
               <span class="link-title" style="margin-left: 16.7px;">Services</span>

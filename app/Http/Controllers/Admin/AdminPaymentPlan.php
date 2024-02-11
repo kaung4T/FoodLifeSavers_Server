@@ -8,6 +8,9 @@ use Illuminate\Http\Request;
 
 class AdminPaymentPlan extends Controller
 {
+    /**
+     * Display the admin plan.
+     */
     public function plan (Request $request) {
 
         $donation = DonationPlan::all();
@@ -18,6 +21,9 @@ class AdminPaymentPlan extends Controller
         return view('admin.payment_plan.plan', $context);
     }
 
+    /**
+     * Store the admin plan.
+     */
     public function plan_store (Request $request) {
 
         $donation = DonationPlan::create([
@@ -30,6 +36,9 @@ class AdminPaymentPlan extends Controller
         return redirect()->route('admin.plan')->with('success', 'File Uploaded Successfully');
     }
 
+    /**
+     * Display the admin update plan.
+     */
     public function plan_update_index (Request $request, $id) {
 
         $donation = DonationPlan::find($id);
@@ -41,6 +50,9 @@ class AdminPaymentPlan extends Controller
         return view('admin.payment_plan.plan_update_index', $context);
     }
 
+    /**
+     * Update the admin update plan.
+     */
     public function plan_update_store (Request $request, $id) {
 
         $donation = DonationPlan::find($id);
@@ -54,6 +66,9 @@ class AdminPaymentPlan extends Controller
         return redirect()->route('admin.plan')->with('success', 'File Uploaded Successfully');
     }
 
+    /**
+     * Delete the admin plan.
+     */
     public function plan_delete (Request $request, $id) {
 
         $donation = DonationPlan::find($id);

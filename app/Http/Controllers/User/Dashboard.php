@@ -10,10 +10,16 @@ use Illuminate\Support\Facades\Auth;
 
 class Dashboard extends Controller
 {
+    /**
+     * Display the user dashboard.
+     */
     public function dashboard (Request $request) {
         return view('user.dashboard');
     }
 
+    /**
+     * Display the user donation.
+     */
     public function donation (Request $request) {
         
         $user_order = Order::where('user_id', '=', Auth::id())->get();

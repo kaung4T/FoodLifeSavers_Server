@@ -14,11 +14,17 @@ use Illuminate\Http\RedirectResponse;
 
 class AdminController extends Controller
 {
+    /**
+     * Display the admin dashboard.
+     */
     public function AdminDashboard()
     {
         return view('admin.index');
     }
 
+    /**
+     * Logout the admin
+     */
     public function AdminLogout(Request $request)
     {
         Auth::guard('web')->logout();
@@ -30,12 +36,17 @@ class AdminController extends Controller
         return redirect('/admin/login');
     }
 
-
+    /**
+     * Login the admin.
+     */
     public function AdminLogin()
     {
         return view('admin.admin_login');
     }
 
+    /**
+     * Display the admin profile.
+     */
     public function AdminProfile()
     {
         $id = Auth::user()->id;
@@ -43,6 +54,9 @@ class AdminController extends Controller
         return view('admin.admin_profile_view', compact('profileData'));
     }
 
+    /**
+     * Store the admin.
+     */
     public function AdminProfileStore(Request $request)
     {
         $id = Auth::user()->id;
@@ -70,6 +84,9 @@ class AdminController extends Controller
         return redirect()->back()->with($notification);
     }
 
+    /**
+     * Change the admin passowrd.
+     */
     public function AdminChangePassword()
     {
 
@@ -78,6 +95,9 @@ class AdminController extends Controller
         return view('admin.admin_change_password', compact('profileData'));
     }
 
+    /**
+     * Update the admin passowrd.
+     */
     public function AdminUpdatePassword(Request $request)
     {
         $request->validate([
@@ -108,6 +128,9 @@ class AdminController extends Controller
         return back()->with($notification);
     }
 
+    /**
+     * Display the all admin.
+     */
     public function AllAdmin()
     {
         $alladmin = User::where('role', 'admin')->get();
@@ -115,6 +138,9 @@ class AdminController extends Controller
         return view('backend.pages.admin.all_admin', compact('alladmin'));
     }
 
+    /**
+     * Display the all user.
+     */
     public function AllUser()
     {
         $alladmin = User::where('role', 'user')->get();
@@ -122,6 +148,9 @@ class AdminController extends Controller
         return view('backend.pages.admin.all_user', compact('alladmin'));
     }
 
+    /**
+     * Display the relative admin or user by user id.
+     */
     public function SingleUser(Request $request, $id)
     {
         $user = User::find($id);
@@ -129,6 +158,9 @@ class AdminController extends Controller
         return view('backend.pages.admin.single_user', compact('user'));
     }
 
+    /**
+     * Display the relative admin or user by order id.
+     */
     public function SingleUserNoti(Request $request, $id_order)
     {
         $order = Order::where('order_id', $id_order)->first();
@@ -137,6 +169,9 @@ class AdminController extends Controller
         return view('backend.pages.admin.single_user', compact('user'));
     }
 
+    /**
+     * Display the admin.
+     */
     public function AddAdmin()
     {
         $roles = Role::all();
@@ -144,6 +179,9 @@ class AdminController extends Controller
         return view('backend.pages.admin.add_admin', compact('roles'));
     }
 
+    /**
+     * Store the admin.
+     */
     public function StoreAdmin(Request $request)
     {
         $request->validate([
@@ -180,6 +218,9 @@ class AdminController extends Controller
         return redirect()->route('all.admin')->with($notification);
     }
 
+    /**
+     * Display the admin update.
+     */
     public function EditAdmin($id)
     {
         $user = User::findOrFail($id);
@@ -188,6 +229,9 @@ class AdminController extends Controller
         return view('backend.pages.admin.edit_admin', compact('user', 'roles'));
     }
 
+    /**
+     * update the admin update.
+     */
     public function UpdateAdmin(Request $request, $id)
     {
         $user = User::findOrFail($id);
@@ -215,6 +259,9 @@ class AdminController extends Controller
         return redirect()->route('all.admin')->with($notification);
     }
 
+    /**
+     * Delete the admin.
+     */
     public function DeleteAdmin($id)
     {
         $user = User::findOrFail($id);

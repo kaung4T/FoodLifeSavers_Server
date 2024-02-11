@@ -13,6 +13,9 @@ use App\Models\Service;
 
 class AdminService_Update extends Controller
 {
+    /**
+     * Update upload the admin update service file.
+     */
     public function UploadFile(UploadedFile $file, $folder = null, $disk = 'public', $filename = null)
     {
         $FileName = !is_null($filename) ? $filename : Str::random(10);
@@ -23,6 +26,9 @@ class AdminService_Update extends Controller
         );
     }
 
+    /**
+     * Update the admin update service.
+     */
     public function update_store(Request $request, $id)
     {
 
@@ -39,6 +45,9 @@ class AdminService_Update extends Controller
  
     }
 
+    /**
+     * Display the admin update service.
+     */
     public function update (Request $request, $id) {
 
         $service_item = Service::find($id);

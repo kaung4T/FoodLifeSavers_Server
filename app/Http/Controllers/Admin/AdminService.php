@@ -13,6 +13,9 @@ use App\Models\Service;
 
 class AdminService extends Controller
 {
+    /**
+     * Store the admin service file.
+     */
     public function UploadFile(UploadedFile $file, $folder = null, $disk = 'public', $filename = null)
     {
         $FileName = !is_null($filename) ? $filename : Str::random(10);
@@ -23,11 +26,17 @@ class AdminService extends Controller
         );
     }
 
+    /**
+     * Delete the admin delete service file.
+     */
     public function deleteFile($path, $disk = 'public')
     {
         Storage::disk($disk)->delete($path);
     }
 
+    /**
+     * Store the admin service.
+     */
     public function store(Request $request)
     {
 
@@ -42,6 +51,9 @@ class AdminService extends Controller
  
     }
 
+    /**
+     * Delete the admin delete service.
+     */
     public function delete(Request $request, $id)
     {
         $service_item = Service::find($id);
@@ -50,10 +62,16 @@ class AdminService extends Controller
         return redirect()->route('admin.customize_service')->with('success', 'File Uploaded Successfully');
     }
     
+    /**
+     * Display the admin service.
+     */
     public function service () {
         return view('admin.admin_add_service');
     }
 
+    /**
+     * Display the admin service customize.
+     */
     public function customize_service () {
         $all_service = Service::all();
 

@@ -8,6 +8,9 @@ use Illuminate\Http\Request;
 
 class AdminOrder extends Controller
 {
+    /**
+     * Display the admin order.
+     */
     public function order (Request $request) {
         
         $order = Order::all();

@@ -7,6 +7,9 @@ use Illuminate\Http\Request;
 
 class OurWorkController extends Controller
 {
+    /**
+     * Display the our work.
+     */
     public function our_work()
     {
         
