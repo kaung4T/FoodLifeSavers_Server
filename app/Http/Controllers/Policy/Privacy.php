@@ -7,6 +7,9 @@ use Illuminate\Http\Request;
 
 class Privacy extends Controller
 {
+    /**
+     * Display the privacy.
+     */
     public function privacy () {
         return view('policy.privacy');
     }

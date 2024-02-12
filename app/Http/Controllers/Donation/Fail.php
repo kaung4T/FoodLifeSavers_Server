@@ -9,6 +9,9 @@ use Illuminate\Support\Facades\Auth;
 
 class Fail extends Controller
 {
+    /**
+     * Display the fail with donation_plan ID.
+     */
     public function fail(Request $request, $id) {
         
         $donate_plan = DonationPlan::find($id);

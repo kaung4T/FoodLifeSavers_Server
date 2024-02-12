@@ -10,6 +10,9 @@ use Illuminate\Support\Facades\Auth;
 
 class Success extends Controller
 {
+    /**
+     * Display the success with order ID. >> Order ID will only generate if the payment is success.
+     */
     public function success(Request $request, $id) {
 
         $order = Order::where('order_id', '=', $id)->first();

@@ -8,11 +8,14 @@ use Illuminate\Http\Request;
 
 class Notify extends Controller
 {
+    /**
+     * For accepting notify request from payment merchant portal with post method.
+     */
     public function notify (Request $request) {
         
         $notify = new NotifyCallback;
 
-        // create a notify from payment merchant portal
+        // create a notify from payment merchant portal.
         $notify->status_nm = $request->status_nm;
         $notify->status = $request->status;
         $notify->amount = $request->amount;
@@ -33,6 +36,9 @@ class Notify extends Controller
         return response()->json($return_notify_json, 201);
     }
 
+    /**
+     * Display the notify result.
+     */
     public function notify_result (Request $request) {
         $notify = NotifyCallback::all();
 

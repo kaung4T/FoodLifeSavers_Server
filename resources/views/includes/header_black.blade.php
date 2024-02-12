@@ -15,28 +15,6 @@
         <div class="collapse navbar-collapse responsive_header_nav" id="navbarCollapse">
             <div class="navbar-nav ms-auto py-4 py-lg-0 responsive_header_nav_second">
                  <a href="{{url('/')}}" class="nav-link text-dark">Home</a>
-                
-              <!-- <div class="nav-item dropdown">
-                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Products</a>
-                <div class="dropdown-menu shadow-sm m-0">
-                    <a href="{{ route('panasonic') }}" class="dropdown-item">Tesla / Panasonic</a>
-                    <a href="{{ route('chem') }}" class="dropdown-item">LG Chem</a>
-                    <a href="{{ route('samsung') }}" class="dropdown-item">Samsung SDI</a>
-                </div>
-            </div> -->
-
-              <!-- <div class="nav-item dropdown">
-                <a href="{{ route('earning') }}" class="nav-link">Earnings</a>
-            </div> -->
-
-              <!-- <div class="nav-item dropdown">
-                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Milestones</a>
-                <div class="dropdown-menu shadow-sm m-0">
-                    <a href="{{ route('investment') }}" class="dropdown-item"> Investment </a>
-                    <a href="{{ route('manifesting') }}" class="dropdown-item"> Manifesting </a>
-                    <a href="{{ route('trading') }}" class="dropdown-item"> Trading Report </a>
-                </div>
-            </div> -->
 
                 <div class="nav-item dropdown">
                     <a href="{{ route('our_work') }}" class="nav-link text-dark">Our Work</a>

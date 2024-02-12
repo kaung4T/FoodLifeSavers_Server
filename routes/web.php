@@ -26,14 +26,6 @@ use App\Http\Controllers\OurWorkController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\TandC;
 
-use App\Http\Controllers\Products\LGChemController;
-use App\Http\Controllers\Products\SamsungSDIController;
-use App\Http\Controllers\Products\TeslaPanasonicController;
-
-use App\Http\Controllers\Milestones\InvestmentController;
-use App\Http\Controllers\Milestones\ManifestingController;
-use App\Http\Controllers\Milestones\TradingReportController;
-
 use App\Http\Controllers\Auth\Logout;
 use App\Http\Controllers\User\Dashboard;
 use App\Http\Controllers\Donation\Donate;
@@ -81,14 +73,6 @@ Route::get('/policy/refund-policy', [Refund::class, 'refund'])->name('refund');
 Route::post('/notify', [Notify::class, 'notify'])->name('notify');
 Route::get('/cancellation', [Cancellation::class, 'cancellation'])->name('cancellation');
 
-Route::get('/chem', [LGChemController::class, 'chem'])->name('chem');
-Route::get('/samsung', [SamsungSDIController::class, 'samsung'])->name('samsung');
-Route::get('/panasonic', [TeslaPanasonicController::class, 'panasonic'])->name('panasonic');
-
-Route::get('/investment', [InvestmentController::class, 'investment'])->name('investment');
-Route::get('/manifesting', [ManifestingController::class, 'manifesting'])->name('manifesting');
-Route::get('/trading', [TradingReportController::class, 'trading'])->name('trading');
-
 
 Route::controller(ContactController::class)->group(function () {
     // Route::get('/about', 'about')->name('about.page');
@@ -100,7 +84,6 @@ Route::controller(ContactController::class)->group(function () {
 Route::get('/donate2', [Donate::class, 'donate_2'])->middleware(['auth', 'verified'])->name('donate');  // TEST GET ARRAY
 
 Route::post('/donate/{id}', [Donate::class, 'donate'])->middleware(['auth', 'verified'])->name('donate');
-Route::get('/all_donate', [DonateItem::class, 'all_donate'])->middleware(['auth', 'verified'])->name('all_donate');
 Route::get('/single_donate/{id}', [DonateItem::class, 'single_donate'])->middleware(['auth', 'verified'])->name('single_donate');
 Route::get('/donate/success/{id}', [Success::class, 'success'])->middleware(['auth', 'verified'])->name('success');
 Route::get('/donate/fail/{id}', [Fail::class, 'fail'])->middleware(['auth', 'verified'])->name('fail');

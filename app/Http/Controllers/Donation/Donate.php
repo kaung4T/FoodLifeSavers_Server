@@ -12,9 +12,11 @@ use Illuminate\Support\Facades\Http;
 
 
 class Donate extends Controller {
+    /**
+     * Generate an unique order ID.
+     */
     public function generate_order_id () {
-      // include both words and num
-      // return substr(base_convert(sha1(uniqid(mt_rand())), 16, 36), 0, $limit);
+      // return substr(base_convert(sha1(uniqid(mt_rand())), 16, 36), 0, $limit);   // >> for testing include both words and num!
 
       $number = mt_rand(100000000000000000, 999999999999999999);
 
@@ -25,12 +27,17 @@ class Donate extends Controller {
       return $number;
       }
 
+    /**
+     * Check an Order ID is duplicate or not.
+     */
     public function barcodeNumberExists($number) {
         return Order::where("order_id", "=", $number)->exists();
     } 
 
 
-
+    /**
+     * Integrate the payment donate with payment merchant portal service.
+     */
     public function donate (Request $request ,$payment_plan_id) {
 
     $payment = DonationPlan::find($payment_plan_id);
@@ -195,7 +202,9 @@ class Donate extends Controller {
 
 
 
-
+    /**
+     * Test GET, POST, PUT, DELETE JSON from external website service.
+     */
 // {
     public function donate_2 (Request $request) {
         $res = Http::get('https://jsonplaceholder.typicode.com/users');
