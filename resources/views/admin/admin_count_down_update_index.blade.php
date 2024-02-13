@@ -42,7 +42,7 @@
         <label class="form-check-label" for="check_count_down">Approved</label>
     </div>
 
-        <button type="submit" class="btn btn-outline-primary mt-3 service_button">Submit</button>
+        <button type="submit" class="btn btn-outline-primary mt-3 service_button">Update</button>
 
     </form>
 

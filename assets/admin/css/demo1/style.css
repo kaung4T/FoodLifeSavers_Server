@@ -89,6 +89,17 @@
 
 
 
+.customize_web_info_body {
+  margin: auto;
+  margin-left: 0px;
+}
+
+.web-info-icon {
+  position: absolute;
+  margin-top: 9px;
+  margin-left: 13px;
+}
+
 .info_body {
   margin: auto;
   margin-left: 0px;
