@@ -111,6 +111,8 @@ Route::middleware(['auth', 'roles:admin'])->group(function () {
 
 
     Route::get('/admin/admin_website/web_info', [AdminWebsite::class, 'web_info'])->middleware(['auth', 'verified'])->name('admin.web_info');
+    Route::post('/admin/admin_website/info_store', [AdminWebsite::class, 'info_store'])->middleware(['auth', 'verified'])->name('admin.info_store');
+    Route::post('/admin/admin_website/info_delete/{id}', [AdminWebsite::class, 'info_delete'])->middleware(['auth', 'verified'])->name('admin.info_delete');
 
     
     Route::get('/admin/count_down', [AdminCountDown::class, 'countdown'])->middleware(['auth', 'verified'])->name('admin.count_down');

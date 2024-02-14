@@ -18,9 +18,10 @@ return new class extends Migration
             $table->string('business_address1')->nullable();
             $table->string('business_address2')->nullable();
             $table->string('business_phone')->nullable();
-            $table->string('business_email')->unique();
+            $table->string('business_email')->nullable();
             $table->string('business_website')->nullable();
             $table->string('business_location')->nullable();
+            $table->boolean('business_approved')->default(false);
             $table->timestamps();
         });
     }

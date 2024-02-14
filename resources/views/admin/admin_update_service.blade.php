@@ -22,13 +22,13 @@
             <div class="form-group row mb-3">
             <label class="col-sm-5 col-form-label">Service Name</label>
             <div class="col-sm-7">
-            <input name="name" type="text" class="form-control" value="{{ $service_item->name }}">
+            <input name="name" type="text" class="form-control" value="{{ $service_item->name }}" maxlength="255" required>
             </div>
         </div>
         <div class="form-group row mb-3">
             <label class="col-sm-5 col-form-label">Text</label>
             <div class="col-sm-7">
-            <input name="text" type="text" class="form-control" value="{{ $service_item->text }}">
+            <input name="text" type="text" class="form-control" value="{{ $service_item->text }}" maxlength="255" required>
             </div>
         </div>
         <div class="form-group row mb-3">

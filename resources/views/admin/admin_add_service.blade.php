@@ -18,13 +18,13 @@
         <div class="form-group row mb-3">
         <label class="col-sm-5 col-form-label">Service Name</label>
         <div class="col-sm-7">
-        <input name="name" type="text" class="form-control">
+        <input name="name" type="text" class="form-control"  maxlength="255" required>
         </div>
     </div>
     <div class="form-group row mb-3">
         <label class="col-sm-5 col-form-label">Text</label>
         <div class="col-sm-7">
-        <input name="text" type="text" class="form-control">
+        <input name="text" type="text" class="form-control"  maxlength="255" required>
         </div>
     </div>
     <div class="form-group row mb-3">

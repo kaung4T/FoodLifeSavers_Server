@@ -16,6 +16,7 @@ class Info extends Model
         'business_phone',
         'business_email',
         'business_website',
-        'business_location'
+        'business_location',
+        'business_approved'
     ];
 }

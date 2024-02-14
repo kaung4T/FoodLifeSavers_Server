@@ -52,7 +52,7 @@
     <div class="form-group row mb-3">
         <label class="col-sm-5 col-form-label">Plan Info</label>
         <div class="col-sm-7">
-        <input name="plan_text" type="text" class="form-control" value="{{ $donation->plan_info }}" required>
+        <input name="plan_text" type="text" class="form-control" value="{{ $donation->plan_info }}" maxlength="255" required>
         </div>
     </div>
     <div class="form-group row mb-3">
