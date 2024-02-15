@@ -13,7 +13,6 @@ use App\Http\Controllers\Admin\AdminPaymentPlan;
 
 use App\Http\Controllers\Admin\AdminOrder;
 
-use App\Http\Controllers\agent\AgentController;
 use App\Http\Controllers\Backend\RoleController;
 use App\Http\Controllers\Backend\PropertyTypeController;
 use Symfony\Component\HttpKernel\Event\ControllerEvent;
@@ -113,6 +112,8 @@ Route::middleware(['auth', 'roles:admin'])->group(function () {
     Route::get('/admin/admin_website/web_info', [AdminWebsite::class, 'web_info'])->middleware(['auth', 'verified'])->name('admin.web_info');
     Route::post('/admin/admin_website/info_store', [AdminWebsite::class, 'info_store'])->middleware(['auth', 'verified'])->name('admin.info_store');
     Route::post('/admin/admin_website/info_delete/{id}', [AdminWebsite::class, 'info_delete'])->middleware(['auth', 'verified'])->name('admin.info_delete');
+    Route::get('/admin/admin_website/info_update/{id}', [AdminWebsite::class, 'info_update'])->middleware(['auth', 'verified'])->name('admin.info_update');
+    Route::post('/admin/admin_website/info_update_store/{id}', [AdminWebsite::class, 'info_update_store'])->middleware(['auth', 'verified'])->name('admin.info_update_store');
 
     
     Route::get('/admin/count_down', [AdminCountDown::class, 'countdown'])->middleware(['auth', 'verified'])->name('admin.count_down');
@@ -155,11 +156,6 @@ Route::middleware(['auth', 'roles:admin'])->group(function () {
     Route::post('/admin/update/password', [AdminController::class, 'AdminUpdatePassword'])->name('admin.update.password');
 });
 
-
-// Agent Group Middleware
-Route::middleware(['auth', 'roles:agent'])->group(function () {
-    Route::get('/agent/dashboard', [AgentController::class, 'AgentDashboard'])->name('agent.dashboard');
-});
 
 Route::get('/admin/login', [AdminController::class, 'AdminLogin'])->name('admin.login');
 

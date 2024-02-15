@@ -144,7 +144,7 @@
                 <td class="text-center"> {{ Str::limit($each_info->business_location, 25, $end='...') }} </td>
                 <td class="text-center"> {{ $each_info->business_approved }} </td>
 
-                <td><a href="" class="btn btn-sm btn-outline-primary">Edit</a></td>
+                <td><a href="{{ route('admin.info_update', $each_info->id)}}" class="btn btn-sm btn-outline-primary">Edit</a></td>
                 <td>
                     <form action="{{ route('admin.info_delete', $each_info->id)}}" method="POST">
                         @csrf
